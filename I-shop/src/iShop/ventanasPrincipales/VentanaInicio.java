@@ -46,16 +46,21 @@ public class VentanaInicio {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Bienvenido al mundo de la electronica");
-		lblNewLabel.setBackground(new Color(255, 153, 0));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+		JLabel lblNewLabel = new JLabel("New label");
 		lblNewLabel.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/logo.png"));
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 11));
-		frame.getContentPane().add(lblNewLabel, BorderLayout.CENTER);
+		lblNewLabel.setBounds(108, 52, 234, 88);
+		frame.getContentPane().add(lblNewLabel);
 		
-		JButton btnAcceder = new JButton("Acceder a la tienda online");
-		frame.getContentPane().add(btnAcceder, BorderLayout.SOUTH);
+		JLabel lblNewLabel_1 = new JLabel("Bienvenido al mundo de la electronica!");
+		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
+		lblNewLabel_1.setBounds(83, 169, 291, 16);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JButton btnNewButton = new JButton("Acceder a tienda");
+		btnNewButton.setBounds(147, 214, 165, 29);
+		frame.getContentPane().add(btnNewButton);
 	}
 
 }
