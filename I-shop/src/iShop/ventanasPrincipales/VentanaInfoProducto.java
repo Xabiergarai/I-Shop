@@ -50,15 +50,15 @@ public class VentanaInfoProducto {
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Precio:");
-		lblNewLabel_2.setBounds(22, 135, 61, 16);
+		lblNewLabel_2.setBounds(22, 153, 61, 16);
 		frame.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Imagen:");
-		lblNewLabel_3.setBounds(22, 232, 61, 16);
+		lblNewLabel_3.setBounds(268, 83, 61, 16);
 		frame.getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("Extra:");
-		lblNewLabel_4.setBounds(22, 187, 61, 16);
+		lblNewLabel_4.setBounds(22, 219, 61, 16);
 		frame.getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
