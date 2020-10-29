@@ -8,6 +8,8 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.SwingConstants;
@@ -47,6 +49,7 @@ public class VentanaLogin {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(new Color(255, 255, 255));
 		frame.getContentPane().setIgnoreRepaint(true);
 		frame.setBounds(100, 100, 500, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -90,7 +93,12 @@ public class VentanaLogin {
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("C:/Users/MIKEL/git/I-Shop/I-shop/img/i-shopNombreLogo.jpg"));
-		lblNewLabel_1.setBounds(115, 47, 236, 109);
+		lblNewLabel_1.setBounds(115, 40, 236, 138);
 		frame.getContentPane().add(lblNewLabel_1);
+		
+		
+		ImageIcon ico1= new ImageIcon("E:\\Deusto\\Proyectos\\Proyecto Prog 3\\fotos\\i-shopSinFondo.png");
+		ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
+		lblNewLabel_1.setIcon(img1);
 	}
 }

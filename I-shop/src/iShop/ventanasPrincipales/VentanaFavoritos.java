@@ -42,13 +42,8 @@ public class VentanaFavoritos {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 500, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
-		JLabel lblNewLabel = new JLabel("Debajo encontrarás tus productos favoritos");
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
-		lblNewLabel.setBounds(45, 27, 336, 16);
-		frame.getContentPane().add(lblNewLabel);
 	}
 }
