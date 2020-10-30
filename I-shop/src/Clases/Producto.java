@@ -2,10 +2,10 @@ package Clases;
 
 public class Producto {
 	
-	String nombre;
-	String codigo;
-	String atributos;
-	double precio;
+	private String nombre;
+	private String codigo;
+	private String atributos;
+	private double precio;
 	
 	
 	public Producto(String nombre, String codigo, String atributos, double precio) {
