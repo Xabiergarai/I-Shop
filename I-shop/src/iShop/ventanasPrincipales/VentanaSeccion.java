@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
@@ -57,7 +59,7 @@ public class VentanaSeccion {
 		frame.getContentPane().add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Smartphone");
-		btnNewButton_2.setBounds(192, 213, 117, 29);
+		btnNewButton_2.setBounds(162, 212, 117, 29);
 		frame.getContentPane().add(btnNewButton_2);
 		
 		JButton btnNewButton = new JButton("PC");
@@ -69,19 +71,33 @@ public class VentanaSeccion {
 		frame.getContentPane().add(btnNewButton);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/Uni/Prog III/Proyecto /Imagenes/pc .jpg"));
 		lblNewLabel_1.setBounds(64, 121, 99, 55);
 		frame.getContentPane().add(lblNewLabel_1);
 		
+
+		ImageIcon ico2= new ImageIcon("img/pc .jpg");
+		ImageIcon img2= new ImageIcon(ico2.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
+		lblNewLabel_1.setIcon(img2);
+		
 		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/Uni/Prog III/Proyecto /Imagenes/accesorios.jpg"));
-		lblNewLabel_2.setBounds(315, 121, 61, 16);
+		lblNewLabel_2.setBounds(315, 121, 76, 55);
 		frame.getContentPane().add(lblNewLabel_2);
+		ImageIcon ico3= new ImageIcon("img/accesorios.jpg");
+		ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblNewLabel_2.getWidth(), lblNewLabel_2.getHeight(), Image.SCALE_SMOOTH));
+		lblNewLabel_2.setIcon(img3);
+		
+		
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setBackground(Color.WHITE);
-		lblNewLabel_3.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/Uni/Prog III/Proyecto /Imagenes/smartphone.png"));
-		lblNewLabel_3.setBounds(166, 244, 80, 16);
+		lblNewLabel_3.setBounds(166, 244, 126, 77);
 		frame.getContentPane().add(lblNewLabel_3);
+
+		ImageIcon ico4= new ImageIcon("img/smartphone.png");
+		ImageIcon img4= new ImageIcon(ico4.getImage().getScaledInstance(lblNewLabel_3.getWidth(), lblNewLabel_3.getHeight(), Image.SCALE_SMOOTH));
+		lblNewLabel_3.setIcon(img4);
+		
+		
+		
 	}
 }
