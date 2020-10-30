@@ -97,7 +97,7 @@ public class VentanaLogin {
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		
-		ImageIcon ico1= new ImageIcon("E:\\Deusto\\Proyectos\\Proyecto Prog 3\\fotos\\i-shopSinFondo.png");
+		ImageIcon ico1= new ImageIcon("img/i-shopSinFondo.png");
 		ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_1.setIcon(img1);
 	}

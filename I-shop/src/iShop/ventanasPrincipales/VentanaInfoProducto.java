@@ -101,7 +101,7 @@ public class VentanaInfoProducto {
 	
 		
 		
-		ImageIcon ico= new ImageIcon("C:\\Users\\MIKEL\\Desktop\\1539-honor-magicbook-14-amd-ryzen-5-3500u-8gb-256gb-ssd-14.jpg");
+		ImageIcon ico= new ImageIcon("img/1539-honor-magicbook-14-amd-ryzen-5-3500u-8gb-256gb-ssd-14.jpg");
 		ImageIcon img= new ImageIcon(ico.getImage().getScaledInstance(lblNewLabel_3.getWidth(), lblNewLabel_3.getHeight(), Image.SCALE_SMOOTH));
 			lblNewLabel_3.setIcon(img);
 		

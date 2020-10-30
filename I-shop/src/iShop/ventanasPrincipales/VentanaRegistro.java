@@ -50,7 +50,7 @@ public class VentanaRegistro {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(new Color(255, 255, 255));
+		frame.getContentPane().setBackground(Color.WHITE);
 		frame.getContentPane().setForeground(new Color(0, 0, 0));
 		frame.setBounds(100, 100, 500, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -108,7 +108,7 @@ public class VentanaRegistro {
 		lblNewLabel_1.setBounds(114, 5, 236, 151);
 		frame.getContentPane().add(lblNewLabel_1);
 		
-		ImageIcon ico1= new ImageIcon("E:\\Deusto\\Proyectos\\Proyecto Prog 3\\fotos\\i-shopSinFondo.png");
+		ImageIcon ico1= new ImageIcon("img/i-shopSinFondo.png");
 		ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_1.setIcon(img1);
 		
