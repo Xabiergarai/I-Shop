@@ -49,11 +49,11 @@ public class VentanaInicio {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/logo.png"));
+		lblNewLabel.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/Uni/Prog III/Proyecto /Imagenes/logo.png"));
 		lblNewLabel.setBounds(108, 52, 234, 88);
 		frame.getContentPane().add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Bienvenido al mundo de la electronica!");
+		JLabel lblNewLabel_1 = new JLabel("Bienvenido al mundo de la electronica!!");
 		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
 		lblNewLabel_1.setBounds(83, 169, 291, 16);
 		frame.getContentPane().add(lblNewLabel_1);
