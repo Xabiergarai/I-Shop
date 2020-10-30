@@ -96,7 +96,7 @@ public class VentanaSeccion {
 		ImageIcon ico4= new ImageIcon("img/smartphone.png");
 		ImageIcon img4= new ImageIcon(ico4.getImage().getScaledInstance(lblNewLabel_3.getWidth(), lblNewLabel_3.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_3.setIcon(img4);
-		
+		System.out.println("prueba");
 		
 		
 	}
