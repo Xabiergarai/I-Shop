@@ -61,9 +61,12 @@ public class VentanaFavoritos {
 		txtFavoritos.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\luisg\\git\\I-Shop\\I-shop\\img\\listadedeseos.png"));
 		lblNewLabel.setBounds(34, 49, 55, 54);
 		frame.getContentPane().add(lblNewLabel);
+		ImageIcon ico5= new ImageIcon("img/listadedeseos.png");
+		ImageIcon img5= new ImageIcon(ico5.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
+	    lblNewLabel.setIcon(img5);
+		
 		
 		txtMisListas = new JTextField();
 		txtMisListas.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -76,8 +79,9 @@ public class VentanaFavoritos {
 		btnNewButton.setBounds(34, 170, 115, 158);
 		frame.getContentPane().add(btnNewButton);
 		
-		ImageIcon ico= new ImageIcon("img/listadedeseos.png");
-		ImageIcon img= new ImageIcon(ico.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
-			lblNewLabel.setIcon(img);
+	
+			
+			
+			
 	}
 }

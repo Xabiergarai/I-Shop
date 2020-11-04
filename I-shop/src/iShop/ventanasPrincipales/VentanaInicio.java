@@ -49,7 +49,7 @@ public class VentanaInicio {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/Uni/Prog III/Proyecto /Imagenes/logo.png"));
+		lblNewLabel.setIcon(new ImageIcon("img/logo.png"));
 		lblNewLabel.setBounds(108, 52, 234, 88);
 		frame.getContentPane().add(lblNewLabel);
 		
