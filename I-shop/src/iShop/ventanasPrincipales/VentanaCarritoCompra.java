@@ -68,12 +68,12 @@ public class VentanaCarritoCompra {
 		chckbxNewCheckBox.setBounds(20, 179, 188, 23);
 		frame.getContentPane().add(chckbxNewCheckBox);
 		
-		JLabel lblNewLabel_2 = new JLabel("TOTAL                                                              999,99");
+		JLabel lblNewLabel_2 = new JLabel("TOTAL:   999,99");
 		lblNewLabel_2.setBounds(20, 215, 360, 16);
 		frame.getContentPane().add(lblNewLabel_2);
 		
 		JButton btnNewButton_3 = new JButton("REALIZAR PEDIDO");
-		btnNewButton_3.setBackground(Color.ORANGE);
+		btnNewButton_3.setBackground(Color.YELLOW);
 		btnNewButton_3.setBounds(104, 243, 188, 29);
 		frame.getContentPane().add(btnNewButton_3);
 		
