@@ -104,7 +104,7 @@ public class VentanaLogin {
 		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:/Users/MIKEL/git/I-Shop/I-shop/img/i-shopNombreLogo.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("img/i-shopNombreLogo.jpg"));
 		lblNewLabel_1.setBounds(115, 40, 236, 138);
 		frame.getContentPane().add(lblNewLabel_1);
 		

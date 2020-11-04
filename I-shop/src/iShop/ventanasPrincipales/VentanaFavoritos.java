@@ -13,7 +13,6 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
-
 public class VentanaFavoritos {
 
 	private JFrame frame;
