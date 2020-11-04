@@ -7,6 +7,10 @@ import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import Clases.BD;
+
 import java.awt.Font;
 import java.awt.Image;
 
@@ -14,6 +18,8 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import java.awt.SystemColor;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VentanaLogin {
 
@@ -56,12 +62,40 @@ public class VentanaLogin {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnNewButton = new JButton("ENTRAR");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String correo = txtEmail.getText();
+				String con = txtContrase.getText();
+				int resul = BD.comprobarUsuario(correo, con);
+				if(resul==0) {
+					JOptionPane.showMessageDialog(null, "Tienes que registrarte", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
+					String correoUsuario = JOptionPane.showInputDialog("Introduce tu correo: ");
+					while (BD.existeUsuario(correoUsuario)) {
+						correoUsuario = JOptionPane.showInputDialog("Este correo ya esta en uso, introduce otro: ");
+					}
+					String conUsuario = JOptionPane.showInputDialog("Introduce tu contraseña: ");
+					BD.insertarUsuario(correoUsuario, conUsuario);
+				}
+				else if(resul==1)
+					JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
+				else
+					JOptionPane.showMessageDialog(null, "Bienvenido!", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
+				vaciarCampos();
+
+			}
+		});
 		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setBackground(new Color(255, 165, 0));
 		btnNewButton.setBounds(132, 366, 185, 48);
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnNuevoCliente = new JButton("NUEVO CLIENTE");
+		btnNuevoCliente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new VentanaRegistro();
+			}
+		});
+		
 		btnNuevoCliente.setForeground(new Color(255, 255, 255));
 		btnNuevoCliente.setBackground(new Color(192, 192, 192));
 		btnNuevoCliente.setBounds(132, 439, 185, 48);
@@ -100,5 +134,11 @@ public class VentanaLogin {
 		ImageIcon ico1= new ImageIcon("E:\\Deusto\\Proyectos\\Proyecto Prog 3\\fotos\\i-shopSinFondo.png");
 		ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_1.setIcon(img1);
+
 	}
+	
+	public void vaciarCampos() {
+		txtEmail.setText("");
+		txtContrase.setText("");
+	}	
 }
