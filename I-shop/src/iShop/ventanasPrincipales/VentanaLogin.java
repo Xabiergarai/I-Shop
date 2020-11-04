@@ -62,28 +62,6 @@ public class VentanaLogin {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnNewButton = new JButton("ENTRAR");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String correo = txtEmail.getText();
-				String con = txtContrase.getText();
-				int resul = BD.comprobarUsuario(correo, con);
-				if(resul==0) {
-					JOptionPane.showMessageDialog(null, "Tienes que registrarte", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
-					String correoUsuario = JOptionPane.showInputDialog("Introduce tu correo: ");
-					while (BD.existeUsuario(correoUsuario)) {
-						correoUsuario = JOptionPane.showInputDialog("Este correo ya esta en uso, introduce otro: ");
-					}
-					String conUsuario = JOptionPane.showInputDialog("Introduce tu contraseña: ");
-					BD.insertarUsuario(correoUsuario, conUsuario);
-				}
-				else if(resul==1)
-					JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
-				else
-					JOptionPane.showMessageDialog(null, "Bienvenido!", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
-				vaciarCampos();
-
-			}
-		});
 		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setBackground(new Color(255, 165, 0));
 		btnNewButton.setBounds(132, 366, 185, 48);
