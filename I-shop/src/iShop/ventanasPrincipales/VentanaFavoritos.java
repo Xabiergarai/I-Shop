@@ -54,6 +54,7 @@ public class VentanaFavoritos {
 		frame.getContentPane().setLayout(null);
 		
 		txtFavoritos = new JTextField();
+		txtFavoritos.setEditable(false);
 		txtFavoritos.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		txtFavoritos.setText("Lista de deseos");
 		txtFavoritos.setBounds(98, 49, 295, 54);
@@ -69,6 +70,7 @@ public class VentanaFavoritos {
 		
 		
 		txtMisListas = new JTextField();
+		txtMisListas.setEditable(false);
 		txtMisListas.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		txtMisListas.setText("Mis listas");
 		txtMisListas.setBounds(34, 139, 115, 20);

@@ -45,7 +45,7 @@ public class VentanaSeccion {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(800, 800, 500, 400);
+		frame.setBounds(100, 100, 500, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
