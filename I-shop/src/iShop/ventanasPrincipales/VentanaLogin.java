@@ -62,6 +62,10 @@ public class VentanaLogin {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnNewButton = new JButton("ENTRAR");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setBackground(new Color(255, 165, 0));
 		btnNewButton.setBounds(132, 366, 185, 48);

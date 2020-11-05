@@ -50,25 +50,9 @@ public class VentanaSeccion {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Secciones de los productos");
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
-		lblNewLabel.setBounds(95, 29, 224, 16);
+		lblNewLabel.setFont(new Font("Dialog", Font.BOLD, 18));
+		lblNewLabel.setBounds(128, 27, 242, 16);
 		frame.getContentPane().add(lblNewLabel);
-		
-		JButton btnNewButton_1 = new JButton("Accesorios");
-		btnNewButton_1.setBounds(274, 64, 117, 29);
-		frame.getContentPane().add(btnNewButton_1);
-		
-		JButton btnNewButton_2 = new JButton("Smartphone");
-		btnNewButton_2.setBounds(162, 212, 117, 29);
-		frame.getContentPane().add(btnNewButton_2);
-		
-		JButton btnNewButton = new JButton("PC");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton.setBounds(46, 64, 117, 29);
-		frame.getContentPane().add(btnNewButton);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setBounds(64, 121, 99, 55);
@@ -90,12 +74,30 @@ public class VentanaSeccion {
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setBackground(Color.WHITE);
-		lblNewLabel_3.setBounds(166, 244, 126, 77);
+		lblNewLabel_3.setBounds(165, 260, 126, 77);
 		frame.getContentPane().add(lblNewLabel_3);
 
 		ImageIcon ico4= new ImageIcon("img/smartphone.png");
 		ImageIcon img4= new ImageIcon(ico4.getImage().getScaledInstance(lblNewLabel_3.getWidth(), lblNewLabel_3.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_3.setIcon(img4);
+		
+		JButton btnPc = new JButton("PC");
+		btnPc.setForeground(Color.WHITE);
+		btnPc.setBackground(new Color(255, 165, 0));
+		btnPc.setBounds(55, 62, 126, 48);
+		frame.getContentPane().add(btnPc);
+		
+		JButton btnAccesorios = new JButton("Accesorios");
+		btnAccesorios.setForeground(Color.WHITE);
+		btnAccesorios.setBackground(new Color(255, 165, 0));
+		btnAccesorios.setBounds(275, 62, 126, 48);
+		frame.getContentPane().add(btnAccesorios);
+		
+		JButton btnSmartphone = new JButton("SmartPhone");
+		btnSmartphone.setForeground(Color.WHITE);
+		btnSmartphone.setBackground(new Color(255, 165, 0));
+		btnSmartphone.setBounds(165, 201, 126, 48);
+		frame.getContentPane().add(btnSmartphone);
 		System.out.println("prueba");
 		
 		

@@ -56,6 +56,7 @@ public class VentanaInfoProducto {
 		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nombre: Honor MagicBook 14 AMD Ryzen 5 3500U/8GB/256GB 14\"");
+		lblNewLabel_1.setToolTipText("");
 		lblNewLabel_1.setHorizontalTextPosition(SwingConstants.LEADING);
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
