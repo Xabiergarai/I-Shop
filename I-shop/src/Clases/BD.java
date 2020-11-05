@@ -14,8 +14,10 @@ public class BD {
 		try {
 		    Class.forName("org.sqlite.JDBC");
 		    Connection con = DriverManager.getConnection("jdbc:sqlite:" + nombreBD );
+		    System.out.println("OK");
 		    return con;
 		} catch (ClassNotFoundException | SQLException e) {
+			System.out.println("error");
 			return null;
 		}
 	}
@@ -39,6 +41,18 @@ public class BD {
 			return statement;
 		} catch (SQLException e) {
 			return null;
+		}
+	}
+	
+	/** Cierra la base de datos abierta
+	 * @param con Conexion abierta de la BD
+	 * @param st Sentencia abierta de la BD
+	 */
+	public static void cerrarBD( Connection con, Statement st ) {
+		try {
+			if (st!=null) st.close();
+			if (con!=null) con.close();
+		} catch (SQLException e) {
 		}
 	}
 }
