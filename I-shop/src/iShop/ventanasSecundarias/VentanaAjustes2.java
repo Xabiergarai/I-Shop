@@ -56,7 +56,7 @@ public class VentanaAjustes2 {
 		lblNewLabel.setBounds(25, 24, 110, 16);
 		frame.getContentPane().add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Antigua contraseña");
+		JLabel lblNewLabel_1 = new JLabel("Antigua contrasenia");
 		lblNewLabel_1.setBounds(25, 63, 137, 16);
 		frame.getContentPane().add(lblNewLabel_1);
 		
@@ -65,7 +65,7 @@ public class VentanaAjustes2 {
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		JLabel lblNewLabel_2 = new JLabel("Nueva contraseña");
+		JLabel lblNewLabel_2 = new JLabel("Nueva contrasenia");
 		lblNewLabel_2.setBounds(25, 122, 137, 16);
 		frame.getContentPane().add(lblNewLabel_2);
 		
@@ -74,7 +74,7 @@ public class VentanaAjustes2 {
 		frame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 		
-		JLabel lblNewLabel_3 = new JLabel("Repetir contraeña");
+		JLabel lblNewLabel_3 = new JLabel("Repetir contraenia");
 		lblNewLabel_3.setBounds(25, 188, 137, 16);
 		frame.getContentPane().add(lblNewLabel_3);
 		

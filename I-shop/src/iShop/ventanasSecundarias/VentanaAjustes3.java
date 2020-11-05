@@ -51,7 +51,7 @@ public class VentanaAjustes3 {
 		frame.getContentPane().add(lblNewLabel);
 		
 		JEditorPane dtrpnAadirDireccion = new JEditorPane();
-		dtrpnAadirDireccion.setText("Añadir direccion");
+		dtrpnAadirDireccion.setText("Aniadir direccion");
 		dtrpnAadirDireccion.setBounds(25, 89, 130, 16);
 		frame.getContentPane().add(dtrpnAadirDireccion);
 		
@@ -64,7 +64,7 @@ public class VentanaAjustes3 {
 		frame.getContentPane().add(lblNewLabel_2);
 		
 		JEditorPane dtrpnAadirDireccion_1 = new JEditorPane();
-		dtrpnAadirDireccion_1.setText("Añadir direccion");
+		dtrpnAadirDireccion_1.setText("Aniadir direccion");
 		dtrpnAadirDireccion_1.setBounds(25, 154, 130, 16);
 		frame.getContentPane().add(dtrpnAadirDireccion_1);
 		

@@ -1,4 +1,4 @@
-package Clases;
+package Tienda;
 
 public class Usuario {
 
