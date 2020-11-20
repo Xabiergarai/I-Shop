@@ -9,6 +9,9 @@ public class Producto {
 	private String descripcion;
 	private String categoria;
 	
+	/*Constructor*/
+	
+	
 	public Producto(String nombre, String codigo, String marca, double precio,
 		   String descripcion, String categoria) {
 		super();
