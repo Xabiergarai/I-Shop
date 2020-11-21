@@ -65,6 +65,28 @@ public class VentanaLogin {
 		JButton btnNewButton = new JButton("ENTRAR");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				String email = txtEmail.getText();
+				String con = txtContrase.getText();
+				int resul = BD.comprobarUsuario(email, con);
+				if(resul==0) {
+					JOptionPane.showMessageDialog(null, "El e-mail no esta registrado.", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
+					//String emailUsuario = JOptionPane.showInputDialog("Introduce tu correo: ");
+					//while (BD.existeUsuario(emailUsuario)) {
+						//emailUsuario = JOptionPane.showInputDialog("Correo repetido, introduce otro: ");
+					//}
+					//String conUsuario = JOptionPane.showInputDialog("Introduce tu contraseña: ");
+					//BD.insertarUsuario(emailUsuario, conUsuario);
+				}
+				else if(resul==1)
+					JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
+				else
+					JOptionPane.showMessageDialog(null, "Bienvenido!", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
+				/*boolean existe = BD.existeUsuario(nick);
+				if(existe)
+					JOptionPane.showMessageDialog(null, "ONGI ETORRI!", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
+				else
+					JOptionPane.showMessageDialog(null, "Tienes que registrarte", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);*/
+				vaciarCampos();
 			}
 		});
 		btnNewButton.setForeground(new Color(255, 255, 255));
@@ -75,7 +97,8 @@ public class VentanaLogin {
 		JButton btnNuevoCliente = new JButton("NUEVO CLIENTE");
 		btnNuevoCliente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new VentanaRegistro();
+				VentanaRegistro.main(null);
+				frame.dispose();
 			}
 		});
 		
@@ -95,13 +118,13 @@ public class VentanaLogin {
 		txtContrase = new JTextField();
 		txtContrase.setBackground(SystemColor.menu);
 		txtContrase.setHorizontalAlignment(SwingConstants.LEFT);
-		txtContrase.setText("CONTRASE\u00D1A");
+		txtContrase.setText("CONTRASEÑA");
 		txtContrase.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		txtContrase.setColumns(10);
 		txtContrase.setBounds(115, 252, 236, 42);
 		frame.getContentPane().add(txtContrase);
 		
-		JLabel lblNewLabel = new JLabel("He olvidado mi contrase\u00F1a");
+		JLabel lblNewLabel = new JLabel("He olvidado mi contraseña");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel.setForeground(new Color(255, 165, 0));

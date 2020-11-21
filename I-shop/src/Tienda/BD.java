@@ -35,8 +35,9 @@ public class BD {
 		try {
 			Statement statement = con.createStatement();
 			statement.executeUpdate("create table Usuario "+
-						   "(correo string, "+
-						   " con string)");
+						   "(nombre varchar, "+
+						   " email varchar, "+
+						   " con varchar)");
 
 			return statement;
 		} catch (SQLException e) {
@@ -54,5 +55,78 @@ public class BD {
 			if (con!=null) con.close();
 		} catch (SQLException e) {
 		}
+	}
+	
+	public static boolean existeUsuario(String email) {
+		//statement.executeUpdate : Cuando queramos hacer create, insert, delete, update, drop
+		//statement.executeQuery : Cuando queramos hacer select
+		
+		
+		boolean existe = false;
+		
+		String sql = "SELECT * FROM Usuario WHERE email ='"+email+"'";
+		Connection con = initBD("proyecto.db");
+		Statement st;
+		try {
+			st = con.createStatement(); //Creo el objeto sentencia
+			ResultSet rs = st.executeQuery(sql); //Ejecutamos la consulta
+			if(rs.next()) { //rs.next() -> Devuelve true si rs tiene datos, false en caso contrario
+				existe = true;
+			}
+			cerrarBD(con, st);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return existe;
+	}
+	
+	/**
+	 * 
+	 * @param email Correo insertado por el usuario
+	 * @param con Contraseña insertada por el usuario
+	 * @return 0 - Si el usuario no está registrado
+	 *         1 - Si el email es correcto pero la contraseña no
+	 *         2 - Si el email es correcto y la contraseña también 
+	 */
+	public static int comprobarUsuario(String email, String con) {
+		int resul = 0;
+		String s = "SELECT * FROM Usuario WHERE email = '"+email+"'";
+		
+		Connection c = initBD("proyecto.db");
+		try {
+			Statement st = c.createStatement();
+			//Una select SIEMPRE devuelve un ResultSet
+			ResultSet rs = st.executeQuery(s);
+			if(rs.next()) { //Si hemos encontrado el usuario cuyo email coincide con el recibido por parámetro
+				String contrasenia = rs.getString("con");
+				if(contrasenia.equals(con))
+					resul = 2;
+				else
+					resul = 1;
+			}
+			cerrarBD(c, st);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return resul;
+		
+	}
+	
+	public static void insertarUsuario(String nombre, String email, String con) {
+		
+		String s = "INSERT INTO Usuario VALUES('"+nombre+"','"+email+"','"+con+"')";
+		Connection c = BD.initBD("proyecto.db");
+		try {
+			Statement st = c.createStatement();
+			st.executeUpdate(s);
+			cerrarBD(c, st);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }

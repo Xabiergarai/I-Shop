@@ -4,6 +4,9 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+
+import Tienda.BD;
+
 import java.awt.SystemColor;
 import java.awt.Font;
 import java.awt.Image;
@@ -12,7 +15,10 @@ import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VentanaRegistro {
 
@@ -81,6 +87,22 @@ public class VentanaRegistro {
 		frame.getContentPane().add(txtContrasena_1);
 		
 		JButton btnCrearCuenta = new JButton("CREAR CUENTA");
+		btnCrearCuenta.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//String email = txtEmail.getText();
+				//String con = txtContrasena.getText();
+				//int resul = BD.comprobarUsuario(email, con);
+				String nombreUsuario = txtNombre.getText();
+				String emailUsuario = txtEmail.getText();
+				String conUsuario = txtContrasena.getText();
+				if  (BD.existeUsuario(emailUsuario)) {
+					emailUsuario = JOptionPane.showInputDialog("Este email ya esta en uso, introduce otro: ");	
+				} else {
+					BD.insertarUsuario(nombreUsuario, emailUsuario, conUsuario);
+				}
+					
+			}
+		});
 		btnCrearCuenta.setForeground(Color.WHITE);
 		btnCrearCuenta.setBackground(new Color(255, 165, 0));
 		btnCrearCuenta.setBounds(136, 440, 185, 48);
