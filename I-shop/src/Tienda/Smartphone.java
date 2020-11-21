@@ -3,12 +3,12 @@ package Tienda;
 public class Smartphone extends Producto {
 	
 	private String sistemaOperativo;
-	private int pulgadas;
+	private double pulgadas;
 	private boolean nfc;
 	
 	
 	public Smartphone(String nombre, String codigo, String marca, double precio, String descripcion, String categoria,
-			String sistemaOperativo, int pulgadas, boolean nfc) {
+			String sistemaOperativo, double pulgadas, boolean nfc) {
 		super(nombre, codigo, marca, precio, descripcion, categoria);
 		this.sistemaOperativo = sistemaOperativo;
 		this.pulgadas = pulgadas;
@@ -18,7 +18,7 @@ public class Smartphone extends Producto {
 	public Smartphone() {
 		super();
 		this.sistemaOperativo = "";
-		this.pulgadas = 0;
+		this.pulgadas = 0.0;
 		this.nfc = false;
 	}
 
@@ -30,7 +30,7 @@ public class Smartphone extends Producto {
 		this.sistemaOperativo = sistemaOperativo;
 	}
 
-	public int getPulgadas() {
+	public double getPulgadas() {
 		return pulgadas;
 	}
 
