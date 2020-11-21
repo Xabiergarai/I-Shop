@@ -3,12 +3,12 @@ package Tienda;
 public class Ordenador extends Producto {
 	
 	private String ram;
-	private int pulgadas;
+	private double pulgadas;
 	private boolean portatil;
 	
 	
 	public Ordenador(String nombre, String codigo, String marca, double precio, String descripcion, String categoria,
-			String ram, int pulgadas, boolean portatil) {
+			String ram, double pulgadas, boolean portatil) {
 		super(nombre, codigo, marca, precio, descripcion, categoria);
 		this.ram = ram;
 		this.pulgadas = pulgadas;
@@ -18,7 +18,7 @@ public class Ordenador extends Producto {
 	public Ordenador() {
 		super();
 		this.ram = "";
-		this.pulgadas = 0;
+		this.pulgadas = 0.0;
 		this.portatil = false;
 	}
 
@@ -30,7 +30,7 @@ public class Ordenador extends Producto {
 		this.ram = ram;
 	}
 
-	public int getPulgadas() {
+	public double getPulgadas() {
 		return pulgadas;
 	}
 
