@@ -89,7 +89,7 @@ public class VentanaSeccion {
 				
 			btnPc.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					VentanaProducto.main(null);
+					VentanaOrdenador.main(null);
 					frame.dispose();
 				}
 			});
@@ -102,7 +102,7 @@ public class VentanaSeccion {
 			
 			btnAccesorios.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					VentanaProducto.main(null);
+					VentanaOrdenador.main(null);
 					frame.dispose();
 				}
 			});
@@ -117,7 +117,7 @@ public class VentanaSeccion {
 
 		btnSmartphone.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaProducto.main(null);
+				VentanaOrdenador.main(null);
 				frame.dispose();
 			}
 		});

@@ -15,7 +15,7 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-public class VentanaProducto {
+public class VentanaOrdenador {
 
 	private JFrame frame;
 
@@ -26,7 +26,7 @@ public class VentanaProducto {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaProducto window = new VentanaProducto();
+					VentanaOrdenador window = new VentanaOrdenador();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,7 +38,7 @@ public class VentanaProducto {
 	/**
 	 * Create the application.
 	 */
-	public VentanaProducto() {
+	public VentanaOrdenador() {
 		initialize();
 	}
 
@@ -53,12 +53,12 @@ public class VentanaProducto {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(57, 72, 124, 141);
+		lblNewLabel.setBounds(72, 90, 124, 141);
 		frame.getContentPane().add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("PCs");
+		JLabel lblNewLabel_1 = new JLabel("Ordenadores");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblNewLabel_1.setBounds(29, 11, 139, 43);
+		lblNewLabel_1.setBounds(42, 18, 154, 43);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		
@@ -66,23 +66,23 @@ public class VentanaProducto {
         ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
         lblNewLabel.setIcon(img1);
         
-        JLabel lblNewLabel_2 = new JLabel("Lenovo IdeaPad 3 15ADA05 AMD\r\n3020e/8GB/256GB SSD/15.6\"");
+        JLabel lblNewLabel_2 = new JLabel("<html>Lenovo IdeaPad 3 15ADA05 AMD\r\n3020e/8GB/256GB SSD/15.6\"<html>" );
         lblNewLabel_2.setBackground(Color.WHITE);
         lblNewLabel_2.setToolTipText("");
         lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        lblNewLabel_2.setBounds(57, 188, 139, 107);
+        lblNewLabel_2.setBounds(77, 234, 139, 107);
         frame.getContentPane().add(lblNewLabel_2);
         
-        JLabel label = new JLabel("379\u20AC");
+        JLabel label = new JLabel("379 eur");
         label.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        label.setBounds(57, 270, 124, 43);
+        label.setBounds(67, 330, 124, 43);
         frame.getContentPane().add(label);
         
-        JButton btnAnadirAlCarrito = new JButton("A\u00F1adir al carrito");
+        JButton btnAnadirAlCarrito = new JButton("Añadir al carrito");
         btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito.setForeground(Color.WHITE);
         btnAnadirAlCarrito.setBackground(new Color(255, 165, 0));
-        btnAnadirAlCarrito.setBounds(57, 312, 139, 43);
+        btnAnadirAlCarrito.setBounds(57, 419, 139, 43);
         frame.getContentPane().add(btnAnadirAlCarrito);
         
 
@@ -94,30 +94,30 @@ public class VentanaProducto {
 		});
         
         JLabel lblNewLabel_3 = new JLabel("New label");
-        lblNewLabel_3.setBounds(291, 72, 124, 141);
+        lblNewLabel_3.setBounds(301, 90, 124, 141);
         frame.getContentPane().add(lblNewLabel_3);
         
         ImageIcon ico2= new ImageIcon("img/Portatil.jpg");
         ImageIcon img2= new ImageIcon(ico2.getImage().getScaledInstance(lblNewLabel_3.getWidth(), lblNewLabel_3.getHeight(), Image.SCALE_SMOOTH));
         lblNewLabel_3.setIcon(img2);
         
-        JLabel lblNewLabel_2_1 = new JLabel("HP 255 G7 AMD Ryzen 5 3500U/8GB/256 GB SSD/15.6\"");
+        JLabel lblNewLabel_2_1 = new JLabel("<html>HP 255 G7 AMD Ryzen 5 3500U/8GB/256 GB SSD/15.6\"<html>");
         lblNewLabel_2_1.setToolTipText("");
         lblNewLabel_2_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
         lblNewLabel_2_1.setBackground(Color.WHITE);
-        lblNewLabel_2_1.setBounds(291, 188, 139, 107);
+        lblNewLabel_2_1.setBounds(291, 234, 139, 107);
         frame.getContentPane().add(lblNewLabel_2_1);
         
-        JLabel label_1 = new JLabel("559\u20AC");
+        JLabel label_1 = new JLabel("559 eur");
         label_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        label_1.setBounds(291, 270, 124, 43);
+        label_1.setBounds(301, 330, 124, 43);
         frame.getContentPane().add(label_1);
         
-        JButton btnAnadirAlCarrito_1 = new JButton("A\u00F1adir al carrito");
+        JButton btnAnadirAlCarrito_1 = new JButton("Añadir al carrito");
         btnAnadirAlCarrito_1.setForeground(Color.WHITE);
         btnAnadirAlCarrito_1.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_1.setBackground(new Color(255, 165, 0));
-        btnAnadirAlCarrito_1.setBounds(291, 312, 139, 43);
+        btnAnadirAlCarrito_1.setBounds(291, 419, 139, 43);
         frame.getContentPane().add(btnAnadirAlCarrito_1);
         
 
