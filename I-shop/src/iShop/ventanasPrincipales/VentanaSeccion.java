@@ -45,7 +45,7 @@ public class VentanaSeccion {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 500, 400);
+		frame.setBounds(100, 100, 500, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -112,7 +112,18 @@ public class VentanaSeccion {
 		btnSmartphone.setBackground(new Color(255, 165, 0));
 		btnSmartphone.setBounds(165, 201, 126, 48);
 		frame.getContentPane().add(btnSmartphone);
+		
+		JButton btnBuscarProducto = new JButton("Busque aqui el producto deseado");
+		btnBuscarProducto.setBounds(99, 381, 271, 29);
+		frame.getContentPane().add(btnBuscarProducto);
 		System.out.println("prueba");
+		
+		btnBuscarProducto.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaBusqueda.main(null);
+				frame.dispose();
+			}
+		});
 		
 
 		btnSmartphone.addActionListener(new ActionListener() {
