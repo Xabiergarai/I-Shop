@@ -175,7 +175,6 @@ public class VentanaOrdenador {
         scrollBar.setBounds(480, 154, 15, 465);
         frame.getContentPane().add(scrollBar);
         
-
 		btnAnadirAlCarrito_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaCarritoCompra.main(null);
