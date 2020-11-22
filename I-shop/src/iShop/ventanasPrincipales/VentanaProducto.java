@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
@@ -76,12 +78,20 @@ public class VentanaProducto {
         label.setBounds(57, 270, 124, 43);
         frame.getContentPane().add(label);
         
-        JButton btnAadirAlCarrito = new JButton("A\u00F1adir al carrito");
-        btnAadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
-        btnAadirAlCarrito.setForeground(Color.WHITE);
-        btnAadirAlCarrito.setBackground(new Color(255, 165, 0));
-        btnAadirAlCarrito.setBounds(57, 312, 139, 43);
-        frame.getContentPane().add(btnAadirAlCarrito);
+        JButton btnAnadirAlCarrito = new JButton("A\u00F1adir al carrito");
+        btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
+        btnAnadirAlCarrito.setForeground(Color.WHITE);
+        btnAnadirAlCarrito.setBackground(new Color(255, 165, 0));
+        btnAnadirAlCarrito.setBounds(57, 312, 139, 43);
+        frame.getContentPane().add(btnAnadirAlCarrito);
+        
+
+		btnAnadirAlCarrito.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaCarritoCompra.main(null);
+				frame.dispose();
+			}
+		});
         
         JLabel lblNewLabel_3 = new JLabel("New label");
         lblNewLabel_3.setBounds(291, 72, 124, 141);
@@ -103,11 +113,19 @@ public class VentanaProducto {
         label_1.setBounds(291, 270, 124, 43);
         frame.getContentPane().add(label_1);
         
-        JButton btnAadirAlCarrito_1 = new JButton("A\u00F1adir al carrito");
-        btnAadirAlCarrito_1.setForeground(Color.WHITE);
-        btnAadirAlCarrito_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-        btnAadirAlCarrito_1.setBackground(new Color(255, 165, 0));
-        btnAadirAlCarrito_1.setBounds(291, 312, 139, 43);
-        frame.getContentPane().add(btnAadirAlCarrito_1);
+        JButton btnAnadirAlCarrito_1 = new JButton("A\u00F1adir al carrito");
+        btnAnadirAlCarrito_1.setForeground(Color.WHITE);
+        btnAnadirAlCarrito_1.setFont(new Font("Tahoma", Font.BOLD, 11));
+        btnAnadirAlCarrito_1.setBackground(new Color(255, 165, 0));
+        btnAnadirAlCarrito_1.setBounds(291, 312, 139, 43);
+        frame.getContentPane().add(btnAnadirAlCarrito_1);
+        
+
+		btnAnadirAlCarrito_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaCarritoCompra.main(null);
+				frame.dispose();
+			}
+		});
 	}
 }

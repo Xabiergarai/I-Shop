@@ -85,13 +85,27 @@ public class VentanaSeccion {
 		btnPc.setForeground(Color.WHITE);
 		btnPc.setBackground(new Color(255, 165, 0));
 		btnPc.setBounds(55, 62, 126, 48);
-		frame.getContentPane().add(btnPc);
+		frame.getContentPane().add(btnPc); 
+				
+			btnPc.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					VentanaProducto.main(null);
+					frame.dispose();
+				}
+			});
 		
 		JButton btnAccesorios = new JButton("Accesorios");
 		btnAccesorios.setForeground(Color.WHITE);
 		btnAccesorios.setBackground(new Color(255, 165, 0));
 		btnAccesorios.setBounds(275, 62, 126, 48);
-		frame.getContentPane().add(btnAccesorios);
+		frame.getContentPane().add(btnAccesorios); 
+			
+			btnAccesorios.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					VentanaProducto.main(null);
+					frame.dispose();
+				}
+			});
 		
 		JButton btnSmartphone = new JButton("SmartPhone");
 		btnSmartphone.setForeground(Color.WHITE);
@@ -100,6 +114,12 @@ public class VentanaSeccion {
 		frame.getContentPane().add(btnSmartphone);
 		System.out.println("prueba");
 		
-		
+
+		btnSmartphone.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaProducto.main(null);
+				frame.dispose();
+			}
+		});
 	}
 }
