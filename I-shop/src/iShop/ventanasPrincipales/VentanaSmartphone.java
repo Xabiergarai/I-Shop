@@ -121,11 +121,14 @@ public class VentanaSmartphone {
         lblNewLabel_1_1.setIcon(img2);
         
         JLabel lblNewLabel_3 = new JLabel("New label");
-        lblNewLabel_3.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/movil 4.jpg"));
         lblNewLabel_3.setBounds(67, 510, 139, 123);
         frame.getContentPane().add(lblNewLabel_3);
         
-        JLabel lblNewLabel_4 = new JLabel("Samsung Galaxy Tab A 10.1\" 2019 32GB Wifi Plata");
+        ImageIcon ico3= new ImageIcon("img/movil 4.jpg");
+        ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblNewLabel_3.getWidth(), lblNewLabel_3.getHeight(), Image.SCALE_SMOOTH));
+        lblNewLabel_3.setIcon(img3);
+        
+        JLabel lblNewLabel_4 = new JLabel("<html>Samsung Galaxy Tab A 10.1\" 2019 32GB Wifi Plata<html>");
         lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 12));
         lblNewLabel_4.setBounds(67, 645, 139, 16);
         frame.getContentPane().add(lblNewLabel_4);
@@ -135,14 +138,14 @@ public class VentanaSmartphone {
         lblNewLabel_5.setBounds(67, 698, 93, 16);
         frame.getContentPane().add(lblNewLabel_5);
         
-        JButton btnAnadirAlCarrito_2 = new JButton("Aï¿½adir al carrito");
+        JButton btnAnadirAlCarrito_2 = new JButton("Añadir al carrito");
         btnAnadirAlCarrito_2.setForeground(Color.WHITE);
         btnAnadirAlCarrito_2.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_2.setBackground(new Color(255, 165, 0));
         btnAnadirAlCarrito_2.setBounds(67, 726, 139, 43);
         frame.getContentPane().add(btnAnadirAlCarrito_2);
         
-        JButton btnAnadirAlCarrito_3 = new JButton("Aï¿½adir al carrito");
+        JButton btnAnadirAlCarrito_3 = new JButton("Añadir al carrito");
         btnAnadirAlCarrito_3.setForeground(Color.WHITE);
         btnAnadirAlCarrito_3.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_3.setBackground(new Color(255, 165, 0));
@@ -150,9 +153,13 @@ public class VentanaSmartphone {
         frame.getContentPane().add(btnAnadirAlCarrito_3);
         
         JLabel lblNewLabel_6 = new JLabel("New label");
-        lblNewLabel_6.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/movil3.jpg"));
         lblNewLabel_6.setBounds(298, 510, 134, 123);
         frame.getContentPane().add(lblNewLabel_6);
+        
+        ImageIcon ico4= new ImageIcon("img/movil3.jpg");
+        ImageIcon img4= new ImageIcon(ico4.getImage().getScaledInstance(lblNewLabel_6.getWidth(), lblNewLabel_6.getHeight(), Image.SCALE_SMOOTH));
+        lblNewLabel_6.setIcon(img4);
+        
         
         JLabel lblNewLabel_7 = new JLabel("Realme 6 4/64GB Comet Blue Libre");
         lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 12));

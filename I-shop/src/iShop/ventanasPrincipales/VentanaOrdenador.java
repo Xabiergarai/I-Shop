@@ -79,7 +79,7 @@ public class VentanaOrdenador {
         label.setBounds(67, 330, 124, 43);
         frame.getContentPane().add(label);
         
-        JButton btnAnadirAlCarrito = new JButton("Aï¿½adir al carrito");
+        JButton btnAnadirAlCarrito = new JButton("Añadir al carrito");
         btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito.setForeground(Color.WHITE);
         btnAnadirAlCarrito.setBackground(new Color(255, 165, 0));
@@ -114,7 +114,7 @@ public class VentanaOrdenador {
         label_1.setBounds(301, 330, 124, 43);
         frame.getContentPane().add(label_1);
         
-        JButton btnAnadirAlCarrito_1 = new JButton("Aï¿½adir al carrito");
+        JButton btnAnadirAlCarrito_1 = new JButton("Añadir al carrito");
         btnAnadirAlCarrito_1.setForeground(Color.WHITE);
         btnAnadirAlCarrito_1.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_1.setBackground(new Color(255, 165, 0));
@@ -122,47 +122,53 @@ public class VentanaOrdenador {
         frame.getContentPane().add(btnAnadirAlCarrito_1);
         
         JLabel lblNewLabel_4 = new JLabel("New label");
-        lblNewLabel_4.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/pc3.jpg"));
         lblNewLabel_4.setBounds(72, 526, 154, 93);
         frame.getContentPane().add(lblNewLabel_4);
         
-        JLabel lblNewLabel_5 = new JLabel("Apple MacBook Pro Intel Core i5/8GB/512GB SSD/13.3\" Gris Espacial");
+        ImageIcon ico3= new ImageIcon("img/pc3.jpg");
+        ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblNewLabel_4.getWidth(), lblNewLabel_4.getHeight(), Image.SCALE_SMOOTH));
+        lblNewLabel_4.setIcon(img3);
+        
+        JLabel lblNewLabel_5 = new JLabel("<html>Apple MacBook Pro Intel Core i5/8GB/512GB SSD/13.3\" Gris Espacial<html>");
         lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        lblNewLabel_5.setBounds(57, 631, 139, 16);
+        lblNewLabel_5.setBounds(57, 647, 139, 60);
         frame.getContentPane().add(lblNewLabel_5);
         
         JLabel lblNewLabel_6 = new JLabel("1499 eur");
         lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        lblNewLabel_6.setBounds(57, 679, 119, 16);
+        lblNewLabel_6.setBounds(72, 718, 119, 16);
         frame.getContentPane().add(lblNewLabel_6);
         
-        JButton btnAnadirAlCarrito_2 = new JButton("Aï¿½adir al carrito");
+        JButton btnAnadirAlCarrito_2 = new JButton("Añadir al carrito");
         btnAnadirAlCarrito_2.setForeground(Color.WHITE);
         btnAnadirAlCarrito_2.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_2.setBackground(new Color(255, 165, 0));
-        btnAnadirAlCarrito_2.setBounds(57, 717, 139, 43);
+        btnAnadirAlCarrito_2.setBounds(67, 759, 139, 43);
         frame.getContentPane().add(btnAnadirAlCarrito_2);
         
-        JButton btnAnadirAlCarrito_2_1 = new JButton("Aï¿½adir al carrito");
+        JButton btnAnadirAlCarrito_2_1 = new JButton("Añadir al carrito");
         btnAnadirAlCarrito_2_1.setForeground(Color.WHITE);
         btnAnadirAlCarrito_2_1.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_2_1.setBackground(new Color(255, 165, 0));
-        btnAnadirAlCarrito_2_1.setBounds(301, 717, 139, 43);
+        btnAnadirAlCarrito_2_1.setBounds(301, 759, 139, 43);
         frame.getContentPane().add(btnAnadirAlCarrito_2_1);
         
         JLabel lblNewLabel_7 = new JLabel("New label");
-        lblNewLabel_7.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/pc4.jpg"));
         lblNewLabel_7.setBounds(301, 526, 154, 93);
         frame.getContentPane().add(lblNewLabel_7);
         
-        JLabel lblNewLabel_8 = new JLabel("Asus Tuf Gaming A15 FA506II-BQ029 AMD Ryzen 7 4800H/16GB/1TB SSD/GTX 1650Ti/15.6\"");
+        ImageIcon ico4= new ImageIcon("img/pc4.jpg");
+        ImageIcon img4= new ImageIcon(ico4.getImage().getScaledInstance(lblNewLabel_7.getWidth(), lblNewLabel_7.getHeight(), Image.SCALE_SMOOTH));
+        lblNewLabel_7.setIcon(img4);
+        
+        JLabel lblNewLabel_8 = new JLabel("<html>Asus Tuf Gaming A15 AMD Ryzen 7 4800H/16GB/1TB SSD/GTX 1650Ti/15.6\"<html>");
         lblNewLabel_8.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        lblNewLabel_8.setBounds(301, 631, 124, 16);
+        lblNewLabel_8.setBounds(301, 630, 124, 77);
         frame.getContentPane().add(lblNewLabel_8);
         
         JLabel lblNewLabel_9 = new JLabel("1199 eur");
         lblNewLabel_9.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        lblNewLabel_9.setBounds(301, 679, 93, 16);
+        lblNewLabel_9.setBounds(309, 718, 93, 16);
         frame.getContentPane().add(lblNewLabel_9);
         
         JScrollBar scrollBar = new JScrollBar();
