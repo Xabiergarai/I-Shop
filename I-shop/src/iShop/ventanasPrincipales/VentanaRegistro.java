@@ -18,6 +18,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
+import java.sql.*;
 import java.awt.event.ActionEvent;
 
 public class VentanaRegistro {
@@ -95,12 +96,22 @@ public class VentanaRegistro {
 				String nombreUsuario = txtNombre.getText();
 				String emailUsuario = txtEmail.getText();
 				String conUsuario = txtContrasena.getText();
-				if  (BD.existeUsuario(emailUsuario)) {
-					emailUsuario = JOptionPane.showInputDialog("Este email ya esta en uso, introduce otro: ");	
-				} else {
-					BD.insertarUsuario(nombreUsuario, emailUsuario, conUsuario);
-				}
+				
+				Connection con;
+				try {
+					con = DriverManager.getConnection("jdbc:sqlite:proyecto.db");
+					BD.usarCrearTablasBD(con);
 					
+					if  (BD.existeUsuario(emailUsuario)) {
+						emailUsuario = JOptionPane.showInputDialog("Este email ya esta en uso, introduce otro: ");	
+					} else {
+						BD.insertarUsuario(nombreUsuario, emailUsuario, conUsuario);
+					}
+				} catch (SQLException e1) {
+					
+						e1.printStackTrace();
+				}
+	
 			}
 		});
 		btnCrearCuenta.setForeground(Color.WHITE);
