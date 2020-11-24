@@ -46,7 +46,7 @@ public class VentanaSmartphone {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 600, 800);
+		frame.setBounds(100, 100, 600, 900);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -70,10 +70,10 @@ public class VentanaSmartphone {
 		
 		JLabel label = new JLabel("630,99 eur");
 		label.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		label.setBounds(85, 371, 93, 16);
+		label.setBounds(67, 371, 93, 16);
 		frame.getContentPane().add(label);
 		
-		JButton btnAnadirAlCarrito = new JButton("A�adir al carrito");
+		JButton btnAnadirAlCarrito = new JButton("Agregar al carrito");
 		btnAnadirAlCarrito.setForeground(Color.WHITE);
 		btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAnadirAlCarrito.setBackground(new Color(255, 165, 0));
@@ -88,7 +88,7 @@ public class VentanaSmartphone {
 		});
 		
 		
-		JButton btnAnadirAlCarrito_1 = new JButton("A�adir al carrito");
+		JButton btnAnadirAlCarrito_1 = new JButton("Agregar al carrito");
 		btnAnadirAlCarrito_1.setForeground(Color.WHITE);
 		btnAnadirAlCarrito_1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAnadirAlCarrito_1.setBackground(new Color(255, 165, 0));
@@ -109,7 +109,7 @@ public class VentanaSmartphone {
 		
 		JLabel lblNewLabel_2_2 = new JLabel("199 eur");
 		lblNewLabel_2_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_2_2.setBounds(314, 371, 85, 16);
+		lblNewLabel_2_2.setBounds(293, 371, 85, 16);
 		frame.getContentPane().add(lblNewLabel_2_2);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("New label");
@@ -135,14 +135,14 @@ public class VentanaSmartphone {
         
         JLabel lblNewLabel_5 = new JLabel("169 eur");
         lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        lblNewLabel_5.setBounds(67, 698, 93, 16);
+        lblNewLabel_5.setBounds(67, 694, 93, 16);
         frame.getContentPane().add(lblNewLabel_5);
         
-        JButton btnAnadirAlCarrito_2 = new JButton("A�adir al carrito");
+        JButton btnAnadirAlCarrito_2 = new JButton("Agregar al carrito");
         btnAnadirAlCarrito_2.setForeground(Color.WHITE);
         btnAnadirAlCarrito_2.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_2.setBackground(new Color(255, 165, 0));
-        btnAnadirAlCarrito_2.setBounds(67, 726, 139, 43);
+        btnAnadirAlCarrito_2.setBounds(62, 737, 139, 43);
         frame.getContentPane().add(btnAnadirAlCarrito_2);
         
         btnAnadirAlCarrito_2.addActionListener(new ActionListener() {
@@ -152,11 +152,11 @@ public class VentanaSmartphone {
 			}
 		});
         
-        JButton btnAnadirAlCarrito_3 = new JButton("A�adir al carrito");
+        JButton btnAnadirAlCarrito_3 = new JButton("Agregar al carrito");
         btnAnadirAlCarrito_3.setForeground(Color.WHITE);
         btnAnadirAlCarrito_3.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_3.setBackground(new Color(255, 165, 0));
-        btnAnadirAlCarrito_3.setBounds(293, 726, 139, 43);
+        btnAnadirAlCarrito_3.setBounds(288, 737, 139, 43);
         frame.getContentPane().add(btnAnadirAlCarrito_3);
         
         btnAnadirAlCarrito_3.addActionListener(new ActionListener() {
@@ -177,19 +177,19 @@ public class VentanaSmartphone {
         
         JLabel lblNewLabel_7 = new JLabel("Realme 6 4/64GB Comet Blue Libre");
         lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        lblNewLabel_7.setBounds(293, 645, 106, 16);
+        lblNewLabel_7.setBounds(293, 645, 194, 16);
         frame.getContentPane().add(lblNewLabel_7);
         
         JLabel lblNewLabel_8 = new JLabel("169 eur");
         lblNewLabel_8.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        lblNewLabel_8.setBounds(293, 698, 78, 16);
+        lblNewLabel_8.setBounds(293, 694, 78, 16);
         frame.getContentPane().add(lblNewLabel_8);
         
         JScrollBar scrollBar = new JScrollBar();
-        scrollBar.setBounds(499, 110, 15, 482);
+        scrollBar.setBounds(554, 11, 15, 861);
         frame.getContentPane().add(scrollBar);
         
-        JButton btnFav = new JButton("New button");
+        JButton btnFav = new JButton("Fav");
         btnFav.setBounds(207, 428, 53, 43);
         frame.getContentPane().add(btnFav);
         
@@ -200,7 +200,7 @@ public class VentanaSmartphone {
 			}
 		});
         
-        JButton btnFav3 = new JButton("New button");
+        JButton btnFav3 = new JButton("Fav");
         btnFav3.setBounds(434, 428, 53, 43);
         frame.getContentPane().add(btnFav3);
         
@@ -212,8 +212,8 @@ public class VentanaSmartphone {
 		});
         
         
-        JButton btnFav2 = new JButton("New button");
-        btnFav2.setBounds(207, 726, 53, 43);
+        JButton btnFav2 = new JButton("Fav");
+        btnFav2.setBounds(202, 737, 53, 43);
         frame.getContentPane().add(btnFav2);
         
         btnFav2.addActionListener(new ActionListener() {
@@ -223,8 +223,8 @@ public class VentanaSmartphone {
 			}
 		});
         
-        JButton btnFav4 = new JButton("New button");
-        btnFav4.setBounds(434, 726, 53, 43);
+        JButton btnFav4 = new JButton("Fav");
+        btnFav4.setBounds(429, 737, 53, 43);
         frame.getContentPane().add(btnFav4);
         
 		

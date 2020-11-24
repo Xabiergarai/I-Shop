@@ -49,7 +49,7 @@ public class VentanaOrdenador {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 10));
-		frame.setBounds(100, 100, 600, 800);
+		frame.setBounds(100, 100, 600, 900);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -76,10 +76,10 @@ public class VentanaOrdenador {
         
         JLabel label = new JLabel("379 eur");
         label.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        label.setBounds(67, 330, 124, 43);
+        label.setBounds(57, 342, 124, 43);
         frame.getContentPane().add(label);
         
-        JButton btnAnadirAlCarrito = new JButton("A�adir al carrito");
+        JButton btnAnadirAlCarrito = new JButton("Agregar al carrito");
         btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito.setForeground(Color.WHITE);
         btnAnadirAlCarrito.setBackground(new Color(255, 165, 0));
@@ -95,7 +95,7 @@ public class VentanaOrdenador {
 		});
         
         JLabel lblNewLabel_3 = new JLabel("New label");
-        lblNewLabel_3.setBounds(301, 90, 124, 141);
+        lblNewLabel_3.setBounds(301, 90, 150, 141);
         frame.getContentPane().add(lblNewLabel_3);
         
         ImageIcon ico2= new ImageIcon("img/Portatil.jpg");
@@ -111,10 +111,10 @@ public class VentanaOrdenador {
         
         JLabel label_1 = new JLabel("559 eur");
         label_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        label_1.setBounds(301, 330, 124, 43);
+        label_1.setBounds(291, 342, 124, 43);
         frame.getContentPane().add(label_1);
         
-        JButton btnAnadirAlCarrito_1 = new JButton("A�adir al carrito");
+        JButton btnAnadirAlCarrito_1 = new JButton("Agregar al carrito");
         btnAnadirAlCarrito_1.setForeground(Color.WHITE);
         btnAnadirAlCarrito_1.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_1.setBackground(new Color(255, 165, 0));
@@ -138,15 +138,15 @@ public class VentanaOrdenador {
         
         JLabel lblNewLabel_5 = new JLabel("<html>Apple MacBook Pro Intel Core i5/8GB/512GB SSD/13.3\" Gris Espacial<html>");
         lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        lblNewLabel_5.setBounds(57, 647, 139, 60);
+        lblNewLabel_5.setBounds(57, 630, 139, 60);
         frame.getContentPane().add(lblNewLabel_5);
         
         JLabel lblNewLabel_6 = new JLabel("1499 eur");
         lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        lblNewLabel_6.setBounds(72, 718, 119, 16);
+        lblNewLabel_6.setBounds(57, 718, 119, 16);
         frame.getContentPane().add(lblNewLabel_6);
         
-        JButton btnAnadirAlCarrito_2 = new JButton("A�adir al carrito");
+        JButton btnAnadirAlCarrito_2 = new JButton("Agregar al carrito");
         btnAnadirAlCarrito_2.setForeground(Color.WHITE);
         btnAnadirAlCarrito_2.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_2.setBackground(new Color(255, 165, 0));
@@ -160,7 +160,7 @@ public class VentanaOrdenador {
 			}
 		});
         
-        JButton btnAnadirAlCarrito_2_1 = new JButton("A�adir al carrito");
+        JButton btnAnadirAlCarrito_2_1 = new JButton("Agregar al carrito");
         btnAnadirAlCarrito_2_1.setForeground(Color.WHITE);
         btnAnadirAlCarrito_2_1.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_2_1.setBackground(new Color(255, 165, 0));
@@ -182,6 +182,7 @@ public class VentanaOrdenador {
         ImageIcon img4= new ImageIcon(ico4.getImage().getScaledInstance(lblNewLabel_7.getWidth(), lblNewLabel_7.getHeight(), Image.SCALE_SMOOTH));
         lblNewLabel_7.setIcon(img4);
         
+      
         JLabel lblNewLabel_8 = new JLabel("<html>Asus Tuf Gaming A15 AMD Ryzen 7 4800H/16GB/1TB SSD/GTX 1650Ti/15.6\"<html>");
         lblNewLabel_8.setFont(new Font("Tahoma", Font.PLAIN, 12));
         lblNewLabel_8.setBounds(301, 630, 124, 77);
@@ -193,10 +194,11 @@ public class VentanaOrdenador {
         frame.getContentPane().add(lblNewLabel_9);
         
         JScrollBar scrollBar = new JScrollBar();
-        scrollBar.setBounds(496, 90, 15, 465);
-        frame.getContentPane().add(scrollBar);
+        scrollBar.setBounds(559, -38, 15, 920);
+        frame.getContentPane().add(scrollBar);	
         
-        JButton btnFav = new JButton("New button");
+        JButton btnFav = new JButton("Fav");
+        btnFav.setHorizontalTextPosition(SwingConstants.CENTER);
         btnFav.setBounds(198, 419, 53, 43);
         frame.getContentPane().add(btnFav);
         
@@ -207,9 +209,10 @@ public class VentanaOrdenador {
 			}
 		});
         
-        JButton btnFav2 = new JButton("New button");
+        JButton btnFav2 = new JButton("Fav");
         btnFav2.setBounds(431, 419, 53, 43);
         frame.getContentPane().add(btnFav2);
+      
         
         btnFav2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -218,8 +221,8 @@ public class VentanaOrdenador {
 			}
 		});
         
-        JButton btnFav3 = new JButton("New button");
-        btnFav3.setBounds(198, 758, 53, 43);
+        JButton btnFav3 = new JButton("Fav");
+        btnFav3.setBounds(198, 759, 53, 43);
         frame.getContentPane().add(btnFav3);
         
         btnFav3.addActionListener(new ActionListener() {
@@ -229,7 +232,7 @@ public class VentanaOrdenador {
 			}
 		});
         
-        JButton btnFav4 = new JButton("New button");
+        JButton btnFav4 = new JButton("Fav");
         btnFav4.setBounds(442, 759, 53, 43);
         frame.getContentPane().add(btnFav4);
         
