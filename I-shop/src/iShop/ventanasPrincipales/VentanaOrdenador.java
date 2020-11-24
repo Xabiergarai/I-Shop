@@ -79,7 +79,7 @@ public class VentanaOrdenador {
         label.setBounds(67, 330, 124, 43);
         frame.getContentPane().add(label);
         
-        JButton btnAnadirAlCarrito = new JButton("Añadir al carrito");
+        JButton btnAnadirAlCarrito = new JButton("Aï¿½adir al carrito");
         btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito.setForeground(Color.WHITE);
         btnAnadirAlCarrito.setBackground(new Color(255, 165, 0));
@@ -114,7 +114,7 @@ public class VentanaOrdenador {
         label_1.setBounds(301, 330, 124, 43);
         frame.getContentPane().add(label_1);
         
-        JButton btnAnadirAlCarrito_1 = new JButton("Añadir al carrito");
+        JButton btnAnadirAlCarrito_1 = new JButton("Aï¿½adir al carrito");
         btnAnadirAlCarrito_1.setForeground(Color.WHITE);
         btnAnadirAlCarrito_1.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_1.setBackground(new Color(255, 165, 0));
@@ -139,19 +139,33 @@ public class VentanaOrdenador {
         lblNewLabel_6.setBounds(72, 718, 119, 16);
         frame.getContentPane().add(lblNewLabel_6);
         
-        JButton btnAnadirAlCarrito_2 = new JButton("Añadir al carrito");
+        JButton btnAnadirAlCarrito_2 = new JButton("Aï¿½adir al carrito");
         btnAnadirAlCarrito_2.setForeground(Color.WHITE);
         btnAnadirAlCarrito_2.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_2.setBackground(new Color(255, 165, 0));
         btnAnadirAlCarrito_2.setBounds(67, 759, 139, 43);
         frame.getContentPane().add(btnAnadirAlCarrito_2);
         
-        JButton btnAnadirAlCarrito_2_1 = new JButton("Añadir al carrito");
+        btnAnadirAlCarrito_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaCarritoCompra.main(null);
+				frame.dispose();
+			}
+		});
+        
+        JButton btnAnadirAlCarrito_2_1 = new JButton("Aï¿½adir al carrito");
         btnAnadirAlCarrito_2_1.setForeground(Color.WHITE);
         btnAnadirAlCarrito_2_1.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_2_1.setBackground(new Color(255, 165, 0));
         btnAnadirAlCarrito_2_1.setBounds(301, 759, 139, 43);
         frame.getContentPane().add(btnAnadirAlCarrito_2_1);
+        
+        btnAnadirAlCarrito_2_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaCarritoCompra.main(null);
+				frame.dispose();
+			}
+		});
         
         JLabel lblNewLabel_7 = new JLabel("New label");
         lblNewLabel_7.setBounds(301, 526, 154, 93);

@@ -136,12 +136,26 @@ public class VentanaAudio {
 		btnAnadirAlCarrito_2.setBounds(57, 717, 139, 43);
 		frame.getContentPane().add(btnAnadirAlCarrito_2);
 		
+		btnAnadirAlCarrito_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaCarritoCompra.main(null);
+				frame.dispose();
+			}
+		});
+		
 		JButton btnAnadirAlCarrito_3 = new JButton("A�adir al carrito");
 		btnAnadirAlCarrito_3.setForeground(Color.WHITE);
 		btnAnadirAlCarrito_3.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAnadirAlCarrito_3.setBackground(new Color(255, 165, 0));
 		btnAnadirAlCarrito_3.setBounds(287, 717, 139, 43);
 		frame.getContentPane().add(btnAnadirAlCarrito_3);
+		
+		btnAnadirAlCarrito_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaCarritoCompra.main(null);
+				frame.dispose();
+			}
+		});
 		
 		JLabel lblNewLabel_6_1 = new JLabel("New label");
 		lblNewLabel_6_1.setBounds(287, 449, 172, 139);
