@@ -49,7 +49,7 @@ public class VentanaOrdenador {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 10));
-		frame.setBounds(100, 100, 600, 900);
+		frame.setBounds(100, 100, 600, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -143,7 +143,7 @@ public class VentanaOrdenador {
         btnAnadirAlCarrito_2.setForeground(Color.WHITE);
         btnAnadirAlCarrito_2.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnAnadirAlCarrito_2.setBackground(new Color(255, 165, 0));
-        btnAnadirAlCarrito_2.setBounds(67, 759, 139, 43);
+        btnAnadirAlCarrito_2.setBounds(57, 759, 139, 43);
         frame.getContentPane().add(btnAnadirAlCarrito_2);
         
         btnAnadirAlCarrito_2.addActionListener(new ActionListener() {
@@ -186,8 +186,24 @@ public class VentanaOrdenador {
         frame.getContentPane().add(lblNewLabel_9);
         
         JScrollBar scrollBar = new JScrollBar();
-        scrollBar.setBounds(480, 154, 15, 465);
+        scrollBar.setBounds(480, 86, 15, 465);
         frame.getContentPane().add(scrollBar);
+        
+        JButton btnNewButton = new JButton("New button");
+        btnNewButton.setBounds(198, 419, 53, 43);
+        frame.getContentPane().add(btnNewButton);
+        
+        JButton btnNewButton_1 = new JButton("New button");
+        btnNewButton_1.setBounds(431, 419, 53, 43);
+        frame.getContentPane().add(btnNewButton_1);
+        
+        JButton btnNewButton_2 = new JButton("New button");
+        btnNewButton_2.setBounds(198, 758, 53, 43);
+        frame.getContentPane().add(btnNewButton_2);
+        
+        JButton btnNewButton_3 = new JButton("New button");
+        btnNewButton_3.setBounds(442, 759, 53, 43);
+        frame.getContentPane().add(btnNewButton_3);
         
 		btnAnadirAlCarrito_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

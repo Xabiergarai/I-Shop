@@ -46,7 +46,7 @@ public class VentanaAudio {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 550, 600);
+		frame.setBounds(100, 100, 500, 900);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -133,7 +133,7 @@ public class VentanaAudio {
 		btnAnadirAlCarrito_2.setForeground(Color.WHITE);
 		btnAnadirAlCarrito_2.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAnadirAlCarrito_2.setBackground(new Color(255, 165, 0));
-		btnAnadirAlCarrito_2.setBounds(57, 717, 139, 43);
+		btnAnadirAlCarrito_2.setBounds(52, 717, 139, 43);
 		frame.getContentPane().add(btnAnadirAlCarrito_2);
 		
 		btnAnadirAlCarrito_2.addActionListener(new ActionListener() {
@@ -177,6 +177,24 @@ public class VentanaAudio {
 		JScrollBar scrollBar = new JScrollBar();
 		scrollBar.setBounds(503, 107, 15, 366);
 		frame.getContentPane().add(scrollBar);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setIcon(new ImageIcon("/Users/xabiergarai/git/I-shop/I-shop/img/listadedeseos.png"));
+		btnNewButton.setBounds(192, 369, 53, 43);
+		frame.getContentPane().add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.setBounds(427, 370, 53, 43);
+		frame.getContentPane().add(btnNewButton_1);
+		
+		JButton btnNewButton_3 = new JButton("New button");
+		btnNewButton_3.setBounds(427, 717, 53, 43);
+		frame.getContentPane().add(btnNewButton_3);
+		
+		JButton btnNewButton_2 = new JButton("New button");
+		btnNewButton_2.setIcon(new ImageIcon("/Users/xabiergarai/git/I-shop/I-shop/img/listadedeseos.png"));
+		btnNewButton_2.setBounds(192, 717, 53, 43);
+		frame.getContentPane().add(btnNewButton_2);
 		
 		btnAnadirAlCarrito_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

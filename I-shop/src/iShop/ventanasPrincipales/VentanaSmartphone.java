@@ -46,7 +46,7 @@ public class VentanaSmartphone {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 600, 900);
+		frame.setBounds(100, 100, 600, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -186,8 +186,24 @@ public class VentanaSmartphone {
         frame.getContentPane().add(lblNewLabel_8);
         
         JScrollBar scrollBar = new JScrollBar();
-        scrollBar.setBounds(459, 151, 15, 482);
+        scrollBar.setBounds(499, 110, 15, 482);
         frame.getContentPane().add(scrollBar);
+        
+        JButton btnNewButton = new JButton("New button");
+        btnNewButton.setBounds(207, 428, 53, 43);
+        frame.getContentPane().add(btnNewButton);
+        
+        JButton btnNewButton_1 = new JButton("New button");
+        btnNewButton_1.setBounds(434, 428, 53, 43);
+        frame.getContentPane().add(btnNewButton_1);
+        
+        JButton btnNewButton_2 = new JButton("New button");
+        btnNewButton_2.setBounds(207, 726, 53, 43);
+        frame.getContentPane().add(btnNewButton_2);
+        
+        JButton btnNewButton_3 = new JButton("New button");
+        btnNewButton_3.setBounds(434, 726, 53, 43);
+        frame.getContentPane().add(btnNewButton_3);
 		
 		
 	}
