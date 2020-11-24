@@ -49,7 +49,7 @@ public class VentanaOrdenador {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 10));
-		frame.setBounds(100, 100, 600, 400);
+		frame.setBounds(100, 100, 600, 800);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -186,7 +186,7 @@ public class VentanaOrdenador {
         frame.getContentPane().add(lblNewLabel_9);
         
         JScrollBar scrollBar = new JScrollBar();
-        scrollBar.setBounds(480, 86, 15, 465);
+        scrollBar.setBounds(496, 90, 15, 465);
         frame.getContentPane().add(scrollBar);
         
         JButton btnNewButton = new JButton("New button");
