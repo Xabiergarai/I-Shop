@@ -189,23 +189,51 @@ public class VentanaSmartphone {
         scrollBar.setBounds(499, 110, 15, 482);
         frame.getContentPane().add(scrollBar);
         
-        JButton btnNewButton = new JButton("New button");
-        btnNewButton.setBounds(207, 428, 53, 43);
-        frame.getContentPane().add(btnNewButton);
+        JButton btnFav = new JButton("New button");
+        btnFav.setBounds(207, 428, 53, 43);
+        frame.getContentPane().add(btnFav);
         
-        JButton btnNewButton_1 = new JButton("New button");
-        btnNewButton_1.setBounds(434, 428, 53, 43);
-        frame.getContentPane().add(btnNewButton_1);
+        btnFav.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaFavoritos.main(null);
+				frame.dispose();
+			}
+		});
         
-        JButton btnNewButton_2 = new JButton("New button");
-        btnNewButton_2.setBounds(207, 726, 53, 43);
-        frame.getContentPane().add(btnNewButton_2);
+        JButton btnFav3 = new JButton("New button");
+        btnFav3.setBounds(434, 428, 53, 43);
+        frame.getContentPane().add(btnFav3);
         
-        JButton btnNewButton_3 = new JButton("New button");
-        btnNewButton_3.setBounds(434, 726, 53, 43);
-        frame.getContentPane().add(btnNewButton_3);
+        btnFav3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaFavoritos.main(null);
+				frame.dispose();
+			}
+		});
+        
+        
+        JButton btnFav2 = new JButton("New button");
+        btnFav2.setBounds(207, 726, 53, 43);
+        frame.getContentPane().add(btnFav2);
+        
+        btnFav2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaFavoritos.main(null);
+				frame.dispose();
+			}
+		});
+        
+        JButton btnFav4 = new JButton("New button");
+        btnFav4.setBounds(434, 726, 53, 43);
+        frame.getContentPane().add(btnFav4);
+        
 		
-		
+        btnFav4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaFavoritos.main(null);
+				frame.dispose();
+			}
+		});
 	}
 
 }

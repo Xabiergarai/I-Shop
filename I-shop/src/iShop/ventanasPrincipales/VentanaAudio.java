@@ -112,6 +112,13 @@ public class VentanaAudio {
 		btnAnadirAlCarrito_1.setBounds(287, 370, 139, 43);
 		frame.getContentPane().add(btnAnadirAlCarrito_1);
 		
+		btnAnadirAlCarrito_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaCarritoCompra.main(null);
+				frame.dispose();
+			}
+		});
+		
 		JLabel lblNewLabel_6 = new JLabel("New label");
 		lblNewLabel_6.setBounds(49, 444, 157, 148);
 		frame.getContentPane().add(lblNewLabel_6);
@@ -178,29 +185,53 @@ public class VentanaAudio {
 		scrollBar.setBounds(503, 107, 15, 366);
 		frame.getContentPane().add(scrollBar);
 		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setIcon(new ImageIcon("/Users/xabiergarai/git/I-shop/I-shop/img/listadedeseos.png"));
-		btnNewButton.setBounds(192, 369, 53, 43);
-		frame.getContentPane().add(btnNewButton);
+		JButton btnFav = new JButton("New button");
+		btnFav.setIcon(new ImageIcon("/Users/xabiergarai/git/I-shop/I-shop/img/listadedeseos.png"));
+		btnFav.setBounds(192, 369, 53, 43);
+		frame.getContentPane().add(btnFav);
 		
-		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.setBounds(427, 370, 53, 43);
-		frame.getContentPane().add(btnNewButton_1);
-		
-		JButton btnNewButton_3 = new JButton("New button");
-		btnNewButton_3.setBounds(427, 717, 53, 43);
-		frame.getContentPane().add(btnNewButton_3);
-		
-		JButton btnNewButton_2 = new JButton("New button");
-		btnNewButton_2.setIcon(new ImageIcon("/Users/xabiergarai/git/I-shop/I-shop/img/listadedeseos.png"));
-		btnNewButton_2.setBounds(192, 717, 53, 43);
-		frame.getContentPane().add(btnNewButton_2);
-		
-		btnAnadirAlCarrito_1.addActionListener(new ActionListener() {
+		btnFav.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaCarritoCompra.main(null);
+				VentanaFavoritos.main(null);
 				frame.dispose();
 			}
 		});
+		
+		
+		
+		JButton btnFav3 = new JButton("New button");
+		btnFav3.setBounds(427, 370, 53, 43);
+		frame.getContentPane().add(btnFav3);
+		
+		btnFav3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaFavoritos.main(null);
+				frame.dispose();
+			}
+		});
+		
+		JButton btnFav4 = new JButton("New button");
+		btnFav4.setBounds(427, 717, 53, 43);
+		frame.getContentPane().add(btnFav4);
+		
+		btnFav4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaFavoritos.main(null);
+				frame.dispose();
+			}
+		});
+		
+		JButton btnFav2 = new JButton("New button");
+		btnFav2.setIcon(new ImageIcon("/Users/xabiergarai/git/I-shop/I-shop/img/listadedeseos.png"));
+		btnFav2.setBounds(192, 717, 53, 43);
+		frame.getContentPane().add(btnFav2);
+		
+		btnFav2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaFavoritos.main(null);
+				frame.dispose();
+			}
+		});
+		
 	}
 }
