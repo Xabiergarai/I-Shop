@@ -86,7 +86,7 @@ public class VentanaAudio {
 		lblNewLabel_5.setBounds(52, 322, 112, 16);
 		frame.getContentPane().add(lblNewLabel_5);
 		
-		JButton btnAnadirAlCarrito = new JButton("Añadir al carrito");
+		JButton btnAnadirAlCarrito = new JButton("Aï¿½adir al carrito");
 		btnAnadirAlCarrito.setForeground(Color.WHITE);
 		btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAnadirAlCarrito.setBackground(new Color(255, 165, 0));
@@ -105,7 +105,7 @@ public class VentanaAudio {
 		lblNewLabel_5_1.setBounds(287, 322, 85, 16);
 		frame.getContentPane().add(lblNewLabel_5_1);
 		
-		JButton btnAnadirAlCarrito_1 = new JButton("Añadir al carrito");
+		JButton btnAnadirAlCarrito_1 = new JButton("Aï¿½adir al carrito");
 		btnAnadirAlCarrito_1.setForeground(Color.WHITE);
 		btnAnadirAlCarrito_1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAnadirAlCarrito_1.setBackground(new Color(255, 165, 0));
@@ -129,14 +129,14 @@ public class VentanaAudio {
 		lblNewLabel_8.setBounds(86, 666, 61, 16);
 		frame.getContentPane().add(lblNewLabel_8);
 		
-		JButton btnAnadirAlCarrito_2 = new JButton("Añadir al carrito");
+		JButton btnAnadirAlCarrito_2 = new JButton("Aï¿½adir al carrito");
 		btnAnadirAlCarrito_2.setForeground(Color.WHITE);
 		btnAnadirAlCarrito_2.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAnadirAlCarrito_2.setBackground(new Color(255, 165, 0));
 		btnAnadirAlCarrito_2.setBounds(57, 717, 139, 43);
 		frame.getContentPane().add(btnAnadirAlCarrito_2);
 		
-		JButton btnAnadirAlCarrito_3 = new JButton("Añadir al carrito");
+		JButton btnAnadirAlCarrito_3 = new JButton("Aï¿½adir al carrito");
 		btnAnadirAlCarrito_3.setForeground(Color.WHITE);
 		btnAnadirAlCarrito_3.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAnadirAlCarrito_3.setBackground(new Color(255, 165, 0));
@@ -161,7 +161,7 @@ public class VentanaAudio {
 		frame.getContentPane().add(lblNewLabel_6_3);
 		
 		JScrollBar scrollBar = new JScrollBar();
-		scrollBar.setBounds(509, 184, 15, 366);
+		scrollBar.setBounds(503, 107, 15, 366);
 		frame.getContentPane().add(scrollBar);
 		
 		btnAnadirAlCarrito_1.addActionListener(new ActionListener() {
