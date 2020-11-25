@@ -64,6 +64,7 @@ public class VentanaOrdenador {
 		/*PanelProducto pp1 = PanelProducto("Ordenadores");
 		panel.add(pp1);
 		
+		
 		frame.getContentPane().add(scroll);
 		//frame.getContentPane().add(panel);
 		
