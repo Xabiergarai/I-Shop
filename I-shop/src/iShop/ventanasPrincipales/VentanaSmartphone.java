@@ -50,10 +50,10 @@ public class VentanaSmartphone {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Smartphones");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel.setBounds(52, 27, 108, 27);
-		frame.getContentPane().add(lblNewLabel);
+		JLabel lblSeccion = new JLabel("Smartphones");
+		lblSeccion.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblSeccion.setBounds(52, 27, 108, 27);
+		frame.getContentPane().add(lblSeccion);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setBounds(85, 100, 129, 151);
@@ -63,15 +63,15 @@ public class VentanaSmartphone {
         ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
         lblNewLabel_1.setIcon(img1);
 		
-		JLabel lblNewLabel_2 = new JLabel("<html>Apple iPhone XR 64GB Negro Libre<html>");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblNewLabel_2.setBounds(36, 309, 195, 16);
-		frame.getContentPane().add(lblNewLabel_2);
+		JLabel lblRuta1 = new JLabel("<html>Apple iPhone XR 64GB Negro Libre<html>");
+		lblRuta1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblRuta1.setBounds(36, 309, 195, 16);
+		frame.getContentPane().add(lblRuta1);
 		
-		JLabel label = new JLabel("630,99 eur");
-		label.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		label.setBounds(67, 371, 93, 16);
-		frame.getContentPane().add(label);
+		JLabel Precio1 = new JLabel("630,99 eur");
+		Precio1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		Precio1.setBounds(67, 371, 93, 16);
+		frame.getContentPane().add(Precio1);
 		
 		JButton btnAnadirAlCarrito = new JButton("Agregar al carrito");
 		btnAnadirAlCarrito.setForeground(Color.WHITE);
@@ -102,15 +102,15 @@ public class VentanaSmartphone {
 			}
 		});
 		
-		JLabel lblNewLabel_2_1 = new JLabel("<html>Samsung Galaxy M31 Negro Libre<html>");
-		lblNewLabel_2_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblNewLabel_2_1.setBounds(270, 309, 204, 16);
-		frame.getContentPane().add(lblNewLabel_2_1);
+		JLabel lblRuta2 = new JLabel("<html>Samsung Galaxy M31 Negro Libre<html>");
+		lblRuta2.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblRuta2.setBounds(270, 309, 204, 16);
+		frame.getContentPane().add(lblRuta2);
 		
-		JLabel lblNewLabel_2_2 = new JLabel("199 eur");
-		lblNewLabel_2_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_2_2.setBounds(293, 371, 85, 16);
-		frame.getContentPane().add(lblNewLabel_2_2);
+		JLabel lblPrecio2 = new JLabel("199 eur");
+		lblPrecio2.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblPrecio2.setBounds(293, 371, 85, 16);
+		frame.getContentPane().add(lblPrecio2);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("New label");
 		lblNewLabel_1_1.setBounds(303, 100, 129, 151);
@@ -128,15 +128,15 @@ public class VentanaSmartphone {
         ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblNewLabel_3.getWidth(), lblNewLabel_3.getHeight(), Image.SCALE_SMOOTH));
         lblNewLabel_3.setIcon(img3);
         
-        JLabel lblNewLabel_4 = new JLabel("<html>Samsung Galaxy Tab A 10.1\" 2019 32GB Wifi Plata<html>");
-        lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        lblNewLabel_4.setBounds(67, 645, 139, 16);
-        frame.getContentPane().add(lblNewLabel_4);
+        JLabel lblRuta3 = new JLabel("<html>Samsung Galaxy Tab A 10.1\" 2019 32GB Wifi Plata<html>");
+        lblRuta3.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        lblRuta3.setBounds(67, 645, 139, 16);
+        frame.getContentPane().add(lblRuta3);
         
-        JLabel lblNewLabel_5 = new JLabel("169 eur");
-        lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        lblNewLabel_5.setBounds(67, 694, 93, 16);
-        frame.getContentPane().add(lblNewLabel_5);
+        JLabel lblPrecio3 = new JLabel("169 eur");
+        lblPrecio3.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        lblPrecio3.setBounds(67, 694, 93, 16);
+        frame.getContentPane().add(lblPrecio3);
         
         JButton btnAnadirAlCarrito_2 = new JButton("Agregar al carrito");
         btnAnadirAlCarrito_2.setForeground(Color.WHITE);
@@ -175,15 +175,15 @@ public class VentanaSmartphone {
         lblNewLabel_6.setIcon(img4);
         
         
-        JLabel lblNewLabel_7 = new JLabel("Realme 6 4/64GB Comet Blue Libre");
-        lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        lblNewLabel_7.setBounds(293, 645, 194, 16);
-        frame.getContentPane().add(lblNewLabel_7);
+        JLabel lblRuta4 = new JLabel("Realme 6 4/64GB Comet Blue Libre");
+        lblRuta4.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        lblRuta4.setBounds(293, 645, 194, 16);
+        frame.getContentPane().add(lblRuta4);
         
-        JLabel lblNewLabel_8 = new JLabel("169 eur");
-        lblNewLabel_8.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        lblNewLabel_8.setBounds(293, 694, 78, 16);
-        frame.getContentPane().add(lblNewLabel_8);
+        JLabel lblPrecio4 = new JLabel("169 eur");
+        lblPrecio4.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        lblPrecio4.setBounds(293, 694, 78, 16);
+        frame.getContentPane().add(lblPrecio4);
         
         JScrollBar scrollBar = new JScrollBar();
         scrollBar.setBounds(554, 11, 15, 861);
