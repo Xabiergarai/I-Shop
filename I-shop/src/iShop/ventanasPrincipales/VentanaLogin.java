@@ -8,6 +8,7 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 
 import java.awt.Font;
 import java.awt.Image;
@@ -73,7 +74,7 @@ public class VentanaLogin {
 					JOptionPane.showMessageDialog(null, "El e-mail no esta registrado.", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
 				}
 				else if(resul==1)
-					JOptionPane.showMessageDialog(null, "La contraseï¿½a no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
 				else
 					JOptionPane.showMessageDialog(null, "Bienvenido", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
 				vaciarCampos();
@@ -105,16 +106,16 @@ public class VentanaLogin {
 		frame.getContentPane().add(txtEmail);
 		txtEmail.setColumns(10);
 		
-		txtContrase = new JTextField();
+		txtContrase = new JPasswordField();
 		txtContrase.setBackground(SystemColor.menu);
 		txtContrase.setHorizontalAlignment(SwingConstants.LEFT);
-		txtContrase.setText("CONTRASEï¿½A");
+		txtContrase.setText("");
 		txtContrase.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		txtContrase.setColumns(10);
 		txtContrase.setBounds(115, 252, 236, 42);
 		frame.getContentPane().add(txtContrase);
 		
-		JLabel lblOlvidarContrasena = new JLabel("He olvidado mi contraseï¿½a");
+		JLabel lblOlvidarContrasena = new JLabel("He olvidado mi contraseña");
 		lblOlvidarContrasena.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOlvidarContrasena.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblOlvidarContrasena.setForeground(new Color(255, 165, 0));
