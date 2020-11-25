@@ -55,6 +55,7 @@ public class VentanaLogin {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		BD.crearLaBD();
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(255, 255, 255));
 		frame.getContentPane().setIgnoreRepaint(true);
@@ -70,22 +71,11 @@ public class VentanaLogin {
 				int resul = BD.comprobarUsuario(email, con);
 				if(resul==0) {
 					JOptionPane.showMessageDialog(null, "El e-mail no esta registrado.", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
-					//String emailUsuario = JOptionPane.showInputDialog("Introduce tu correo: ");
-					//while (BD.existeUsuario(emailUsuario)) {
-						//emailUsuario = JOptionPane.showInputDialog("Correo repetido, introduce otro: ");
-					//}
-					//String conUsuario = JOptionPane.showInputDialog("Introduce tu contraseña: ");
-					//BD.insertarUsuario(emailUsuario, conUsuario);
 				}
 				else if(resul==1)
 					JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
 				else
-					JOptionPane.showMessageDialog(null, "Bienvenido!", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
-				/*boolean existe = BD.existeUsuario(nick);
-				if(existe)
-					JOptionPane.showMessageDialog(null, "ONGI ETORRI!", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
-				else
-					JOptionPane.showMessageDialog(null, "Tienes que registrarte", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);*/
+					JOptionPane.showMessageDialog(null, "Bienvenido", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
 				vaciarCampos();
 			}
 		});

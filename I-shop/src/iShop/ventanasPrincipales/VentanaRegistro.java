@@ -90,28 +90,17 @@ public class VentanaRegistro {
 		JButton btnCrearCuenta = new JButton("CREAR CUENTA");
 		btnCrearCuenta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//String email = txtEmail.getText();
-				//String con = txtContrasena.getText();
-				//int resul = BD.comprobarUsuario(email, con);
+	
 				String nombreUsuario = txtNombre.getText();
 				String emailUsuario = txtEmail.getText();
 				String conUsuario = txtContrasena.getText();
 				
-				Connection con;
-				try {
-					con = DriverManager.getConnection("jdbc:sqlite:proyecto.db");
-					BD.usarCrearTablasBD(con);
-					
-					if  (BD.existeUsuario(emailUsuario)) {
-						emailUsuario = JOptionPane.showInputDialog("Este email ya esta en uso, introduce otro: ");	
-					} else {
-						BD.insertarUsuario(nombreUsuario, emailUsuario, conUsuario);
-					}
-				} catch (SQLException e1) {
-					
-						e1.printStackTrace();
+				if  (BD.existeUsuario(emailUsuario)) {
+					emailUsuario = JOptionPane.showInputDialog("Este email ya esta en uso, introduce otro: ");	
+				} else {
+					BD.insertarUsuario(nombreUsuario, emailUsuario, conUsuario);
 				}
-	
+				
 			}
 		});
 		btnCrearCuenta.setForeground(Color.WHITE);

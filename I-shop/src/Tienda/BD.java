@@ -34,7 +34,7 @@ public class BD {
 		
 		try {
 			Statement statement = con.createStatement();
-			statement.executeUpdate("create table Usuario "+
+			statement.executeUpdate("create table if not exists Usuario "+
 						   "(nombre varchar, "+
 						   " email varchar, "+
 						   " con varchar)");
@@ -56,7 +56,10 @@ public class BD {
 		} catch (SQLException e) {
 		}
 	}
-	
+	public static void crearLaBD() {
+		Connection con = initBD("proyecto.db");
+		cerrarBD(con,usarCrearTablasBD(con));
+	}
 	public static boolean existeUsuario(String email) {
 		//statement.executeUpdate : Cuando queramos hacer create, insert, delete, update, drop
 		//statement.executeQuery : Cuando queramos hacer select
