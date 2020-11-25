@@ -66,7 +66,7 @@ public class VentanaMenu {
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setBounds(315, 121, 76, 55);
 		frame.getContentPane().add(lblNewLabel_2);
-		ImageIcon ico3= new ImageIcon("img/accesorios.jpg");
+		ImageIcon ico3= new ImageIcon("img/audio.jpg");
 		ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblNewLabel_2.getWidth(), lblNewLabel_2.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_2.setIcon(img3);
 		
@@ -94,13 +94,13 @@ public class VentanaMenu {
 				}
 			});
 		
-		JButton btnAccesorios = new JButton("Accesorios");
-		btnAccesorios.setForeground(Color.WHITE);
-		btnAccesorios.setBackground(new Color(255, 165, 0));
-		btnAccesorios.setBounds(275, 62, 126, 48);
-		frame.getContentPane().add(btnAccesorios); 
+		JButton btnAudio = new JButton("Audio");
+		btnAudio.setForeground(Color.WHITE);
+		btnAudio.setBackground(new Color(255, 165, 0));
+		btnAudio.setBounds(275, 62, 126, 48);
+		frame.getContentPane().add(btnAudio); 
 			
-			btnAccesorios.addActionListener(new ActionListener() {
+		btnAudio.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					VentanaAudio.main(null);
 					frame.dispose();
