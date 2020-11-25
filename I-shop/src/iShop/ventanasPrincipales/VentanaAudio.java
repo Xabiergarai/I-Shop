@@ -56,21 +56,21 @@ public class VentanaAudio {
 		frame.getContentPane().add(lblSeccion);
 		
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setBounds(49, 103, 189, 130);
-		frame.getContentPane().add(lblNewLabel_1);
+		JLabel lblImagen1 = new JLabel("New label");
+		lblImagen1.setBounds(49, 103, 189, 130);
+		frame.getContentPane().add(lblImagen1);
 		
 		ImageIcon ico1= new ImageIcon("img/1.jpg");
-        ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
-        lblNewLabel_1.setIcon(img1);
+        ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblImagen1.getWidth(), lblImagen1.getHeight(), Image.SCALE_SMOOTH));
+        lblImagen1.setIcon(img1);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setBounds(287, 108, 151, 121);
-		frame.getContentPane().add(lblNewLabel_2);
+		JLabel lblImagen2 = new JLabel("New label");
+		lblImagen2.setBounds(287, 108, 151, 121);
+		frame.getContentPane().add(lblImagen2);
 		
 		ImageIcon ico2= new ImageIcon("img/mars-gaming-msx-altavoces-21-35w.jpg");
-        ImageIcon img2= new ImageIcon(ico2.getImage().getScaledInstance(lblNewLabel_2.getWidth(), lblNewLabel_2.getHeight(), Image.SCALE_SMOOTH));
-        lblNewLabel_2.setIcon(img2);
+        ImageIcon img2= new ImageIcon(ico2.getImage().getScaledInstance(lblImagen2.getWidth(), lblImagen2.getHeight(), Image.SCALE_SMOOTH));
+        lblImagen2.setIcon(img2);
 		
 		JLabel lblNombre1 = new JLabel("<html>Logitech G432 Auriculares Gaming 7.1<html>");
 		lblNombre1.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -120,13 +120,13 @@ public class VentanaAudio {
 			}
 		});
 		
-		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setBounds(49, 457, 157, 148);
-		frame.getContentPane().add(lblNewLabel_6);
+		JLabel lblImagen3 = new JLabel("New label");
+		lblImagen3.setBounds(49, 457, 157, 148);
+		frame.getContentPane().add(lblImagen3);
 		
 		ImageIcon ico3= new ImageIcon("img/1523-galaxy-buds-live-auriculares-inalambricos-negro.jpg");
-        ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblNewLabel_6.getWidth(), lblNewLabel_6.getHeight(), Image.SCALE_SMOOTH));
-        lblNewLabel_6.setIcon(img3);
+        ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblImagen3.getWidth(), lblImagen3.getHeight(), Image.SCALE_SMOOTH));
+        lblImagen3.setIcon(img3);
 		
 		JLabel lblNombre3 = new JLabel("<html>Galaxy Buds Live Auriculares Inalambricos Negro<html>");
 		lblNombre3.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -166,13 +166,13 @@ public class VentanaAudio {
 			}
 		});
 		
-		JLabel lblNewLabel_6_1 = new JLabel("New label");
-		lblNewLabel_6_1.setBounds(287, 462, 172, 139);
-		frame.getContentPane().add(lblNewLabel_6_1);
+		JLabel lblImagen4 = new JLabel("New label");
+		lblImagen4.setBounds(287, 462, 172, 139);
+		frame.getContentPane().add(lblImagen4);
 		
 		ImageIcon ico4 = new ImageIcon("img/altavoz.jpg");
-        ImageIcon img4 = new ImageIcon(ico4.getImage().getScaledInstance(lblNewLabel_6_1.getWidth(), lblNewLabel_6_1.getHeight(), Image.SCALE_SMOOTH));
-        lblNewLabel_6_1.setIcon(img4);
+        ImageIcon img4 = new ImageIcon(ico4.getImage().getScaledInstance(lblImagen4.getWidth(), lblImagen4.getHeight(), Image.SCALE_SMOOTH));
+        lblImagen4.setIcon(img4);
 		
 		JLabel lblNombre4 = new JLabel("<html>Logitech Speaker System Z313 Altavoces 2.1<html>");
 		lblNombre4.setFont(new Font("Tahoma", Font.PLAIN, 12));
