@@ -6,7 +6,7 @@ import org.junit.*;
 
 import Tienda.Usuario;
 
-class UsuarioTest {
+class TestUsuario {
 
 	
 	@Test

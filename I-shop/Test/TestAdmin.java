@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import Tienda.Usuario;
 
-class AdminTest {
+class TestAdmin {
 	
 	@Test
 	public void testGetAdminUsuario() {

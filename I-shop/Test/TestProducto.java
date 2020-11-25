@@ -6,7 +6,7 @@ import org.junit.*;
 
 import Tienda.Producto;
 
-class ProductoTest {
+class TestProducto {
 	
 	@Test
 	public void testGetNombreProducto() {
