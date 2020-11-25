@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
-public class VentanaSeccion {
+public class VentanaMenu {
 
 	private JFrame frame;
 
@@ -24,7 +24,7 @@ public class VentanaSeccion {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaSeccion window = new VentanaSeccion();
+					VentanaMenu window = new VentanaMenu();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +36,7 @@ public class VentanaSeccion {
 	/**
 	 * Create the application.
 	 */
-	public VentanaSeccion() {
+	public VentanaMenu() {
 		initialize();
 	}
 
