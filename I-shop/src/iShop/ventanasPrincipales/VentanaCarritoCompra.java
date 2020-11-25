@@ -44,53 +44,53 @@ public class VentanaCarritoCompra {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JButton btnNewButton = new JButton("Vaciar cesta");
-		btnNewButton.setBounds(104, 27, 212, 29);
-		frame.getContentPane().add(btnNewButton);
+		JButton btnVaciarCesta = new JButton("Vaciar cesta");
+		btnVaciarCesta.setBounds(104, 27, 212, 29);
+		frame.getContentPane().add(btnVaciarCesta);
 		
-		JButton btnNewButton_1 = new JButton("Guardar lista");
-		btnNewButton_1.setBounds(104, 56, 212, 29);
-		frame.getContentPane().add(btnNewButton_1);
+		JButton btnGuardarLista = new JButton("Guardar lista");
+		btnGuardarLista.setBounds(104, 56, 212, 29);
+		frame.getContentPane().add(btnGuardarLista);
 		
-		JButton btnNewButton_2 = new JButton("Seguir comprando");
-		btnNewButton_2.setBounds(104, 85, 212, 29);
-		frame.getContentPane().add(btnNewButton_2);
+		JButton btnSeguirComprando = new JButton("Seguir comprando");
+		btnSeguirComprando.setBounds(104, 85, 212, 29);
+		frame.getContentPane().add(btnSeguirComprando);
 		
-		JLabel lblNewLabel = new JLabel("* Con I-ShoPremium puedes benificiarte de gastos");
-		lblNewLabel.setBounds(28, 126, 352, 29);
-		frame.getContentPane().add(lblNewLabel);
+		JLabel lblPremium = new JLabel("* Con I-ShoPremium puedes benificiarte de gastos");
+		lblPremium.setBounds(28, 126, 352, 29);
+		frame.getContentPane().add(lblPremium);
 		
-		JLabel lblNewLabel_1 = new JLabel("de envio GRATIS!");
-		lblNewLabel_1.setBounds(28, 153, 130, 16);
-		frame.getContentPane().add(lblNewLabel_1);
+		JLabel lblEnvioGratis = new JLabel("de envio GRATIS!");
+		lblEnvioGratis.setBounds(28, 153, 130, 16);
+		frame.getContentPane().add(lblEnvioGratis);
 		
-		JCheckBox chckbxNewCheckBox = new JCheckBox("Contratar tarifa premium");
-		chckbxNewCheckBox.setBounds(20, 179, 188, 23);
-		frame.getContentPane().add(chckbxNewCheckBox);
+		JCheckBox chckbxContratoTarifa = new JCheckBox("Contratar tarifa premium");
+		chckbxContratoTarifa.setBounds(20, 179, 188, 23);
+		frame.getContentPane().add(chckbxContratoTarifa);
 		
-		JLabel lblNewLabel_2 = new JLabel("TOTAL:   999,99");
-		lblNewLabel_2.setBounds(20, 215, 360, 16);
-		frame.getContentPane().add(lblNewLabel_2);
+		JLabel lblTotal = new JLabel("TOTAL:   999,99");
+		lblTotal.setBounds(20, 215, 360, 16);
+		frame.getContentPane().add(lblTotal);
 		
-		JButton btnNewButton_3 = new JButton("REALIZAR PEDIDO");
-		btnNewButton_3.setBackground(Color.YELLOW);
-		btnNewButton_3.setBounds(104, 243, 188, 29);
-		frame.getContentPane().add(btnNewButton_3);
+		JButton btnRealizarPedido = new JButton("REALIZAR PEDIDO");
+		btnRealizarPedido.setBackground(Color.YELLOW);
+		btnRealizarPedido.setBounds(104, 243, 188, 29);
+		frame.getContentPane().add(btnRealizarPedido);
 		
-		JLabel lblNewLabel_3 = new JLabel("Formas de pago");
-		lblNewLabel_3.setBounds(28, 313, 108, 16);
-		frame.getContentPane().add(lblNewLabel_3);
+		JLabel lblFormasDePago = new JLabel("Formas de pago");
+		lblFormasDePago.setBounds(28, 313, 108, 16);
+		frame.getContentPane().add(lblFormasDePago);
 		
-		JCheckBox chckbxNewCheckBox_1 = new JCheckBox("VISA");
-		chckbxNewCheckBox_1.setBounds(20, 353, 83, 23);
-		frame.getContentPane().add(chckbxNewCheckBox_1);
+		JCheckBox chckbxVisa = new JCheckBox("VISA");
+		chckbxVisa.setBounds(20, 353, 83, 23);
+		frame.getContentPane().add(chckbxVisa);
 		
-		JCheckBox chckbxNewCheckBox_2 = new JCheckBox("MasterCard");
-		chckbxNewCheckBox_2.setBounds(113, 353, 119, 23);
-		frame.getContentPane().add(chckbxNewCheckBox_2);
+		JCheckBox chckbxMaterCard = new JCheckBox("MasterCard");
+		chckbxMaterCard.setBounds(113, 353, 119, 23);
+		frame.getContentPane().add(chckbxMaterCard);
 		
-		JCheckBox chckbxNewCheckBox_3 = new JCheckBox("PayPal");
-		chckbxNewCheckBox_3.setBounds(244, 353, 97, 23);
-		frame.getContentPane().add(chckbxNewCheckBox_3);
+		JCheckBox chckbxPayPal= new JCheckBox("PayPal");
+		chckbxPayPal.setBounds(244, 353, 97, 23);
+		frame.getContentPane().add(chckbxPayPal);
 	}
 }

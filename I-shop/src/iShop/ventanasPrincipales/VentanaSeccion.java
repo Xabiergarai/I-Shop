@@ -49,10 +49,10 @@ public class VentanaSeccion {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Secciones de los productos");
-		lblNewLabel.setFont(new Font("Dialog", Font.BOLD, 18));
-		lblNewLabel.setBounds(128, 27, 242, 16);
-		frame.getContentPane().add(lblNewLabel);
+		JLabel lblSeccionesProductos = new JLabel("Secciones de los productos");
+		lblSeccionesProductos.setFont(new Font("Dialog", Font.BOLD, 18));
+		lblSeccionesProductos.setBounds(128, 27, 242, 16);
+		frame.getContentPane().add(lblSeccionesProductos);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setBounds(64, 121, 99, 55);

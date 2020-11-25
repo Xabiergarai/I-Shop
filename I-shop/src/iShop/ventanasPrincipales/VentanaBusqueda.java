@@ -46,37 +46,37 @@ public class VentanaBusqueda {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Busque aqui tu producto deseado");
-		lblNewLabel.setBounds(76, 18, 292, 16);
-		frame.getContentPane().add(lblNewLabel);
+		JLabel lblBusqueda = new JLabel("Busque aqui tu producto deseado");
+		lblBusqueda.setBounds(76, 18, 292, 16);
+		frame.getContentPane().add(lblBusqueda);
 		
-		JLabel lblNewLabel_1 = new JLabel("Nombre:");
-		lblNewLabel_1.setBounds(20, 123, 61, 16);
-		frame.getContentPane().add(lblNewLabel_1);
+		JLabel lblNombre = new JLabel("Nombre:");
+		lblNombre.setBounds(20, 123, 61, 16);
+		frame.getContentPane().add(lblNombre);
 		
 		textField = new JTextField();
 		textField.setBounds(142, 118, 130, 26);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		JLabel lblNewLabel_2 = new JLabel("Sección:");
-		lblNewLabel_2.setBounds(20, 81, 61, 16);
-		frame.getContentPane().add(lblNewLabel_2);
+		JLabel lblSeccion = new JLabel("Sección:");
+		lblSeccion.setBounds(20, 81, 61, 16);
+		frame.getContentPane().add(lblSeccion);
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(142, 77, 130, 27);
 		frame.getContentPane().add(comboBox);
 		
-		JLabel lblNewLabel_3 = new JLabel("Rango de precio:");
-		lblNewLabel_3.setBounds(20, 166, 115, 16);
-		frame.getContentPane().add(lblNewLabel_3);
+		JLabel lblRangoPrecio = new JLabel("Rango de precio:");
+		lblRangoPrecio.setBounds(20, 166, 115, 16);
+		frame.getContentPane().add(lblRangoPrecio);
 		
 		JComboBox comboBox_1 = new JComboBox();
 		comboBox_1.setBounds(142, 162, 130, 27);
 		frame.getContentPane().add(comboBox_1);
 		
-		JButton btnNewButton = new JButton("Buscar producto");
-		btnNewButton.setBounds(201, 220, 146, 29);
-		frame.getContentPane().add(btnNewButton);
+		JButton btnBusqueda2 = new JButton("Buscar producto");
+		btnBusqueda2.setBounds(201, 220, 146, 29);
+		frame.getContentPane().add(btnBusqueda2);
 	}
 }

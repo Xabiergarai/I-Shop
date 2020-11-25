@@ -63,8 +63,8 @@ public class VentanaLogin {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JButton btnNewButton = new JButton("ENTRAR");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnEntrar = new JButton("ENTRAR");
+		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String email = txtEmail.getText();
 				String con = txtContrase.getText();
@@ -73,16 +73,16 @@ public class VentanaLogin {
 					JOptionPane.showMessageDialog(null, "El e-mail no esta registrado.", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
 				}
 				else if(resul==1)
-					JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "La contraseï¿½a no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
 				else
 					JOptionPane.showMessageDialog(null, "Bienvenido", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
 				vaciarCampos();
 			}
 		});
-		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setBackground(new Color(255, 165, 0));
-		btnNewButton.setBounds(132, 366, 185, 48);
-		frame.getContentPane().add(btnNewButton);
+		btnEntrar.setForeground(new Color(255, 255, 255));
+		btnEntrar.setBackground(new Color(255, 165, 0));
+		btnEntrar.setBounds(132, 366, 185, 48);
+		frame.getContentPane().add(btnEntrar);
 		
 		JButton btnNuevoCliente = new JButton("NUEVO CLIENTE");
 		btnNuevoCliente.addActionListener(new ActionListener() {
@@ -108,18 +108,18 @@ public class VentanaLogin {
 		txtContrase = new JTextField();
 		txtContrase.setBackground(SystemColor.menu);
 		txtContrase.setHorizontalAlignment(SwingConstants.LEFT);
-		txtContrase.setText("CONTRASEÑA");
+		txtContrase.setText("CONTRASEï¿½A");
 		txtContrase.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		txtContrase.setColumns(10);
 		txtContrase.setBounds(115, 252, 236, 42);
 		frame.getContentPane().add(txtContrase);
 		
-		JLabel lblNewLabel = new JLabel("He olvidado mi contraseña");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel.setForeground(new Color(255, 165, 0));
-		lblNewLabel.setBounds(105, 319, 236, 14);
-		frame.getContentPane().add(lblNewLabel);
+		JLabel lblOlvidarContrasena = new JLabel("He olvidado mi contraseï¿½a");
+		lblOlvidarContrasena.setHorizontalAlignment(SwingConstants.CENTER);
+		lblOlvidarContrasena.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblOlvidarContrasena.setForeground(new Color(255, 165, 0));
+		lblOlvidarContrasena.setBounds(105, 319, 236, 14);
+		frame.getContentPane().add(lblOlvidarContrasena);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("img/i-shopNombreLogo.jpg"));
