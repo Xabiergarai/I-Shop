@@ -72,15 +72,15 @@ public class VentanaAudio {
         ImageIcon img2= new ImageIcon(ico2.getImage().getScaledInstance(lblNewLabel_2.getWidth(), lblNewLabel_2.getHeight(), Image.SCALE_SMOOTH));
         lblNewLabel_2.setIcon(img2);
 		
-		JLabel lblRuta1 = new JLabel("<html>Logitech G432 Auriculares Gaming 7.1<html>");
-		lblRuta1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblRuta1.setBounds(52, 244, 172, 48);
-		frame.getContentPane().add(lblRuta1);
+		JLabel lblNombre1 = new JLabel("<html>Logitech G432 Auriculares Gaming 7.1<html>");
+		lblNombre1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNombre1.setBounds(52, 244, 172, 48);
+		frame.getContentPane().add(lblNombre1);
 		
-		JLabel lblRuta2 = new JLabel("<html>Mars Gaming MSX Altavoz<html>");
-		lblRuta2.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblRuta2.setBounds(287, 234, 151, 52);
-		frame.getContentPane().add(lblRuta2);
+		JLabel lblNombre2 = new JLabel("<html>Mars Gaming MSX Altavoz<html>");
+		lblNombre2.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNombre2.setBounds(287, 234, 151, 52);
+		frame.getContentPane().add(lblNombre2);
 		
 		JLabel lblPrecio1 = new JLabel("45,99 eur");
 		lblPrecio1.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
@@ -128,10 +128,10 @@ public class VentanaAudio {
         ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblNewLabel_6.getWidth(), lblNewLabel_6.getHeight(), Image.SCALE_SMOOTH));
         lblNewLabel_6.setIcon(img3);
 		
-		JLabel lblRuta3 = new JLabel("<html>Galaxy Buds Live Auriculares Inalambricos Negro<html>");
-		lblRuta3.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblRuta3.setBounds(57, 625, 172, 43);
-		frame.getContentPane().add(lblRuta3);
+		JLabel lblNombre3 = new JLabel("<html>Galaxy Buds Live Auriculares Inalambricos Negro<html>");
+		lblNombre3.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNombre3.setBounds(57, 625, 172, 43);
+		frame.getContentPane().add(lblNombre3);
 		
 		JLabel lblPrecio3 = new JLabel("134,99 eur");
 		lblPrecio3.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -174,10 +174,10 @@ public class VentanaAudio {
         ImageIcon img4 = new ImageIcon(ico4.getImage().getScaledInstance(lblNewLabel_6_1.getWidth(), lblNewLabel_6_1.getHeight(), Image.SCALE_SMOOTH));
         lblNewLabel_6_1.setIcon(img4);
 		
-		JLabel lblRuta4 = new JLabel("<html>Logitech Speaker System Z313 Altavoces 2.1<html>");
-		lblRuta4.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblRuta4.setBounds(287, 622, 189, 48);
-		frame.getContentPane().add(lblRuta4);
+		JLabel lblNombre4 = new JLabel("<html>Logitech Speaker System Z313 Altavoces 2.1<html>");
+		lblNombre4.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNombre4.setBounds(287, 622, 189, 48);
+		frame.getContentPane().add(lblNombre4);
 		
 		JLabel lblPrecio4 = new JLabel("49,99 eur");
 		lblPrecio4.setFont(new Font("Tahoma", Font.PLAIN, 18));

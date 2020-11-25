@@ -108,10 +108,10 @@ public class VentanaRegistro {
 		btnCrearCuenta.setBounds(136, 440, 185, 48);
 		frame.getContentPane().add(btnCrearCuenta);
 		
-		JCheckBox chckbxNewCheckBox = new JCheckBox(" He leido y acepto la politica de privacidad.");
-		chckbxNewCheckBox.setBackground(new Color(255, 255, 255));
-		chckbxNewCheckBox.setBounds(105, 388, 268, 23);
-		frame.getContentPane().add(chckbxNewCheckBox);
+		JCheckBox chckbxPrivacidad = new JCheckBox(" He leido y acepto la politica de privacidad.");
+		chckbxPrivacidad.setBackground(new Color(255, 255, 255));
+		chckbxPrivacidad.setBounds(105, 388, 268, 23);
+		frame.getContentPane().add(chckbxPrivacidad);
 		
 		txtNombre = new JTextField();
 		txtNombre.setText("NOMBRE*");
@@ -121,9 +121,9 @@ public class VentanaRegistro {
 		txtNombre.setBounds(114, 125, 236, 42);
 		frame.getContentPane().add(txtNombre);
 		
-		JLabel lblNewLabel = new JLabel("Los campos marcados con * son obligatorios.");
-		lblNewLabel.setBounds(114, 351, 277, 14);
-		frame.getContentPane().add(lblNewLabel);
+		JLabel lblCampos = new JLabel("Los campos marcados con * son obligatorios.");
+		lblCampos.setBounds(114, 351, 277, 14);
+		frame.getContentPane().add(lblCampos);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		

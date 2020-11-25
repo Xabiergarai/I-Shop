@@ -63,10 +63,10 @@ public class VentanaSmartphone {
         ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
         lblNewLabel_1.setIcon(img1);
 		
-		JLabel lblRuta1 = new JLabel("<html>Apple iPhone XR 64GB Negro Libre<html>");
-		lblRuta1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblRuta1.setBounds(36, 309, 195, 16);
-		frame.getContentPane().add(lblRuta1);
+		JLabel lblNombre1 = new JLabel("<html>Apple iPhone XR 64GB Negro Libre<html>");
+		lblNombre1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNombre1.setBounds(36, 309, 195, 16);
+		frame.getContentPane().add(lblNombre1);
 		
 		JLabel Precio1 = new JLabel("630,99 eur");
 		Precio1.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -102,10 +102,10 @@ public class VentanaSmartphone {
 			}
 		});
 		
-		JLabel lblRuta2 = new JLabel("<html>Samsung Galaxy M31 Negro Libre<html>");
-		lblRuta2.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblRuta2.setBounds(270, 309, 204, 16);
-		frame.getContentPane().add(lblRuta2);
+		JLabel lblNombre2 = new JLabel("<html>Samsung Galaxy M31 Negro Libre<html>");
+		lblNombre2.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNombre2.setBounds(270, 309, 204, 16);
+		frame.getContentPane().add(lblNombre2);
 		
 		JLabel lblPrecio2 = new JLabel("199 eur");
 		lblPrecio2.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -128,10 +128,10 @@ public class VentanaSmartphone {
         ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblNewLabel_3.getWidth(), lblNewLabel_3.getHeight(), Image.SCALE_SMOOTH));
         lblNewLabel_3.setIcon(img3);
         
-        JLabel lblRuta3 = new JLabel("<html>Samsung Galaxy Tab A 10.1\" 2019 32GB Wifi Plata<html>");
-        lblRuta3.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        lblRuta3.setBounds(67, 645, 139, 16);
-        frame.getContentPane().add(lblRuta3);
+        JLabel lblNombre3 = new JLabel("<html>Samsung Galaxy Tab A 10.1\" 2019 32GB Wifi Plata<html>");
+        lblNombre3.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        lblNombre3.setBounds(67, 645, 139, 16);
+        frame.getContentPane().add(lblNombre3);
         
         JLabel lblPrecio3 = new JLabel("169 eur");
         lblPrecio3.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -175,10 +175,10 @@ public class VentanaSmartphone {
         lblNewLabel_6.setIcon(img4);
         
         
-        JLabel lblRuta4 = new JLabel("Realme 6 4/64GB Comet Blue Libre");
-        lblRuta4.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        lblRuta4.setBounds(293, 645, 194, 16);
-        frame.getContentPane().add(lblRuta4);
+        JLabel lblNombre4 = new JLabel("Realme 6 4/64GB Comet Blue Libre");
+        lblNombre4.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        lblNombre4.setBounds(293, 645, 194, 16);
+        frame.getContentPane().add(lblNombre4);
         
         JLabel lblPrecio4 = new JLabel("169 eur");
         lblPrecio4.setFont(new Font("Tahoma", Font.PLAIN, 18));
