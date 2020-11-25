@@ -77,6 +77,8 @@ public class VentanaLogin {
 					JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
 				else
 					JOptionPane.showMessageDialog(null, "Bienvenido", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
+				VentanaMenu.main(null);
+				frame.dispose();
 				vaciarCampos();
 			}
 		});
