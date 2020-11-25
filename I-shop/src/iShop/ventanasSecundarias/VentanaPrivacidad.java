@@ -8,7 +8,7 @@ import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JButton;
 
-public class VentanaAjustes2 {
+public class VentanaPrivacidad {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -27,7 +27,7 @@ public class VentanaAjustes2 {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaAjustes2 window = new VentanaAjustes2();
+					VentanaPrivacidad window = new VentanaPrivacidad();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +39,7 @@ public class VentanaAjustes2 {
 	/**
 	 * Create the application.
 	 */
-	public VentanaAjustes2() {
+	public VentanaPrivacidad() {
 		initialize();
 	}
 

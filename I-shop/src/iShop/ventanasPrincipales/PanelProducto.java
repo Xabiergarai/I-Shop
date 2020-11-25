@@ -26,6 +26,14 @@ public class PanelProducto extends JPanel {
 		lblSeccion.setBounds(57, 37, 77, 22);
 		/*frame.getContentPane().add(lblSeccion);*/
 		
+		JLabel lblImagen4 = new JLabel("New label");
+		lblImagen4.setBounds(287, 462, 172, 139);
+		/*frame.getContentPane().add(lblImagen4);*/
+		
+		ImageIcon ico4 = new ImageIcon("img/altavoz.jpg");
+        ImageIcon img4 = new ImageIcon(ico4.getImage().getScaledInstance(lblImagen4.getWidth(), lblImagen4.getHeight(), Image.SCALE_SMOOTH));
+        lblImagen4.setIcon(img4);
+		
 		JLabel lblNombre = new JLabel("<html>Logitech G432 Auriculares Gaming 7.1<html>");
 		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNombre.setBounds(52, 244, 172, 48);

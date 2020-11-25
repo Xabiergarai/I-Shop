@@ -10,7 +10,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
 
-public class VentanaAjustes3 {
+public class VentanaFacturacion {
 
 	private JFrame frame;
 
@@ -21,7 +21,7 @@ public class VentanaAjustes3 {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaAjustes3 window = new VentanaAjustes3();
+					VentanaFacturacion window = new VentanaFacturacion();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -33,7 +33,7 @@ public class VentanaAjustes3 {
 	/**
 	 * Create the application.
 	 */
-	public VentanaAjustes3() {
+	public VentanaFacturacion() {
 		initialize();
 	}
 

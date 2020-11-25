@@ -8,7 +8,7 @@ import javax.swing.JTextField;
 import javax.swing.JSpinner;
 import javax.swing.JButton;
 
-public class VentanaAjustes1 {
+public class VentanaCuenta {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -20,7 +20,7 @@ public class VentanaAjustes1 {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaAjustes1 window = new VentanaAjustes1();
+					VentanaCuenta window = new VentanaCuenta();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -32,7 +32,7 @@ public class VentanaAjustes1 {
 	/**
 	 * Create the application.
 	 */
-	public VentanaAjustes1() {
+	public VentanaCuenta() {
 		initialize();
 	}
 
