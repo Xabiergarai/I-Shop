@@ -102,7 +102,7 @@ public class VentanaMenu {
 			
 			btnAccesorios.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					VentanaOrdenador.main(null);
+					VentanaAudio.main(null);
 					frame.dispose();
 				}
 			});
@@ -128,7 +128,7 @@ public class VentanaMenu {
 
 		btnSmartphone.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaOrdenador.main(null);
+				VentanaSmartphone.main(null);
 				frame.dispose();
 			}
 		});
