@@ -33,7 +33,7 @@ class TestAdmin {
 		fail("Not yet implemented");
 	}
 	
-	public void testinvalidArguments() {
+	public void testInvalidArguments() {
 		expected.expect(IlegalArgumentException.class);
 		newAdmin(null,"Admin02","Admin03","Admin04");
 		newAdmin("Admin01",null,"Admin03","Admin04");
@@ -71,7 +71,7 @@ class TestAdmin {
 		
 	   expected.expect(GroupException.class);
 	   a.addAdmin(new Admin("Admin01","Admin02","Admin03","Admin04"));
-	   assertEquals(2,g.size());
+	   assertEquals(2, a.size());
 	   
 	   expected.expect(NullPointerException.class);
 	   a.addAdmin(null);

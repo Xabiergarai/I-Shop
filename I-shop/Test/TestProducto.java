@@ -83,42 +83,42 @@ class TestProducto {
 	
 	public void testEquals() {
 		Producto sameProducto = new Producto("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
-		assertTrue(a.equals(sameProducto));
+		assertTrue(p.equals(sameProducto));
 		
 		Producto diferentProducto = new Producto("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
-		assertFalse(a.equals(differentProducto));
+		assertFalse(p.equals(differentProducto));
 		
 		diferentProducto = new Producto("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
-		assertFalse(a.equals(differentProducto));
+		assertFalse(p.equals(differentProducto));
 
 	}
 	
 	public void testAddProducto() throws GroupException {
 		a.addProducto(new Producto("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador"));
-		assertEquals(1, a.size());
+		assertEquals(1, p.size());
 	}
 	
 	public ExpectedException expected = ExpectedException.none();
 	
 	public void testAddProductoErrors() throws GroupException {
 		a.addProducto(new Producto("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador"));
-		assertEquals(1,a.size());
-		
+		assertEquals(1, p.size());
+		 
 	   expected.expect(GroupException.class);
 	   a.addProducto(new Producto("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador"));
-	   assertEquals(2,g.size());
+	   assertEquals(2, p.size());
 	   
 	   expected.expect(NullPointerException.class);
 	   a.addProducto(null);
-	   assertEquals(a,a.size());
+	   assertEquals(a, p.size());
 	}
 	
 	public void testRemoveProducto() throws GroupException {
 		a.addProducto(new Producto("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador"));
-		assertEquals(1, a.size());
+		assertEquals(1, p.size());
 		
 		a.removeProducto(new Producto("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador"));
-		assertEquals(0, a.size());
+		assertEquals(0, p.size());
 			
 		}
 	}
@@ -126,4 +126,4 @@ class TestProducto {
 }
 
 
-}
+
