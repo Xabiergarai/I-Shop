@@ -47,7 +47,7 @@ class TestUsuario {
 		fail("Not yet implemented");
 	}
 	
-	public void testinvalidArguments() {
+	public void testInvalidArguments() {
 		expected.expect(IlegalArgumentException.class);
 		newUsuario(null,"Contraeña1","Xabier.gaari@opendeusto.es","Xabier","Garai", "Pascual");
 		newUsuario("XabierG",null,"Xabier.gaari@opendeusto.es","Xabier","Garai", "Pascual");
@@ -67,42 +67,42 @@ class TestUsuario {
 	
 	public void testEquals() {
 		Usuario sameUsuario = new Usuario("XabierG","Contraeña1","Xabier.gaari@opendeusto.es","Xabier","Garai, Pascual");
-		assertTrue(a.equals(sameUsuario));
+		assertTrue(u.equals(sameUsuario));
 		
 		Usuario diferentUsuario = new Usuario("XabierG","Contraeña1","Xabier.gaari@opendeusto.es","Xabier","Garai, Pascual");
-		assertFalse(a.equals(differentUsuario));
+		assertFalse(u.equals(differentUsuario));
 		
 		diferentUsuario = new Usuario("XabierG","Contraeña1","Xabier.gaari@opendeusto.es","Xabier","Garai, Pascual");
-		assertFalse(a.equals(differentUsuario));
+		assertFalse(u.equals(differentUsuario));
 
 	}
 	
 	public void testAddUsuario() throws GroupException {
 		a.addUsuario(new Usuario("XabierG","Contraeña1","Xabier.gaari@opendeusto.es","Xabier","Garai, Pascual"));
-		assertEquals(1, a.size());
+		assertEquals(1, u.size());
 	}
 	
 	public ExpectedException expected = ExpectedException.none();
 	
 	public void testAddUsuarioErrors() throws GroupException {
 		a.addUsuario(new Usuario("XabierG","Contraeña1","Xabier.gaari@opendeusto.es","Xabier","Garai, Pascual"));
-		assertEquals(1,a.size());
+		assertEquals(1, u.size());
 		
 	   expected.expect(GroupException.class);
 	   a.addUsuario(new Usuario("XabierG","Contraeña1","Xabier.gaari@opendeusto.es","Xabier","Garai, Pascual"));
-	   assertEquals(2,g.size());
+	   assertEquals(2, u.size());
 	   
 	   expected.expect(NullPointerException.class);
 	   a.addUsuario(null);
-	   assertEquals(a,a.size());
+	   assertEquals(a, u.size());
 	}
 	
 	public void testRemoveUsuario() throws GroupException {
 		a.addUsuario(new Usuario("XabierG","Contraeña1","Xabier.gaari@opendeusto.es","Xabier","Garai, Pascual"));
-		assertEquals(1, a.size());
+		assertEquals(1, u.size());
 		
 		a.removeUsuario(new Usuario("XabierG","Contraeña1","Xabier.gaari@opendeusto.es","Xabier","Garai, Pascual"));
-		assertEquals(0, a.size());
+		assertEquals(0, u.size());
 			
 		}
 	}
@@ -110,4 +110,4 @@ class TestUsuario {
 }
 
 
-}
+

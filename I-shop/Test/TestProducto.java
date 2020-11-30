@@ -64,7 +64,7 @@ class TestProducto {
 		fail("Not yet implemented");
 	}
 	
-	public void testinvalidArguments() {
+	public void testInvalidArguments() {
 		expected.expect(IlegalArgumentException.class);
 		newProducto(null, "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
 		newProducto("Macbook Pro", null ,"Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
