@@ -98,36 +98,34 @@ public class VentanaRegistro {
 		JButton btnCrearCuenta = new JButton("CREAR CUENTA");
 		btnCrearCuenta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-	
-				String nombreUsuario = txtNombre.getText();
-				String emailUsuario = txtEmail.getText();
-				String conUsuario = txtContrasena.getText();
-				
-				if (!conUsuario.isEmpty()) {
-					if (!emailUsuario.isEmpty()) {
-						if (!nombreUsuario.isEmpty()) {
-							
+				if (chckbxPrivacidad.isSelected()) {
+					
+					String nombreUsuario = txtNombre.getText();
+					String emailUsuario = txtEmail.getText();
+					String conUsuario = txtContrasena.getText();
+					
+					if (!conUsuario.isEmpty()) {
+						if (!emailUsuario.isEmpty()) {
+							if (!nombreUsuario.isEmpty()) {
+								
+							} else {
+								JOptionPane.showMessageDialog(null, "El apartado nombre esta vacio");
+							}
 						} else {
-							JOptionPane.showMessageDialog(null, "El apartado nombre esta vacio");
+							JOptionPane.showMessageDialog(null, "Tienes que introducir un correo");
 						}
 					} else {
-						JOptionPane.showMessageDialog(null, "Tienes que introducir un correo");
+						JOptionPane.showMessageDialog(null, "Tienes que crear una contraseï¿½a");
 					}
-				} else {
-					JOptionPane.showMessageDialog(null, "Tienes que crear una contraseña");
-				}
-				
-				if  (BD.existeUsuario(emailUsuario)) {
-					emailUsuario = JOptionPane.showInputDialog("Este email ya esta en uso, introduce otro: ");	
-				} else {
-					BD.insertarUsuario(nombreUsuario, emailUsuario, conUsuario);
-				}
-				
-				/*if (chckbxPrivacidad.isSelected()) {
-			
-				} else {
+					
+					if  (BD.existeUsuario(emailUsuario)) {
+						emailUsuario = JOptionPane.showInputDialog("Este email ya esta en uso, introduce otro: ");	
+					} else {
+						BD.insertarUsuario(nombreUsuario, emailUsuario, conUsuario);
+					}
+				}else {
 					JOptionPane.showMessageDialog(null, "Debes aceptar la politica de privacidad", "ERROR!", JOptionPane.ERROR_MESSAGE);
-		}*/
+				}
 				
 			}
 		});

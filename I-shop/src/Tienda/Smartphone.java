@@ -38,7 +38,7 @@ public class Smartphone extends Producto {
 		this.pulgadas = pulgadas;
 	}
 
-	public boolean isNfc() {
+	public boolean getNfc() {
 		return nfc;
 	}
 

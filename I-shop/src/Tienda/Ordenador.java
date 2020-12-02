@@ -38,7 +38,7 @@ public class Ordenador extends Producto {
 		this.pulgadas = pulgadas;
 	}
 
-	public boolean isPortatil() {
+	public boolean getPortatil() {
 		return portatil;
 	}
 
@@ -50,4 +50,5 @@ public class Ordenador extends Producto {
 	public String toString() {
 		return "Ordenador [ram=" + ram + ", pulgadas=" + pulgadas + ", portatil=" + portatil + "]";
 	}
+
 }

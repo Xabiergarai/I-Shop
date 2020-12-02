@@ -37,7 +37,7 @@ public class Audio extends Producto {
 		this.potencia = potencia;
 	}
 
-	public boolean isBluetooth() {
+	public boolean getBluetooth() {
 		return bluetooth;
 	}
 

@@ -49,7 +49,7 @@ public class Television extends Producto {
 		this.pulgadas = pulgadas;
 	}
 
-	public boolean isSmartTV() {
+	public boolean getSmartTV() {
 		return smartTV;
 	}
 

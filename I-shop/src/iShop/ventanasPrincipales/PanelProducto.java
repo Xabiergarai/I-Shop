@@ -21,7 +21,7 @@ public class PanelProducto extends JPanel {
 	public PanelProducto(String Seccion, String Ruta, String Nombre, Double Precio) {
 		
 		
-		JLabel lblSeccion = new JLabel("Audio");
+		JLabel lblSeccion = new JLabel(Seccion);
 		lblSeccion.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		lblSeccion.setBounds(57, 37, 77, 22);
 		/*frame.getContentPane().add(lblSeccion);*/
@@ -30,17 +30,17 @@ public class PanelProducto extends JPanel {
 		lblImagen4.setBounds(287, 462, 172, 139);
 		/*frame.getContentPane().add(lblImagen4);*/
 		
-		ImageIcon ico4 = new ImageIcon("img/altavoz.jpg");
+		ImageIcon ico4 = new ImageIcon(Ruta);
         ImageIcon img4 = new ImageIcon(ico4.getImage().getScaledInstance(lblImagen4.getWidth(), lblImagen4.getHeight(), Image.SCALE_SMOOTH));
         lblImagen4.setIcon(img4);
 		
-		JLabel lblNombre = new JLabel("<html>Logitech G432 Auriculares Gaming 7.1<html>");
+		JLabel lblNombre = new JLabel(Nombre);
 		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNombre.setBounds(52, 244, 172, 48);
 		/*frame.getContentPane().add(lblRuta);*/
 		
 		
-		JLabel lblPrecio = new JLabel("45,99 eur");
+		JLabel lblPrecio = new JLabel(String.valueOf(Precio));
 		lblPrecio.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
 		lblPrecio.setBounds(52, 322, 112, 16);
 		/*frame.getContentPane().add(lblPrecio);*/
