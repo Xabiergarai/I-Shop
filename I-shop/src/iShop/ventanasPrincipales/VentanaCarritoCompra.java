@@ -3,8 +3,10 @@ package iShop.ventanasPrincipales;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JRadioButton;
 import javax.swing.JCheckBox;
 import java.awt.Color;
 
@@ -81,16 +83,23 @@ public class VentanaCarritoCompra {
 		lblFormasDePago.setBounds(28, 313, 108, 16);
 		frame.getContentPane().add(lblFormasDePago);
 		
-		JCheckBox chckbxVisa = new JCheckBox("VISA");
-		chckbxVisa.setBounds(20, 353, 83, 23);
-		frame.getContentPane().add(chckbxVisa);
+		JRadioButton radiobtVisa = new JRadioButton("VISA");
+		radiobtVisa.setBounds(20, 353, 83, 23);
+		frame.getContentPane().add(radiobtVisa);
 		
-		JCheckBox chckbxMaterCard = new JCheckBox("MasterCard");
-		chckbxMaterCard.setBounds(113, 353, 119, 23);
-		frame.getContentPane().add(chckbxMaterCard);
+		JRadioButton radiobtMaterCard = new JRadioButton("MasterCard");
+		radiobtMaterCard.setBounds(113, 353, 119, 23);
+		frame.getContentPane().add(radiobtMaterCard);
 		
-		JCheckBox chckbxPayPal= new JCheckBox("PayPal");
-		chckbxPayPal.setBounds(244, 353, 97, 23);
-		frame.getContentPane().add(chckbxPayPal);
+		JRadioButton radiobtPayPal= new JRadioButton("PayPal");
+		radiobtPayPal.setBounds(244, 353, 97, 23);
+		frame.getContentPane().add(radiobtPayPal);
+		
+		ButtonGroup grupo1 = new ButtonGroup();
+		grupo1.add(radiobtVisa);
+		grupo1.add(radiobtMaterCard);
+		grupo1.add(radiobtPayPal);
+		
+		
 	}
 }
