@@ -142,6 +142,10 @@ public class VentanaMenu {
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Television");
 		mnNewMenu.add(mntmNewMenuItem_1);
+		
+		JMenuItem mntmNewMenuItem_3 = new JMenuItem("MENU");
+		mnNewMenu.add(mntmNewMenuItem_3);
+	
 	
 		
 		btnBuscarProducto.addActionListener(new ActionListener() {
