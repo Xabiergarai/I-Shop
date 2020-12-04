@@ -70,14 +70,14 @@ class TestOrdenador {
 	}
 	
 	public void testAddOrdenador() throws GroupException {
-		a.addOrdenador(new Ordenador("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","DDR4 8GB*2 (2666MHz)",15.6,true));
+		o.addOrdenador(new Ordenador("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","DDR4 8GB*2 (2666MHz)",15.6,true));
 		assertEquals(1, o.size());
 	}
 	
 	public ExpectedException expected = ExpectedException.none();
 	
 	public void testAddOrdenadorErrors() throws GroupException {
-		a.addOrdenador(new Ordenador("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","DDR4 8GB*2 (2666MHz)",15.6,true));
+		o.addOrdenador(new Ordenador("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","DDR4 8GB*2 (2666MHz)",15.6,true));
 		assertEquals(1, o.size());
 		
 	   expected.expect(GroupException.class);
@@ -85,15 +85,15 @@ class TestOrdenador {
 	   assertEquals(2, o.size());
 	   
 	   expected.expect(NullPointerException.class);
-	   a.addOrdenador(null);
-	   assertEquals(a, o.size());
+	   o.addOrdenador(null);
+	   assertEquals(1, o.size());
 	}
 	
 	public void testRemoveOrdenador() throws GroupException {
-		a.addOrdenador(new Ordenador("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","DDR4 8GB*2 (2666MHz)",15.6,true));
+		o.addOrdenador(new Ordenador("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","DDR4 8GB*2 (2666MHz)",15.6,true));
 		assertEquals(1, o.size());
 		
-		a.removeOrdenador(new Ordenador("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","DDR4 8GB*2 (2666MHz)",15.6,true));
+		o.removeOrdenador(new Ordenador("Macbook Pro", "E01","Atributos",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","DDR4 8GB*2 (2666MHz)",15.6,true));
 		assertEquals(0, o.size());
 			
 		}

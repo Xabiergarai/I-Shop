@@ -12,6 +12,10 @@ import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
+import javax.swing.JComboBox;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 
 public class VentanaMenu {
 
@@ -55,7 +59,7 @@ public class VentanaMenu {
 		frame.getContentPane().add(lblSeccionesProductos);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setBounds(64, 121, 99, 55);
+		lblNewLabel_1.setBounds(110, 121, 99, 55);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 
@@ -84,7 +88,7 @@ public class VentanaMenu {
 		JButton btnPc = new JButton("PC");
 		btnPc.setForeground(Color.WHITE);
 		btnPc.setBackground(new Color(255, 165, 0));
-		btnPc.setBounds(55, 62, 126, 48);
+		btnPc.setBounds(83, 61, 126, 48);
 		frame.getContentPane().add(btnPc); 
 				
 			btnPc.addActionListener(new ActionListener() {
@@ -116,7 +120,29 @@ public class VentanaMenu {
 		JButton btnBuscarProducto = new JButton("Busque aqui el producto deseado");
 		btnBuscarProducto.setBounds(99, 381, 271, 29);
 		frame.getContentPane().add(btnBuscarProducto);
-		System.out.println("prueba");
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 99, 22);
+		frame.getContentPane().add(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("Categorias");
+		menuBar.add(mnNewMenu);
+		
+		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Audio");
+		mntmNewMenuItem_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaAudio.main(null);
+				frame.dispose();
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem_2);
+		
+		JMenuItem mntmNewMenuItem = new JMenuItem("Ordenador");
+		mnNewMenu.add(mntmNewMenuItem);
+		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Television");
+		mnNewMenu.add(mntmNewMenuItem_1);
+	
 		
 		btnBuscarProducto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
