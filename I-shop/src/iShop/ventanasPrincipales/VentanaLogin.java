@@ -29,7 +29,7 @@ public class VentanaLogin {
 	private JTextField txtEmail;
 	private JTextField txtContrase;
 
-	/**
+	/*
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
@@ -56,12 +56,14 @@ public class VentanaLogin {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
 		BD.crearLaBD();
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(255, 255, 255));
 		frame.getContentPane().setIgnoreRepaint(true);
 		frame.setBounds(100, 100, 500, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("Ishop");
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnEntrar = new JButton("ENTRAR");

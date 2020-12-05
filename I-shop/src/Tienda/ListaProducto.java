@@ -1,15 +1,16 @@
 package Tienda;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class ListaProducto {
 
-    private HashMap<Integer, Producto> productos;
+    private Map<Integer, Producto> productos;
 
     public static void main(String[] args) {
         ListaProducto listaProducto = new ListaProducto();
 
-        HashMap<Integer, Producto> lista= listaProducto.getProductos();
+        Map<Integer, Producto> lista= listaProducto.getProductos();
         lista.put(
                 12342145,
                 new Producto(
@@ -24,11 +25,11 @@ public class ListaProducto {
         this.productos = new HashMap<Integer, Producto>();
     }
 
-    public HashMap<Integer, Producto> getProductos() {
+    public Map<Integer, Producto> getProductos() {
         return productos;
     }
 
-    public void setProductos(HashMap<Integer, Producto> productos) {
+    public void setProductos(Map<Integer, Producto> productos) {
         this.productos = productos;
     }
 }

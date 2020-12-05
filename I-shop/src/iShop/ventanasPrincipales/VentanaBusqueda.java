@@ -44,6 +44,7 @@ public class VentanaBusqueda {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("Ishop");
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblBusqueda = new JLabel("Busque aqui tu producto deseado");

@@ -62,6 +62,7 @@ public class VentanaRegistro {
 		frame.getContentPane().setForeground(new Color(0, 0, 0));
 		frame.setBounds(100, 100, 500, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("Ishop");
 		frame.getContentPane().setLayout(null);
 		
 		txtEmail = new JTextField();

@@ -50,6 +50,7 @@ public class VentanaFavoritos {
 		frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 14));
 		frame.setBounds(100, 100, 500, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("Ishop");
 		frame.getContentPane().setLayout(null);
 		
 		txtFavoritos = new JTextField();

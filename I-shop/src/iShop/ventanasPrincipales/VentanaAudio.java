@@ -4,6 +4,10 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -48,6 +52,7 @@ public class VentanaAudio {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 600, 900);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("Ishop");
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblSeccion = new JLabel("Audio");
@@ -185,7 +190,7 @@ public class VentanaAudio {
 		frame.getContentPane().add(lblPrecio4);
 		
 		JScrollBar scrollBar = new JScrollBar();
-		scrollBar.setBounds(559, 0, 15, 874);
+		scrollBar.setBounds(559, 66, 15, 874);
 		frame.getContentPane().add(scrollBar);
 		
 		JButton btnFav = new JButton("Fav");
@@ -235,5 +240,42 @@ public class VentanaAudio {
 			}
 		});
 		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 99, 22);
+		frame.getContentPane().add(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("Categorias");
+		menuBar.add(mnNewMenu);
+		
+		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Audio");
+		mntmNewMenuItem_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaAudio.main(null);
+				frame.dispose();
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem_2);
+		
+		JMenuItem mntmNewMenuItem = new JMenuItem("Ordenador");
+		mntmNewMenuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaOrdenador.main(null);
+				frame.dispose();
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem);
+		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("SmartPhone");
+		mntmNewMenuItem_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaSmartphone.main(null);
+				frame.dispose();
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem_1);
+	
+	
+		
+
 	}
 }

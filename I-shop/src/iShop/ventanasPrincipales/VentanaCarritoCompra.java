@@ -44,6 +44,7 @@ public class VentanaCarritoCompra {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 400, 500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("Ishop");
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnVaciarCesta = new JButton("Vaciar cesta");

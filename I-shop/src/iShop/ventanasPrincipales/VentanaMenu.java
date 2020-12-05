@@ -51,6 +51,7 @@ public class VentanaMenu {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 500, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("Ishop");
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblSeccionesProductos = new JLabel("Secciones de los productos");
@@ -138,16 +139,25 @@ public class VentanaMenu {
 		mnNewMenu.add(mntmNewMenuItem_2);
 		
 		JMenuItem mntmNewMenuItem = new JMenuItem("Ordenador");
+		mntmNewMenuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaOrdenador.main(null);
+				frame.dispose();
+			}
+		});
 		mnNewMenu.add(mntmNewMenuItem);
 		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Television");
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("SmartPhone");
+		mntmNewMenuItem_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaSmartphone.main(null);
+				frame.dispose();
+			}
+		});
 		mnNewMenu.add(mntmNewMenuItem_1);
 		
-		JMenuItem mntmNewMenuItem_3 = new JMenuItem("MENU");
-		mnNewMenu.add(mntmNewMenuItem_3);
 	
-	
-		
+
 		btnBuscarProducto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaBusqueda.main(null);

@@ -54,6 +54,7 @@ public class VentanaOrdenador {
 		frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 10));
 		frame.setBounds(100, 100, 600, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("Ishop");
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(0,2));
 		JScrollPane scroll = new JScrollPane(panel);
