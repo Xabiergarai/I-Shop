@@ -273,6 +273,14 @@ public class VentanaSmartphone {
 		});
 		mnNewMenu.add(mntmNewMenuItem_1);
 	
+		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Television");
+		mntmNewMenuItem_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaTelevision.main(null);
+				frame.dispose();
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem_3);
 
 	
 	}

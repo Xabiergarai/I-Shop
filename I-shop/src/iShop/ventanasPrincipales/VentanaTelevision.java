@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -58,9 +59,13 @@ public class VentanaTelevision {
 		frame.getContentPane().add(lblSeccion);
 		
 		JLabel lblImagen1 = new JLabel("New label");
-		lblImagen1.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/tv1.jpg"));
 		lblImagen1.setBounds(65, 123, 174, 116);
 		frame.getContentPane().add(lblImagen1);
+		
+		ImageIcon ico4= new ImageIcon("img/tv1.jpg");
+        ImageIcon img4= new ImageIcon(ico4.getImage().getScaledInstance(lblImagen1.getWidth(), lblImagen1.getHeight(), Image.SCALE_SMOOTH));
+        lblImagen1.setIcon(img4);
+		
 		
 		JLabel lblNombre1 = new JLabel("Televisor Sony 65\" LED UltraHD 4K");
 		lblNombre1.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -98,11 +103,15 @@ public class VentanaTelevision {
 			});
 		
 		JLabel lblImagen2 = new JLabel("New label");
-		lblImagen2.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/tv2.jpg"));
 		lblImagen2.setBounds(75, 444, 164, 136);
 		frame.getContentPane().add(lblImagen2);
 		
-		JLabel lblNombre2 = new JLabel("Lenco 10\" TFT HD Televisor Portátil ");
+		ImageIcon ico1= new ImageIcon("img/tv2.jpg");
+        ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblImagen2.getWidth(), lblImagen2.getHeight(), Image.SCALE_SMOOTH));
+        lblImagen2.setIcon(img1);
+
+		
+		JLabel lblNombre2 = new JLabel("Lenco 10\" TFT HD Televisor Portatil ");
 		lblNombre2.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNombre2.setBounds(50, 615, 231, 16);
 		frame.getContentPane().add(lblNombre2);
@@ -138,9 +147,12 @@ public class VentanaTelevision {
 			});
 		
 		JLabel lblImagen3 = new JLabel("New label");
-		lblImagen3.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/tv3.jpg"));
 		lblImagen3.setBounds(367, 117, 139, 128);
 		frame.getContentPane().add(lblImagen3);
+		
+		ImageIcon ico3= new ImageIcon("img/tv3.jpg");
+        ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblImagen3.getWidth(), lblImagen3.getHeight(), Image.SCALE_SMOOTH));
+        lblImagen3.setIcon(img3);
 		
 		JLabel lblNombre3 = new JLabel("Televisor LG 49\" LED UltraHD 4K");
 		lblNombre3.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -180,9 +192,12 @@ public class VentanaTelevision {
 			});
 		
 		JLabel lblImagen4 = new JLabel("New label");
-		lblImagen4.setIcon(new ImageIcon("/Users/xabiergarai/Desktop/tv4.jpg"));
 		lblImagen4.setBounds(338, 444, 179, 133);
 		frame.getContentPane().add(lblImagen4);
+		
+		ImageIcon ico2= new ImageIcon("img/tv4.jpg");
+        ImageIcon img2= new ImageIcon(ico2.getImage().getScaledInstance(lblImagen4.getWidth(), lblImagen4.getHeight(), Image.SCALE_SMOOTH));
+        lblImagen4.setIcon(img2);
 		
 		JLabel lblNombre4 = new JLabel("Sony Bravia 85\" LED UltraHD 4K");
 		lblNombre4.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -246,6 +261,14 @@ public class VentanaTelevision {
 			});
 			mnNewMenu.add(mntmNewMenuItem_1);
 		
+			JMenuItem mntmNewMenuItem_3 = new JMenuItem("Television");
+			mntmNewMenuItem_3.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					VentanaTelevision.main(null);
+					frame.dispose();
+				}
+			});
+			mnNewMenu.add(mntmNewMenuItem_3);
 
 		
 		}
