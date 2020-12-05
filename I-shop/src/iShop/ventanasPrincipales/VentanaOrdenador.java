@@ -54,7 +54,6 @@ public class VentanaOrdenador {
 		frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 10));
 		frame.setBounds(100, 100, 600, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setTitle("Ishop");
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(0,2));
 		JScrollPane scroll = new JScrollPane(panel);
@@ -62,8 +61,16 @@ public class VentanaOrdenador {
 		frame.getContentPane().add(panel);
 
 		
-		/*PanelProducto pp1 = PanelProducto("Ordenadores");
+		/*PanelProducto pp1 = PanelProducto("Ordenador");
 		panel.add(pp1);
+		
+		PanelProducto pp2 = PanelProducto("Audio");
+		panel.add(pp2);
+		
+		PanelProducto pp3 = PanelProducto("Smartphone");
+		panel.add(pp3);
+		
+		
 		
 		
 		frame.getContentPane().add(scroll);
@@ -277,5 +284,10 @@ public class VentanaOrdenador {
 			}
 		});
         
+	}
+
+	private PanelProducto PanelProducto(String string) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
