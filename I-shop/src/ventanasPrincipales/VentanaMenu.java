@@ -60,7 +60,7 @@ public class VentanaMenu {
 		frame.getContentPane().add(lblSeccionesProductos);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setBounds(110, 121, 99, 55);
+		lblNewLabel_1.setBounds(83, 121, 126, 77);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 
@@ -69,7 +69,7 @@ public class VentanaMenu {
 		lblNewLabel_1.setIcon(img2);
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setBounds(315, 121, 76, 55);
+		lblNewLabel_2.setBounds(285, 121, 106, 77);
 		frame.getContentPane().add(lblNewLabel_2);
 		ImageIcon ico3= new ImageIcon("img/audio.jpg");
 		ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblNewLabel_2.getWidth(), lblNewLabel_2.getHeight(), Image.SCALE_SMOOTH));
@@ -79,7 +79,7 @@ public class VentanaMenu {
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setBackground(Color.WHITE);
-		lblNewLabel_3.setBounds(165, 260, 126, 77);
+		lblNewLabel_3.setBounds(83, 310, 126, 77);
 		frame.getContentPane().add(lblNewLabel_3);
 
 		ImageIcon ico4= new ImageIcon("img/smartphone.png");
@@ -115,48 +115,28 @@ public class VentanaMenu {
 		JButton btnSmartphone = new JButton("SmartPhone");
 		btnSmartphone.setForeground(Color.WHITE);
 		btnSmartphone.setBackground(new Color(255, 165, 0));
-		btnSmartphone.setBounds(165, 201, 126, 48);
+		btnSmartphone.setBounds(83, 224, 126, 48);
 		frame.getContentPane().add(btnSmartphone);
 		
 		JButton btnBuscarProducto = new JButton("Busque aqui el producto deseado");
-		btnBuscarProducto.setBounds(99, 381, 271, 29);
+		btnBuscarProducto.setBounds(99, 411, 271, 29);
 		frame.getContentPane().add(btnBuscarProducto);
 		
-		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(0, 0, 99, 22);
-		frame.getContentPane().add(menuBar);
+		JButton btnTelevision = new JButton("Television");
+		btnTelevision.setForeground(Color.WHITE);
+		btnTelevision.setBackground(new Color(255, 165, 0));
+		btnTelevision.setBounds(275, 224, 126, 48);
+		frame.getContentPane().add(btnTelevision);
 		
-		JMenu mnNewMenu = new JMenu("Categorias");
-		menuBar.add(mnNewMenu);
+		JLabel lblNewLabel_3_1 = new JLabel("New label");
+		lblNewLabel_3_1.setBackground(Color.WHITE);
+		lblNewLabel_3_1.setBounds(275, 310, 126, 77);
+		frame.getContentPane().add(lblNewLabel_3_1);
 		
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Audio");
-		mntmNewMenuItem_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaAudio.main(null);
-				frame.dispose();
-			}
-		});
-		mnNewMenu.add(mntmNewMenuItem_2);
+		ImageIcon ico5= new ImageIcon("img/iconotv.jpg");
+		ImageIcon img5= new ImageIcon(ico5.getImage().getScaledInstance(lblNewLabel_3_1.getWidth(), lblNewLabel_3_1.getHeight(), Image.SCALE_SMOOTH));
+		lblNewLabel_3_1.setIcon(img5);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Ordenador");
-		mntmNewMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaOrdenador.main(null);
-				frame.dispose();
-			}
-		});
-		mnNewMenu.add(mntmNewMenuItem);
-		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("SmartPhone");
-		mntmNewMenuItem_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaSmartphone.main(null);
-				frame.dispose();
-			}
-		});
-		mnNewMenu.add(mntmNewMenuItem_1);
-		
-	
 
 		btnBuscarProducto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

@@ -16,6 +16,8 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+
+
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 
@@ -57,20 +59,24 @@ public class VentanaOrdenador {
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(0,2));
 		JScrollPane scroll = new JScrollPane(panel);
-		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-		frame.getContentPane().add(panel);
+		//scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		frame.getContentPane().add(scroll);
 
-		
-		/*PanelProducto pp1 = PanelProducto("Ordenador");
+		PanelProducto pp1 = new PanelProducto("Ordenadores", "img/1539-honor-magicbook-14-amd-ryzen-5-3500u-8gb-256gb-ssd-14.jpg", "Lenovo IdeaPad 3 15ADA05 AMD",(double)379);
 		panel.add(pp1);
-		
-		PanelProducto pp2 = PanelProducto("Audio");
+		PanelProducto pp2 = new PanelProducto("Ordenadores", "img/1539-honor-magicbook-14-amd-ryzen-5-3500u-8gb-256gb-ssd-14.jpg", "Lenovo IdeaPad 3 15ADA05 AMD",(double)379);
 		panel.add(pp2);
-		
-		PanelProducto pp3 = PanelProducto("Smartphone");
+		PanelProducto pp3 = new PanelProducto("Ordenadores", "img/1539-honor-magicbook-14-amd-ryzen-5-3500u-8gb-256gb-ssd-14.jpg", "Lenovo IdeaPad 3 15ADA05 AMD",(double)379);
 		panel.add(pp3);
+		PanelProducto pp4 = new PanelProducto("Ordenadores", "img/1539-honor-magicbook-14-amd-ryzen-5-3500u-8gb-256gb-ssd-14.jpg", "Lenovo IdeaPad 3 15ADA05 AMD",(double)379);
+		panel.add(pp4);
+		PanelProducto pp5 = new PanelProducto("Ordenadores", "img/1539-honor-magicbook-14-amd-ryzen-5-3500u-8gb-256gb-ssd-14.jpg", "Lenovo IdeaPad 3 15ADA05 AMD",(double)379);
+		panel.add(pp5);
 		
 		
+		/*PanelProducto pp1 = PanelProducto("Ordenadores");
+		panel.add(pp1);
 		
 		
 		frame.getContentPane().add(scroll);
@@ -235,6 +241,7 @@ public class VentanaOrdenador {
         scrollBar.setBounds(559, -38, 15, 920);
         frame.getContentPane().add(scrollBar);*/	
         
+		/*
         JButton btnFav = new JButton("Fav");
         btnFav.setHorizontalTextPosition(SwingConstants.CENTER);
         btnFav.setBounds(198, 419, 53, 43);
@@ -282,12 +289,7 @@ public class VentanaOrdenador {
 				VentanaFavoritos.main(null);
 				frame.dispose();
 			}
-		});
+		});*/
         
-	}
-
-	private PanelProducto PanelProducto(String string) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }
