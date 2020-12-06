@@ -1,4 +1,4 @@
-package iShop.ventanasPrincipales;
+package ventanasPrincipales;
 
 import java.awt.Color;
 import java.awt.EventQueue;

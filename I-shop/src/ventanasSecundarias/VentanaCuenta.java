@@ -1,4 +1,4 @@
-package iShop.ventanasSecundarias;
+package ventanasSecundarias;
 
 import java.awt.EventQueue;
 
