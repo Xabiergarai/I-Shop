@@ -6,14 +6,21 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
 public class PanelProducto extends JPanel {
+	
+	private JFrame frame;
 
 	/**
 	 * Create the panel.
@@ -46,6 +53,24 @@ public class PanelProducto extends JPanel {
 		btnAnadirAlCarrito.setBounds(52, 370, 139, 43);
 		add(btnAnadirAlCarrito);
 		
+		btnAnadirAlCarrito.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaCarritoCompra.main(null);
+				frame.dispose();
+			}
+		});
+		
+		JButton btnFav = new JButton("Fav");
+		btnFav.setBounds(186, 354, 53, 43);
+		frame.getContentPane().add(btnFav);
+		
+		 btnFav.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					VentanaFavoritos.main(null);
+					frame.dispose();
+				}
+			});
+		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setBounds(85, 100, 129, 151);
 		add(lblNewLabel_1);
@@ -54,9 +79,58 @@ public class PanelProducto extends JPanel {
         ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
         lblNewLabel_1.setIcon(img1);
 		
-
+        JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 99, 22);
+		frame.getContentPane().add(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("Categorias");
+		menuBar.add(mnNewMenu);
+		
+		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Audio");
+		mntmNewMenuItem_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaAudio.main(null);
+				frame.dispose();
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem_2);
+		
+		JMenuItem mntmNewMenuItem = new JMenuItem("Ordenador");
+		mntmNewMenuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaOrdenador.main(null);
+				frame.dispose();
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem);
+		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("SmartPhone");
+		mntmNewMenuItem_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaSmartphone.main(null);
+				frame.dispose();
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem_1);
+	
+		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Television");
+		mntmNewMenuItem_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaTelevision.main(null);
+				frame.dispose();
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem_3);
+		
+		JMenuItem mntmNewMenuItem_4 = new JMenuItem("MENU");
+		mntmNewMenuItem_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaMenu.main(null);
+				frame.dispose();
+			}
+		});	
+		mnNewMenu.add(mntmNewMenuItem_4);
+		
+	}
 	}
 	
-	
-
-}
