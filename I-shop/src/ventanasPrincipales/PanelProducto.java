@@ -59,10 +59,15 @@ public class PanelProducto extends JPanel {
 				frame.dispose();
 			}
 		});
+	
 		
+
 		JButton btnFav = new JButton("Fav");
-		btnFav.setBounds(186, 354, 53, 43);
-		frame.getContentPane().add(btnFav);
+		btnAnadirAlCarrito.setForeground(Color.WHITE);
+		btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnAnadirAlCarrito.setBackground(new Color(255, 165, 0));
+		btnAnadirAlCarrito.setBounds(186, 354, 53, 43);
+		add(btnFav);
 		
 		 btnFav.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
@@ -71,17 +76,10 @@ public class PanelProducto extends JPanel {
 				}
 			});
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setBounds(85, 100, 129, 151);
-		add(lblNewLabel_1);
-		
-		ImageIcon ico1= new ImageIcon("img/iphonexr-black-pureangles-us-en-screen1.jpg");
-        ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
-        lblNewLabel_1.setIcon(img1);
-		
+	
         JMenuBar menuBar = new JMenuBar();
 		menuBar.setBounds(0, 0, 99, 22);
-		frame.getContentPane().add(menuBar);
+		add(menuBar);
 		
 		JMenu mnNewMenu = new JMenu("Categorias");
 		menuBar.add(mnNewMenu);
