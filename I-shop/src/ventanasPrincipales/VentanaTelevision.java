@@ -51,6 +51,7 @@ public class VentanaTelevision {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 600, 900);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("Ishop");
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblImagen1 = new JLabel("New label");
