@@ -53,11 +53,6 @@ public class VentanaTelevision {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblSeccion = new JLabel("Televisiones");
-		lblSeccion.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblSeccion.setBounds(65, 45, 139, 16);
-		frame.getContentPane().add(lblSeccion);
-		
 		JLabel lblImagen1 = new JLabel("New label");
 		lblImagen1.setBounds(65, 123, 174, 116);
 		frame.getContentPane().add(lblImagen1);
@@ -269,6 +264,11 @@ public class VentanaTelevision {
 				}
 			});
 			mnNewMenu.add(mntmNewMenuItem_3);
+			
+			JLabel lblNewLabel_1 = new JLabel("Televisiones");
+			lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 24));
+			lblNewLabel_1.setBounds(205, 45, 178, 43);
+			frame.getContentPane().add(lblNewLabel_1);
 
 		
 		}

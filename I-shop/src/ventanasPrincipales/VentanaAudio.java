@@ -55,11 +55,6 @@ public class VentanaAudio {
 		frame.setTitle("Ishop");
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblSeccion = new JLabel("Audio");
-		lblSeccion.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblSeccion.setBounds(57, 37, 77, 22);
-		frame.getContentPane().add(lblSeccion);
-		
 		
 		JLabel lblImagen1 = new JLabel("New label");
 		lblImagen1.setBounds(49, 103, 189, 130);
@@ -70,7 +65,7 @@ public class VentanaAudio {
         lblImagen1.setIcon(img1);
 		
 		JLabel lblImagen2 = new JLabel("New label");
-		lblImagen2.setBounds(287, 108, 151, 121);
+		lblImagen2.setBounds(323, 108, 151, 121);
 		frame.getContentPane().add(lblImagen2);
 		
 		ImageIcon ico2= new ImageIcon("img/mars-gaming-msx-altavoces-21-35w.jpg");
@@ -84,7 +79,7 @@ public class VentanaAudio {
 		
 		JLabel lblNombre2 = new JLabel("<html>Mars Gaming MSX Altavoz<html>");
 		lblNombre2.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblNombre2.setBounds(287, 234, 151, 52);
+		lblNombre2.setBounds(323, 234, 151, 52);
 		frame.getContentPane().add(lblNombre2);
 		
 		JLabel lblPrecio1 = new JLabel("45,99 eur");
@@ -108,14 +103,14 @@ public class VentanaAudio {
 		
 		JLabel lblPrecio2 = new JLabel("15,90 eur");
 		lblPrecio2.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
-		lblPrecio2.setBounds(287, 322, 85, 16);
+		lblPrecio2.setBounds(323, 322, 85, 16);
 		frame.getContentPane().add(lblPrecio2);
 		
 		JButton btnAnadirAlCarrito_1 = new JButton("Agregar al carrito");
 		btnAnadirAlCarrito_1.setForeground(Color.WHITE);
 		btnAnadirAlCarrito_1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAnadirAlCarrito_1.setBackground(new Color(255, 165, 0));
-		btnAnadirAlCarrito_1.setBounds(287, 370, 139, 43);
+		btnAnadirAlCarrito_1.setBounds(323, 370, 139, 43);
 		frame.getContentPane().add(btnAnadirAlCarrito_1);
 		
 		btnAnadirAlCarrito_1.addActionListener(new ActionListener() {
@@ -161,7 +156,7 @@ public class VentanaAudio {
 		btnAnadirAlCarrito_3.setForeground(Color.WHITE);
 		btnAnadirAlCarrito_3.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAnadirAlCarrito_3.setBackground(new Color(255, 165, 0));
-		btnAnadirAlCarrito_3.setBounds(281, 753, 139, 43);
+		btnAnadirAlCarrito_3.setBounds(317, 753, 139, 43);
 		frame.getContentPane().add(btnAnadirAlCarrito_3);
 		
 		btnAnadirAlCarrito_3.addActionListener(new ActionListener() {
@@ -172,7 +167,7 @@ public class VentanaAudio {
 		});
 		
 		JLabel lblImagen4 = new JLabel("New label");
-		lblImagen4.setBounds(287, 462, 172, 139);
+		lblImagen4.setBounds(323, 462, 172, 139);
 		frame.getContentPane().add(lblImagen4);
 		
 		ImageIcon ico4 = new ImageIcon("img/altavoz.jpg");
@@ -181,17 +176,13 @@ public class VentanaAudio {
 		
 		JLabel lblNombre4 = new JLabel("<html>Logitech Speaker System Z313 Altavoces 2.1<html>");
 		lblNombre4.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblNombre4.setBounds(287, 622, 189, 48);
+		lblNombre4.setBounds(323, 622, 189, 48);
 		frame.getContentPane().add(lblNombre4);
 		
 		JLabel lblPrecio4 = new JLabel("49,99 eur");
 		lblPrecio4.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblPrecio4.setBounds(287, 713, 105, 16);
+		lblPrecio4.setBounds(323, 713, 105, 16);
 		frame.getContentPane().add(lblPrecio4);
-		
-		JScrollBar scrollBar = new JScrollBar();
-		scrollBar.setBounds(559, 66, 15, 874);
-		frame.getContentPane().add(scrollBar);
 		
 		JButton btnFav = new JButton("Fav");
 		btnFav.setBounds(192, 369, 53, 44);
@@ -207,7 +198,7 @@ public class VentanaAudio {
 		
 		
 		JButton btnFav3 = new JButton("Fav");
-		btnFav3.setBounds(427, 370, 53, 43);
+		btnFav3.setBounds(463, 370, 53, 43);
 		frame.getContentPane().add(btnFav3);
 		
 		btnFav3.addActionListener(new ActionListener() {
@@ -218,7 +209,7 @@ public class VentanaAudio {
 		});
 		
 		JButton btnFav4 = new JButton("Fav");
-		btnFav4.setBounds(421, 753, 53, 43);
+		btnFav4.setBounds(457, 753, 53, 43);
 		frame.getContentPane().add(btnFav4);
 		
 		btnFav4.addActionListener(new ActionListener() {
@@ -282,6 +273,11 @@ public class VentanaAudio {
 			}
 		});
 		mnNewMenu.add(mntmNewMenuItem_3);
+		
+		JLabel lblNewLabel_1 = new JLabel("Audio");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 24));
+		lblNewLabel_1.setBounds(229, 38, 105, 43);
+		frame.getContentPane().add(lblNewLabel_1);
 		
 
 	}
