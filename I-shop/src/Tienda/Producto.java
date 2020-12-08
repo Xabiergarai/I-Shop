@@ -1,6 +1,8 @@
 package Tienda;
 
-public class Producto {
+import java.io.Serializable;
+
+public abstract class Producto implements Serializable {
 	
 	private String nombre;
 	private String codigo;
@@ -8,12 +10,11 @@ public class Producto {
 	private double precio;
 	private String descripcion;
 	private String categoria;
-	
-	
+	private String rutaFoto;
 	
 	
 	public Producto(String nombre, String codigo, String marca, double precio,
-		   String descripcion, String categoria) {
+		   String descripcion, String categoria, String rutaFoto) {
 		super();
 		this.nombre = nombre;
 		this.codigo = codigo;
@@ -21,6 +22,7 @@ public class Producto {
 		this.precio = precio;
 		this.descripcion = descripcion;
 		this.categoria = categoria;
+		this.rutaFoto = rutaFoto;
 	}
 	
 	public Producto() {
@@ -31,8 +33,10 @@ public class Producto {
 		this.precio = 0.0;
 		this.descripcion = "";
 		this.categoria = "";
+		this.rutaFoto = " "; 
 	}
 
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -80,12 +84,19 @@ public class Producto {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+	
+	public String getRutaFoto() {
+		return rutaFoto;
+	}
 
+	public void setRutaFoto(String rutaFoto) {
+		this.rutaFoto = rutaFoto;
+	}
+
+	
 	@Override
 	public String toString() {
 		return "Producto [nombre=" + nombre + ", codigo=" + codigo + ", marca=" + marca + ", precio=" + precio
-				+ ", descripcion=" + descripcion + ", categoria=" + categoria + "]";
+				+ ", descripcion=" + descripcion + ", categoria=" + categoria + ", rutaFoto=" + rutaFoto + "]";
 	}
-	
-
 }

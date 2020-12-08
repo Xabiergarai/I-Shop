@@ -17,6 +17,7 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 
+import Tienda.Contenedora;
 import Tienda.BD;
 
 import java.awt.SystemColor;
@@ -28,6 +29,7 @@ public class VentanaLogin {
 	private JFrame frame;
 	private JTextField txtEmail;
 	private JTextField txtContrase;
+	public static Contenedora contenedora;
 
 	/*
 	 * Launch the application.
@@ -49,6 +51,7 @@ public class VentanaLogin {
 	 * Create the application.
 	 */
 	public VentanaLogin() {
+		contenedora = new Contenedora();
 		initialize();
 	}
 

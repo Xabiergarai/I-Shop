@@ -8,8 +8,8 @@ public class Smartphone extends Producto {
 	
 	
 	public Smartphone(String nombre, String codigo, String marca, double precio, String descripcion, String categoria,
-			String sistemaOperativo, double pulgadas, boolean nfc) {
-		super(nombre, codigo, marca, precio, descripcion, categoria);
+			String rutaFoto, String sistemaOperativo, double pulgadas, boolean nfc) {
+		super(nombre, codigo, marca, precio, descripcion, categoria, rutaFoto);
 		this.sistemaOperativo = sistemaOperativo;
 		this.pulgadas = pulgadas;
 		this.nfc = nfc;
@@ -17,11 +17,12 @@ public class Smartphone extends Producto {
 	
 	public Smartphone() {
 		super();
-		this.sistemaOperativo = "";
+		this.sistemaOperativo = " ";
 		this.pulgadas = 0.0;
 		this.nfc = false;
 	}
 
+	
 	public String getSistemaOperativo() {
 		return sistemaOperativo;
 	}
@@ -34,11 +35,11 @@ public class Smartphone extends Producto {
 		return pulgadas;
 	}
 
-	public void setPulgadas(int pulgadas) {
+	public void setPulgadas(double pulgadas) {
 		this.pulgadas = pulgadas;
 	}
 
-	public boolean getNfc() {
+	public boolean isNfc() {
 		return nfc;
 	}
 
@@ -46,6 +47,7 @@ public class Smartphone extends Producto {
 		this.nfc = nfc;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "Smartphone [sistemaOperativo=" + sistemaOperativo + ", pulgadas=" + pulgadas + ", nfc=" + nfc + "]";

@@ -4,13 +4,13 @@ public class Television extends Producto {
 	
 	private String tipo;
 	private String formaPantalla;
-	private int pulgadas;
+	private double pulgadas;
 	private boolean smartTV;
 	
 	
 	public Television(String nombre, String codigo, String marca, double precio, String descripcion, String categoria,
-			String tipo, String formaPantalla, int pulgadas, boolean smartTV) {
-		super(nombre, codigo, marca, precio, descripcion, categoria);
+			String rutaFoto, String tipo, String formaPantalla, double pulgadas, boolean smartTV) {
+		super(nombre, codigo, marca, precio, descripcion, categoria, rutaFoto);
 		this.tipo = tipo;
 		this.formaPantalla = formaPantalla;
 		this.pulgadas = pulgadas;
@@ -19,12 +19,13 @@ public class Television extends Producto {
 	
 	public Television() {
 		super();
-		this.tipo = "";
-		this.formaPantalla = "";
-		this.pulgadas = 0;
+		this.tipo = " ";
+		this.formaPantalla = " ";
+		this.pulgadas = 0.0;
 		this.smartTV = false;
 	}
 
+	
 	public String getTipo() {
 		return tipo;
 	}
@@ -41,15 +42,15 @@ public class Television extends Producto {
 		this.formaPantalla = formaPantalla;
 	}
 
-	public int getPulgadas() {
+	public double getPulgadas() {
 		return pulgadas;
 	}
 
-	public void setPulgadas(int pulgadas) {
+	public void setPulgadas(double pulgadas) {
 		this.pulgadas = pulgadas;
 	}
 
-	public boolean getSmartTV() {
+	public boolean isSmartTV() {
 		return smartTV;
 	}
 
@@ -57,10 +58,10 @@ public class Television extends Producto {
 		this.smartTV = smartTV;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "Television [tipo=" + tipo + ", formaPantalla=" + formaPantalla + ", pulgadas=" + pulgadas + ", smartTV="
 				+ smartTV + "]";
 	}
-	
 }

@@ -8,8 +8,8 @@ public class Ordenador extends Producto {
 	
 	
 	public Ordenador(String nombre, String codigo, String marca, double precio, String descripcion, String categoria,
-			String ram, double pulgadas, boolean portatil) {
-		super(nombre, codigo, marca, precio, descripcion, categoria);
+			String rutaFoto, String ram, double pulgadas, boolean portatil) {
+		super(nombre, codigo, marca, precio, descripcion, categoria, rutaFoto);
 		this.ram = ram;
 		this.pulgadas = pulgadas;
 		this.portatil = portatil;
@@ -17,11 +17,12 @@ public class Ordenador extends Producto {
 	
 	public Ordenador() {
 		super();
-		this.ram = "";
+		this.ram = " ";
 		this.pulgadas = 0.0;
 		this.portatil = false;
 	}
 
+	
 	public String getRam() {
 		return ram;
 	}
@@ -34,11 +35,11 @@ public class Ordenador extends Producto {
 		return pulgadas;
 	}
 
-	public void setPulgadas(int pulgadas) {
+	public void setPulgadas(double pulgadas) {
 		this.pulgadas = pulgadas;
 	}
 
-	public boolean getPortatil() {
+	public boolean isPortatil() {
 		return portatil;
 	}
 
@@ -46,9 +47,9 @@ public class Ordenador extends Producto {
 		this.portatil = portatil;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "Ordenador [ram=" + ram + ", pulgadas=" + pulgadas + ", portatil=" + portatil + "]";
 	}
-
 }
