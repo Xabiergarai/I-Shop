@@ -15,7 +15,7 @@ class TestProducto {
 	@Test
 	public void testGetNombreProducto() {
 		
-		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
+		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertEquals("Macbook Pro",p.getNombre());	
 		
 	}
@@ -23,7 +23,7 @@ class TestProducto {
 	@Test
 	public void testGetCodigoProducto() {
 		
-		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
+		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertEquals("E01",p.getCodigo());	
 		
 	}
@@ -31,7 +31,7 @@ class TestProducto {
 	@Test
 	public void testGetMarcaProducto() {
 		
-		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
+		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertEquals("Atributos",p.getMarca());	
 		
 	}
@@ -39,15 +39,15 @@ class TestProducto {
 	@Test
 	public void testGetPrecioProducto() {
 		
-		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
-		assertEquals("999.99",p.getNombre());	
+		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		assertEquals(999.99 ,p.getPrecio());
 		
 	}
 	
 	@Test
 	public void testGetDescripcionProducto() {
 		
-		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
+		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertEquals("Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",p.getDescripcion());	
 		
 	}
@@ -55,8 +55,16 @@ class TestProducto {
 	@Test
 	public void testGetCategoriaProducto() {
 		
-		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
+		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertEquals("Ordenador",p.getCategoria());	
+		
+	}
+	
+	@Test
+	public void testGetRutaFotoProducto() {
+		
+		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		assertEquals("img/pc3.jpg",p.getRutaFoto());
 		
 	}
 	
@@ -67,47 +75,51 @@ class TestProducto {
 	
 	public void testInvalidArguments() {
 		expected.expect(IllegalArgumentException.class);
-		new Producto(null, "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
-		new Producto("Macbook Pro", null,"Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
-		new Producto("Macbook Pro", "E01",null,999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
-		new Producto("Macbook Pro", "E01","Apple",0.0,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
-		new Producto("Macbook Pro", "E01","Apple",999.99,null,"Ordenador");
-		new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",null);
+		new Producto(null, "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", null,"Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "E01",null,999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "E01","Apple",0.0,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "E01","Apple",999.99,null,"Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",null,"img/pc3.jpg");
+		new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",null,"");
+	
+		new Producto(null, "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", null,"Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "E01",null,999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "E01","Apple",0.0,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "E01","Apple",999.99,null,"Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",null,"img/pc3.jpg");
+		new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",null,"img/pc3.jpg");
+		new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador",null);
 		
-		new Producto("", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
-		new Producto("Macbook Pro","","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
-		new Producto("Macbook Pro", "E01","",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
-		new Producto("Macbook Pro", "E01","Apple",0.0,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
-		new Producto("Macbook Pro", "E01","Apple",999.99,"","Ordenador");
-		new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","");
 
 		
 	
 	public void testEquals() {
-		Producto sameProducto = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
+		Producto sameProducto = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertTrue(p.equals(sameProducto));
 		
-		Producto differentProducto = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
+		Producto differentProducto = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertFalse(p.equals(differentProducto));
 		
-		differentProducto = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador");
+		differentProducto = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertFalse(p.equals(differentProducto));
 
 	}
 	
 	public void testAddProducto() throws GroupException {
-		a.addProducto(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador"));
+		a.addProducto(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
 		assertEquals(1, p.size());
 	}
 	
 	public ExpectedException expected = ExpectedException.none();
 	
 	public void testAddProductoErrors() throws GroupException {
-		p.addProducto(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador"));
+		p.addProducto(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
 		assertEquals(1, p.size());
 		 
 	   expected.expect(GroupException.class);
-	   p.addProducto(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador"));
+	   p.addProducto(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
 	   assertEquals(2, p.size());
 	   
 	   expected.expect(NullPointerException.class);
@@ -116,10 +128,10 @@ class TestProducto {
 	}
 	
 	public void testRemoveProducto() throws GroupException {
-		p.addProducto(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador"));
+		p.addProducto(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
 		assertEquals(1, p.size());
 		
-		p.removeProducto(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador"));
+		p.removeProducto(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
 		assertEquals(0, p.size());
 			
 		}
