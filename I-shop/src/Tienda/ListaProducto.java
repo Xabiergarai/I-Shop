@@ -15,7 +15,7 @@ public class ListaProducto {
                 12342145,
                 new Producto(
                         "Macbook Pro", "sdfklgju76",
-                        "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador"
+                        "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador",""
                 )
         );
         lista.get(12342145);

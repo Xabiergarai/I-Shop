@@ -2,7 +2,7 @@ package Tienda;
 
 import java.io.Serializable;
 
-public abstract class Producto implements Serializable {
+public class Producto implements Serializable {
 	
 	private String nombre;
 	private String codigo;
