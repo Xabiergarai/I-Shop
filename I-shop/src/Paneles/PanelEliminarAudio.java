@@ -1,11 +1,11 @@
 package Paneles;
 
 import java.awt.BorderLayout;
-import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -16,20 +16,18 @@ import javax.swing.JPanel;
 import Tienda.Audio;
 import ventanasPrincipales.VentanaLogin;
 
-public class PanelAudio extends JPanel{
+public class PanelEliminarAudio extends JPanel {
 	private JPanel pSur,pCentro,pIzquierda,pDerecha;
-	private JButton btnAñadir,btnFavoritos;
+	private JButton btnEliminar;
 	private JLabel lblFoto,lblNombre,lblCategoria,lblDescripcion,lblPrecio,lblMarca,lblEntrada,lblPotencia,lblBluetooth;
 	private JFrame ventana;
-	public PanelAudio(Audio a, JFrame v) {
+	public PanelEliminarAudio(Audio a, JFrame v, int i) {
 		super();
 		ventana = v;
 		setLayout(new BorderLayout());
 		pSur = new JPanel();
-		btnFavoritos = new JButton("Lista de deseos");
-		pSur.add(btnFavoritos);
-		btnAñadir = new JButton("Añadir al carrito");
-		pSur.add(btnAñadir);
+		btnEliminar = new JButton("Eliminar");
+		pSur.add(btnEliminar);
 		
 		pCentro = new JPanel(new GridLayout(1,2));
 		pIzquierda = new JPanel();
@@ -42,7 +40,7 @@ public class PanelAudio extends JPanel{
 		pIzquierda.add(lblFoto);
 		pCentro.add(pIzquierda);
 		
-		pDerecha = new JPanel(new GridLayout(5,1));
+		pDerecha = new JPanel(new GridLayout(4,1));
 		lblNombre = new JLabel(a.getNombre());
 		lblPotencia =  new JLabel("Potencia: "+ String.valueOf(a.getPotencia()) + " Hz");
 		if(a.isBluetooth() == true)
@@ -57,13 +55,13 @@ public class PanelAudio extends JPanel{
 		pDerecha.add(lblPrecio);
 		pCentro.add(pDerecha);
 		
-		btnAñadir.addActionListener(new ActionListener() {
+		btnEliminar.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				VentanaLogin.contenedora.aniadirProductoAlCarrito(a);
-				JOptionPane.showMessageDialog(null, "El producto ha sido añadido al carrito con exito");
+				VentanaLogin.contenedora.getListaProductos().remove(i);
+				JOptionPane.showMessageDialog(null, "El producto ha sido eliminado con exito");
 			}
 		});
 		
