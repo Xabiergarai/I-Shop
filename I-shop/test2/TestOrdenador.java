@@ -6,7 +6,7 @@ import org.junit.rules.ExpectedException;
 
 import Tienda.*;
 
-class TestOrdenador {
+/*class TestOrdenador {
 
 	@Test
 	public void testGetRam() {
@@ -103,7 +103,7 @@ class TestOrdenador {
 			
 		}
 	
-	}
+	}*/
 
 
 

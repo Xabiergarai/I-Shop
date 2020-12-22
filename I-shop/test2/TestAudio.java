@@ -6,7 +6,7 @@ import org.junit.rules.ExpectedException;
 
 import Tienda.*;
 
-class TestAudio {
+/* class TestAudio {
 
 	
 	@Test
@@ -104,7 +104,7 @@ class TestAudio {
 			
 		}
 	
-	}
+	}*/
 
 	
 

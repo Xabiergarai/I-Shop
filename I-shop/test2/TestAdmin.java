@@ -5,7 +5,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.rules.ExpectedException;
 
 import Tienda.*;
-class TestAdmin {
+
+
+/*class TestAdmin extends GroupException {
+	
+	
 	
 	@Test
 	public void testGetAdminUsuario() {
@@ -98,5 +102,5 @@ class TestAdmin {
 			
 		}
 	
-	}
+	}*/
 

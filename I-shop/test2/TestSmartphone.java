@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.rules.ExpectedException;
 
 import Tienda.*;
-class TestSmartphone {
+/* class TestSmartphone {
 
 	@Test
 	 public void testGetsistemaOperativo() {
@@ -103,7 +103,7 @@ class TestSmartphone {
 		assertEquals(0, s.size());
 			
 		}
-}
+}*/
 
 
 

@@ -10,7 +10,7 @@ import org.junit.rules.ExpectedException;
 
 import Tienda.*;
 
-class TestProducto {
+/* class TestProducto {
 	
 	@Test
 	public void testGetNombreProducto() {
@@ -136,7 +136,7 @@ class TestProducto {
 			
 		}
 	}
-	}
+	}*/
 
 
 
