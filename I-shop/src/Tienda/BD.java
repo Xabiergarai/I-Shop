@@ -17,7 +17,7 @@ public class BD {
 		    System.out.println("OK");
 		    return con;
 		} catch (ClassNotFoundException | SQLException e) {
-			System.out.println("error");
+			System.out.println("Error");
 			return null;
 		}
 	}

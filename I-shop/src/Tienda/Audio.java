@@ -5,9 +5,9 @@ public class Audio extends Producto {
 	private String entrada;
 	private int potencia;
     private boolean bluetooth;
-	public Audio(String nombre, String codigo, String marca, double precio, String descripcion, String categoria,
+	public Audio(String nombre, String marca, double precio, String descripcion, String categoria,
 			String rutaFoto, String entrada, int potencia, boolean bluetooth) {
-		super(nombre, codigo, marca, precio, descripcion, categoria, rutaFoto);
+		super(nombre, marca, precio, descripcion, categoria, rutaFoto);
 		this.entrada = entrada;
 		this.potencia = potencia;
 		this.bluetooth = bluetooth;

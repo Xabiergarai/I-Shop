@@ -40,8 +40,9 @@ public class PanelEliminarAudio extends JPanel {
 		pIzquierda.add(lblFoto);
 		pCentro.add(pIzquierda);
 		
-		pDerecha = new JPanel(new GridLayout(4,1));
+		pDerecha = new JPanel(new GridLayout(5,1));
 		lblNombre = new JLabel(a.getNombre());
+		lblMarca = new JLabel(a.getMarca());
 		lblPotencia =  new JLabel("Potencia: "+ String.valueOf(a.getPotencia()) + " Hz");
 		if(a.isBluetooth() == true)
 			lblBluetooth =  new JLabel("El producto tiene bluetooth");

@@ -44,6 +44,7 @@ public class PanelAudio extends JPanel{
 		
 		pDerecha = new JPanel(new GridLayout(5,1));
 		lblNombre = new JLabel(a.getNombre());
+		lblMarca = new JLabel(a.getMarca());
 		lblPotencia =  new JLabel("Potencia: "+ String.valueOf(a.getPotencia()) + " Hz");
 		if(a.isBluetooth() == true)
 			lblBluetooth =  new JLabel("El producto tiene bluetooth");
@@ -56,6 +57,16 @@ public class PanelAudio extends JPanel{
 		pDerecha.add(lblBluetooth);
 		pDerecha.add(lblPrecio);
 		pCentro.add(pDerecha);
+		
+		btnFavoritos.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				VentanaLogin.contenedora.aniadirProductoAFavoritos(a);
+				JOptionPane.showMessageDialog(null, "El producto ha sido añadido a la lista de deseos con exito");
+			}
+		});
 		
 		btnAñadir.addActionListener(new ActionListener() {
 			

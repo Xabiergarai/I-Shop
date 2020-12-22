@@ -22,8 +22,6 @@ import javax.swing.JScrollPane;
 import Paneles.PanelAudio;
 import Tienda.Audio;
 import Tienda.Producto;
-import Ventanas.VentanaPrincipal;
-import Ventanas.VentanaResumenCompra;
 
 public class VentanaMenu extends JFrame {
 	JPanel pCentral, pSur;
@@ -69,7 +67,7 @@ public class VentanaMenu extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				ventana.dispose();
-				ventanaAnterior.setVisible(true);
+				new VentanaLogin();
 			}
 		});
 		

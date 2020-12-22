@@ -41,6 +41,11 @@ public class Contenedora {
 		this.carrito = carrito;
 	}
 	
+	public void vaciarCarrito() {
+		for(int i=0;i<carrito.size();i++)
+			carrito.remove(i);
+	}	
+	
 	/**
 	 * Método que guarda el contenido del carrito en un fichero de texto para generar la factura
 	 */

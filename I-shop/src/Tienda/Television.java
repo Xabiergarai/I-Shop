@@ -10,7 +10,7 @@ public class Television extends Producto {
 	
 	public Television(String nombre, String codigo, String marca, double precio, String descripcion, String categoria,
 			String rutaFoto, String tipo, String formaPantalla, double pulgadas, boolean smartTV) {
-		super(nombre, codigo, marca, precio, descripcion, categoria, rutaFoto);
+		super(nombre, marca, precio, descripcion, categoria, rutaFoto);
 		this.tipo = tipo;
 		this.formaPantalla = formaPantalla;
 		this.pulgadas = pulgadas;

@@ -9,7 +9,7 @@ public class Ordenador extends Producto {
 	
 	public Ordenador(String nombre, String codigo, String marca, double precio, String descripcion, String categoria,
 			String rutaFoto, String ram, double pulgadas, boolean portatil) {
-		super(nombre, codigo, marca, precio, descripcion, categoria, rutaFoto);
+		super(nombre, marca, precio, descripcion, categoria, rutaFoto);
 		this.ram = ram;
 		this.pulgadas = pulgadas;
 		this.portatil = portatil;

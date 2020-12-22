@@ -6,7 +6,6 @@ public abstract class Producto implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	private String nombre;
-	private String codigo;
 	private String marca;
 	private double precio;
 	private String descripcion;
@@ -14,11 +13,10 @@ public abstract class Producto implements Serializable {
 	private String rutaFoto;
 	
 	
-	public Producto(String nombre, String codigo, String marca, double precio,
+	public Producto(String nombre, String marca, double precio,
 		   String descripcion, String categoria, String rutaFoto) {
 		super();
 		this.nombre = nombre;
-		this.codigo = codigo;
 		this.marca = marca;
 		this.precio = precio;
 		this.descripcion = descripcion;
@@ -29,7 +27,6 @@ public abstract class Producto implements Serializable {
 	public Producto() {
 		super();
 		this.nombre = "";
-		this.codigo = "";
 		this.marca = "";
 		this.precio = 0.0;
 		this.descripcion = "";
@@ -44,14 +41,6 @@ public abstract class Producto implements Serializable {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public String getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
 	}
 
 	public String getMarca() {
@@ -97,7 +86,7 @@ public abstract class Producto implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "Producto [nombre=" + nombre + ", codigo=" + codigo + ", marca=" + marca + ", precio=" + precio
+		return "Producto [nombre=" + nombre + ", marca=" + marca + ", precio=" + precio
 				+ ", descripcion=" + descripcion + ", categoria=" + categoria + ", rutaFoto=" + rutaFoto + "]";
 	}
 }

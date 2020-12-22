@@ -9,7 +9,7 @@ public class Smartphone extends Producto {
 	
 	public Smartphone(String nombre, String codigo, String marca, double precio, String descripcion, String categoria,
 			String rutaFoto, String sistemaOperativo, double pulgadas, boolean nfc) {
-		super(nombre, codigo, marca, precio, descripcion, categoria, rutaFoto);
+		super(nombre, marca, precio, descripcion, categoria, rutaFoto);
 		this.sistemaOperativo = sistemaOperativo;
 		this.pulgadas = pulgadas;
 		this.nfc = nfc;

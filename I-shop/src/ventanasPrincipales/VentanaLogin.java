@@ -24,10 +24,10 @@ import java.awt.SystemColor;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class VentanaLogin {
+public class VentanaLogin extends JFrame {
 
 	private JFrame frame;
-	private JTextField txtEmail;
+	static JTextField txtEmail;
 	private JTextField txtContrase;
 	public static Contenedora contenedora;
 
@@ -82,8 +82,7 @@ public class VentanaLogin {
 					JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
 				else
 					JOptionPane.showMessageDialog(null, "Bienvenido", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
-				VentanaMenu.main(null);
-				frame.dispose();
+				new VentanaMenu(null);
 				vaciarCampos();
 			}
 		});
