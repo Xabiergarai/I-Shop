@@ -2,7 +2,7 @@ package Tienda;
 
 import java.io.Serializable;
 
-public abstract class Producto implements Serializable {
+public class Producto implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	private String nombre;

@@ -11,11 +11,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
 
-import Clases.Articulo;
 import Tienda.BD;
 import Tienda.Producto;
-import Ventanas.VentanaEsperaTransaccion;
-import Ventanas.VentanaPrincipal;
 
 public class VentanaResumenCompra extends JFrame {
 	private JTextArea ta;
