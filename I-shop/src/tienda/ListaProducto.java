@@ -1,4 +1,4 @@
-package Tienda;
+package tienda;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package Administrador;
+package administrador;
 
 public class VentanaEliminarAudio {
 

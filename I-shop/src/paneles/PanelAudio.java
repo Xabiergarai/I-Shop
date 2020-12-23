@@ -1,4 +1,4 @@
-package Paneles;
+package paneles;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -18,7 +18,7 @@ import ventanasPrincipales.VentanaLogin;
 
 public class PanelAudio extends JPanel{
 	private JPanel pSur,pCentro,pIzquierda,pDerecha;
-	private JButton btnAñadir,btnFavoritos;
+	private JButton btnAï¿½adir,btnFavoritos;
 	private JLabel lblFoto,lblNombre,lblCategoria,lblDescripcion,lblPrecio,lblMarca,lblEntrada,lblPotencia,lblBluetooth;
 	private JFrame ventana;
 	public PanelAudio(Audio a, JFrame v) {
@@ -28,8 +28,8 @@ public class PanelAudio extends JPanel{
 		pSur = new JPanel();
 		btnFavoritos = new JButton("Lista de deseos");
 		pSur.add(btnFavoritos);
-		btnAñadir = new JButton("Añadir al carrito");
-		pSur.add(btnAñadir);
+		btnAï¿½adir = new JButton("Aï¿½adir al carrito");
+		pSur.add(btnAï¿½adir);
 		
 		pCentro = new JPanel(new GridLayout(1,2));
 		pIzquierda = new JPanel();
@@ -50,7 +50,7 @@ public class PanelAudio extends JPanel{
 			lblBluetooth =  new JLabel("El producto tiene bluetooth");
 		else
 			lblBluetooth = new JLabel("El producto no tiene bluetooth");
-		lblPrecio =  new JLabel("Precio de compra: "+String.valueOf(a.getPrecio())+ " €");
+		lblPrecio =  new JLabel("Precio de compra: "+String.valueOf(a.getPrecio())+ " ï¿½");
 		pDerecha.add(lblNombre);
 		pDerecha.add(lblMarca);
 		pDerecha.add(lblPotencia);
@@ -64,17 +64,17 @@ public class PanelAudio extends JPanel{
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				VentanaLogin.contenedora.aniadirProductoAFavoritos(a);
-				JOptionPane.showMessageDialog(null, "El producto ha sido añadido a la lista de deseos con exito");
+				JOptionPane.showMessageDialog(null, "El producto ha sido aï¿½adido a la lista de deseos con exito");
 			}
 		});
 		
-		btnAñadir.addActionListener(new ActionListener() {
+		btnAï¿½adir.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				VentanaLogin.contenedora.aniadirProductoAlCarrito(a);
-				JOptionPane.showMessageDialog(null, "El producto ha sido añadido al carrito con exito");
+				JOptionPane.showMessageDialog(null, "El producto ha sido aï¿½adido al carrito con exito");
 			}
 		});
 		

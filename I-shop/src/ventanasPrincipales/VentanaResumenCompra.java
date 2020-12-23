@@ -11,14 +11,14 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
 
-import Tienda.BD;
-import Tienda.Producto;
+import tienda.BD;
+import tienda.Producto;
 
 public class VentanaResumenCompra extends JFrame {
 	private JTextArea ta;
 	public VentanaResumenCompra() {
 		setBounds(800, 300, 600, 200); //Le damos las dimensiones a la ventana
-		setTitle("Resumen de la compra "+ VentanaLogin.txtEmail); //Le asignamos un título a la ventana
+		setTitle("Resumen de la compra "+ VentanaLogin.txtEmail); //Le asignamos un tï¿½tulo a la ventana
 		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		JPanel pSur = new JPanel();
 		JButton btnRealizarPago = new JButton("Realizar pago");

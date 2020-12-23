@@ -1,4 +1,4 @@
-package Tienda;
+package tienda;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,7 +14,7 @@ import java.util.Date;
 
 public class Contenedora {
 	/**
-	 * Lista con toda la información de los artículos
+	 * Lista con toda la informaciï¿½n de los artï¿½culos
 	 */
 	public ArrayList<Producto> listaProductos;
 	public ArrayList<Producto> carrito;
@@ -47,7 +47,7 @@ public class Contenedora {
 	}	
 	
 	/**
-	 * Método que guarda el contenido del carrito en un fichero de texto para generar la factura
+	 * Mï¿½todo que guarda el contenido del carrito en un fichero de texto para generar la factura
 	 */
 	public void guardarCarritoEnFicheroDeTexto(String nombreUsuario) {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
@@ -74,14 +74,14 @@ public class Contenedora {
 	}
 	
 	/**
-	 * Método que añade un articulo al carrito
+	 * Mï¿½todo que aï¿½ade un articulo al carrito
 	 */
 	public void aniadirProductoAlCarrito(Producto p) {
 		carrito.add(p);
 	}
 	
 	/**
-	 * Método que carga la información del fichero PELICULAS.DAT en un ArrayList
+	 * Mï¿½todo que carga la informaciï¿½n del fichero PELICULAS.DAT en un ArrayList
 	 */
 	public void cargarFicheroProductos() {
 		try {
@@ -119,7 +119,7 @@ public class Contenedora {
 	}
 	
 	/**
-	 * Método que actualiza el contenido del fichero con la información del ArrayList
+	 * Mï¿½todo que actualiza el contenido del fichero con la informaciï¿½n del ArrayList
 	 */
 	public void guardarListaProductosEnFichero() {
 

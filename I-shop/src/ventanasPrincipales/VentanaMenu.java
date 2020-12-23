@@ -19,9 +19,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-import Paneles.PanelAudio;
-import Tienda.Audio;
-import Tienda.Producto;
+import paneles.PanelAudio;
+import tienda.Audio;
+import tienda.Producto;
 
 public class VentanaMenu extends JFrame {
 	JPanel pCentral, pSur;
@@ -51,16 +51,16 @@ public class VentanaMenu extends JFrame {
 		super();
 		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		ventana = this; //Hace referencia a la ventana actual
-		ventanaAnterior = va; //Guarda la información de la ventana que ha llamado a esta
+		ventanaAnterior = va; //Guarda la informaciï¿½n de la ventana que ha llamado a esta
 		setBounds(800, 300, 800, 375); //Le damos las dimensiones a la ventana
-		setTitle("Bienvenido"); //Le asignamos un título a la ventana
+		setTitle("Bienvenido"); //Le asignamos un tï¿½tulo a la ventana
 		
-		pCentral = new JPanel(new GridLayout(0, 2)); //Podemos un 0 en las filas para que se vayan incrementando de forma dinámica
+		pCentral = new JPanel(new GridLayout(0, 2)); //Podemos un 0 en las filas para que se vayan incrementando de forma dinï¿½mica
 		cargarFotos();
 		JScrollPane scroll =  new JScrollPane(pCentral);//Creamos un scroll que contiene el panel central
-		getContentPane().add(scroll,BorderLayout.CENTER);//Añadir a la ventana principal el scroll que contine el panel
+		getContentPane().add(scroll,BorderLayout.CENTER);//Aï¿½adir a la ventana principal el scroll que contine el panel
 		
-		btnSalir = new JButton("Cerrar Sesión");
+		btnSalir = new JButton("Cerrar Sesiï¿½n");
 		btnSalir.addActionListener(new ActionListener() {
 			
 			@Override

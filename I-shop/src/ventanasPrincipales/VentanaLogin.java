@@ -17,8 +17,8 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 
-import Tienda.Contenedora;
-import Tienda.BD;
+import tienda.BD;
+import tienda.Contenedora;
 
 import java.awt.SystemColor;
 import java.awt.event.ActionListener;
@@ -79,7 +79,7 @@ public class VentanaLogin extends JFrame {
 					JOptionPane.showMessageDialog(null, "El e-mail no esta registrado.", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
 				}
 				else if(resul==1)
-					JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "La contraseï¿½a no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
 				else
 					JOptionPane.showMessageDialog(null, "Bienvenido", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
 				new VentanaMenu(null);
@@ -121,7 +121,7 @@ public class VentanaLogin extends JFrame {
 		txtContrase.setBounds(115, 252, 236, 42);
 		frame.getContentPane().add(txtContrase);
 		
-		JLabel lblOlvidarContrasena = new JLabel("He olvidado mi contraseña");
+		JLabel lblOlvidarContrasena = new JLabel("He olvidado mi contraseï¿½a");
 		lblOlvidarContrasena.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOlvidarContrasena.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblOlvidarContrasena.setForeground(new Color(255, 165, 0));

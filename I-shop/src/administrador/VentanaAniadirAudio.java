@@ -1,4 +1,4 @@
-package Administrador;
+package administrador;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -12,14 +12,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import Tienda.Audio;
-import Tienda.Producto;
+import tienda.Audio;
+import tienda.Producto;
 import ventanasPrincipales.VentanaLogin;
 
 public class VentanaAniadirAudio extends JFrame{
 	private JTextField txtNombre,txtPotencia,txtPrecio,txtFoto,txtMarca,txtDescripcion,txtCategoria,txtEntrada;
 	private JLabel lblNombre,lblPotencia,lblBluetooth,lblPrecio,lblRutaFoto,lblMarca,lblDescripcion,lblCategoria,lblEntrada;
-	private JComboBox<String> cbBluetooth; //Desplegable con SI ó NO
+	private JComboBox<String> cbBluetooth; //Desplegable con SI ï¿½ NO
 	private JPanel pSur,pCentro;
 	private JButton btnInsertar,btnActualizarFichero,btnVolverAlMenu;
 	
@@ -27,7 +27,7 @@ public class VentanaAniadirAudio extends JFrame{
 		super();
 		JFrame ventana = this;
 		setBounds(800, 300, 400, 200); //Le damos las dimensiones a la ventana
-		setTitle("Añade un producto a la tienda"); //Le asignamos un título a la ventana
+		setTitle("Aï¿½ade un producto a la tienda"); //Le asignamos un tï¿½tulo a la ventana
 		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		
 		lblNombre = new JLabel("Introduce el nombre");
@@ -40,9 +40,9 @@ public class VentanaAniadirAudio extends JFrame{
 		txtCategoria = new JTextField(50);
 		lblEntrada = new JLabel("Introduce la entrada");
 		txtEntrada = new JTextField(50);
-		lblPotencia = new JLabel("Introduce el año de la película");
+		lblPotencia = new JLabel("Introduce el aï¿½o de la pelï¿½cula");
 		txtPotencia = new JTextField(50);
-		lblBluetooth = new JLabel("¿Tiene bluetooth?");
+		lblBluetooth = new JLabel("ï¿½Tiene bluetooth?");
 		String [] opciones = {"SI","NO"}; //Creamos las opciones del desplegable
 		cbBluetooth = new JComboBox<String>(opciones); //Creamos el desplegable con las opciones que queremos que apaerzcan
 		lblPrecio = new JLabel("Introduce el precio del producto");

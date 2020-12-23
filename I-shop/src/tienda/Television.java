@@ -1,4 +1,4 @@
-package Tienda;
+package tienda;
 
 public class Television extends Producto {
 	

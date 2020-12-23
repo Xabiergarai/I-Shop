@@ -1,4 +1,4 @@
-package Tienda;
+package tienda;
 
 import java.sql.*;
 
@@ -87,10 +87,10 @@ public class BD {
 	/**
 	 * 
 	 * @param email Correo insertado por el usuario
-	 * @param con Contraseña insertada por el usuario
-	 * @return 0 - Si el usuario no está registrado
-	 *         1 - Si el email es correcto pero la contraseña no
-	 *         2 - Si el email es correcto y la contraseña también 
+	 * @param con Contraseï¿½a insertada por el usuario
+	 * @return 0 - Si el usuario no estï¿½ registrado
+	 *         1 - Si el email es correcto pero la contraseï¿½a no
+	 *         2 - Si el email es correcto y la contraseï¿½a tambiï¿½n 
 	 */
 	public static int comprobarUsuario(String email, String con) {
 		int resul = 0;
@@ -101,7 +101,7 @@ public class BD {
 			Statement st = c.createStatement();
 			//Una select SIEMPRE devuelve un ResultSet
 			ResultSet rs = st.executeQuery(s);
-			if(rs.next()) { //Si hemos encontrado el usuario cuyo email coincide con el recibido por parámetro
+			if(rs.next()) { //Si hemos encontrado el usuario cuyo email coincide con el recibido por parï¿½metro
 				String contrasenia = rs.getString("con");
 				if(contrasenia.equals(con))
 					resul = 2;

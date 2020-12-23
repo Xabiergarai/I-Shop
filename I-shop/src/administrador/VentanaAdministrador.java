@@ -1,4 +1,4 @@
-package Administrador;
+package administrador;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -24,10 +24,10 @@ public class VentanaAdministrador extends JFrame {
 	public VentanaAdministrador(JFrame va) {
 		super();
 		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-		//ventanaAnterior = va; //Para volver a la ventana desde la que se llamó a esta
+		//ventanaAnterior = va; //Para volver a la ventana desde la que se llamï¿½ a esta
 		ventanaActual = this; //ventana guarda la venta es curso
 		setBounds(800, 300, 400, 200); //Le damos las dimensiones a la ventana
-		setTitle("Bienvenido Administrador, ¿Que operación desea realizar?"); //Le asignamos un título a la ventana
+		setTitle("Bienvenido Administrador, ï¿½Que operaciï¿½n desea realizar?"); //Le asignamos un tï¿½tulo a la ventana
 		panelCentral = new JPanel(new GridLayout(2, 1));//Creamos un panel con 2 filas
 		panelNorte = new JPanel();
 		lblTitulo = new JLabel("Zona de Administrador");
@@ -40,22 +40,22 @@ public class VentanaAdministrador extends JFrame {
 		rbtnOrdenador = new JRadioButton("Ordenadores", false);
 		rbtnSmartphone = new JRadioButton("Smartphones", false);
 		rbtnTelevision = new JRadioButton("Television", false);
-		/*Los añadimos a un grupo para que sólo pueda estar seleccionado uno de ellos*/
+		/*Los aï¿½adimos a un grupo para que sï¿½lo pueda estar seleccionado uno de ellos*/
 		ButtonGroup grupo = new ButtonGroup();
 		grupo.add(rbtnAudio);
 		grupo.add(rbtnOrdenador);
 		grupo.add(rbtnSmartphone);
 		grupo.add(rbtnTelevision);
-		/*Añadimos los 2 radio button al panel con las 2 filas*/
+		/*Aï¿½adimos los 2 radio button al panel con las 2 filas*/
 		panelCentral.add(rbtnAudio);
 		panelCentral.add(rbtnOrdenador);
 		panelCentral.add(rbtnSmartphone);
 		panelCentral.add(rbtnTelevision);
 		
 		panelSur = new JPanel();
-		btnAniadir = new JButton("Añadir");
+		btnAniadir = new JButton("Aï¿½adir");
 		btnEliminar = new JButton("Eliminar");
-		btnSalir = new JButton("Cerrar Sesión");
+		btnSalir = new JButton("Cerrar Sesiï¿½n");
 		panelSur.add(btnAniadir);
 		panelSur.add(btnEliminar);
 		panelSur.add(btnSalir);

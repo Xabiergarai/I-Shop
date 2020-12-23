@@ -1,4 +1,4 @@
-package Tienda;
+package tienda;
 
 import java.io.Serializable;
 

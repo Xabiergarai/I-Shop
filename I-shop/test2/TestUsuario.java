@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.*;
 import org.junit.rules.ExpectedException;
 
-import Tienda.*;
+import tienda.*;
 
 /* class TestUsuario {
 	
