@@ -42,7 +42,7 @@ public class VentanaResumenCompra extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				VentanaLogin.contenedora.guardarCarritoEnFicheroDeTexto();
+				VentanaLogin.contenedora.guardarCarritoEnFicheroDeTexto(getName());
 				VentanaLogin.contenedora.vaciarCarrito();
 				new VentanaTransaccion();
 				

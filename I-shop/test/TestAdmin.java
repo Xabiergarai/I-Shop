@@ -1,13 +1,15 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.Test;
 import org.junit.rules.ExpectedException;
 
 import tienda.*;
 
 
-/*class TestAdmin extends GroupException {
+class TestAdmin extends GroupException {
 	
 	
 	
@@ -62,6 +64,7 @@ import tienda.*;
 	}
 	
 	public void testEquals() {
+		Administrador a = new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03","Admin04");
 		Administrador sameAdmin = new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03","");
 		assertTrue(a.equals(sameAdmin));
 		
@@ -74,33 +77,36 @@ import tienda.*;
 	}
 	
 	public void testAddAdmin() throws GroupException {
-		a.addAdmin(new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03",""));
+		ArrayList<Administrador> a = new ArrayList<>();
+		a.add(new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03",""));
 		assertEquals(1, a.size());
 	}
 	
 	public ExpectedException expected = ExpectedException.none();
 	
 	public void testAddAdminErrors() throws GroupException {
-		a.addAdmin(new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03",""));
+		ArrayList<Administrador> a = new ArrayList<>();
+		a.add(new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03",""));
 		assertEquals(1, a.size());
 		
 	   expected.expect(GroupException.class);
-	   a.addAdmin(new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03",""));
+	   a.add(new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03",""));
 	   assertEquals(2, a.size());
 	   
 	   expected.expect(NullPointerException.class);
-	   a.addAdmin(null);
-	   assertEquals(1 ,a.size());
+	   a.add(null);
+	   assertEquals(2 ,a.size());
 	}
 	
 	public void testRemoveAdmin() throws GroupException {
-		a.addAdmin(new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03",""));
+		ArrayList<Administrador> a = new ArrayList<>();
+		a.add(new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03",""));
 		assertEquals(1, a.size());
 		
-		a.removeAdmin(new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03",""));
+		a.remove(new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03",""));
 		assertEquals(0, a.size());
 			
 		}
 	
-	}*/
+	}
 

@@ -14,13 +14,15 @@ import java.util.Date;
 
 public class Contenedora {
 	/**
-	 * Lista con toda la informaci�n de los art�culos
+	 * Lista con toda la informaci�n de los productos
 	 */
 	public ArrayList<Producto> listaProductos;
+	public ArrayList<Producto> favorito;
 	public ArrayList<Producto> carrito;
 	
 	public Contenedora() {
 		listaProductos = new ArrayList<Producto>();
+		favorito = new ArrayList<Producto>();
 		carrito = new ArrayList<Producto>();
 		
 	}
@@ -33,6 +35,14 @@ public class Contenedora {
 		this.listaProductos = listaProductos;
 	}
 
+	public ArrayList<Producto> getFavorito() {
+		return favorito;
+	}
+
+	public void setFavorito(ArrayList<Producto> favorito) {
+		this.favorito = favorito;
+	}
+	
 	public ArrayList<Producto> getCarrito() {
 		return carrito;
 	}
@@ -40,6 +50,11 @@ public class Contenedora {
 	public void setCarrito(ArrayList<Producto> carrito) {
 		this.carrito = carrito;
 	}
+	
+	public void vaciarListaDeseos() {
+		for(int i=0;i<favorito.size();i++)
+			favorito.remove(i);
+	}	
 	
 	public void vaciarCarrito() {
 		for(int i=0;i<carrito.size();i++)
@@ -74,7 +89,14 @@ public class Contenedora {
 	}
 	
 	/**
-	 * M�todo que a�ade un articulo al carrito
+	 * M�todo que a�ade un producto al carrito
+	 */
+	public void aniadirProductoAFavoritos(Producto p) {
+		favorito.add(p);
+	}
+	
+	/**
+	 * M�todo que a�ade un producto al carrito
 	 */
 	public void aniadirProductoAlCarrito(Producto p) {
 		carrito.add(p);
