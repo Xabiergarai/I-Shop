@@ -3,7 +3,7 @@ package tienda;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ListaProducto {
+public class ListaProducto extends Producto{
 
     private Map<Integer, Producto> productos;
 

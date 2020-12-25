@@ -10,9 +10,6 @@ import tienda.*;
 
 
 class TestAdmin extends GroupException {
-	
-	
-	
 	@Test
 	public void testGetAdminUsuario() {
         Administrador a = new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03","Admin04");

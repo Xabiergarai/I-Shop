@@ -6,12 +6,14 @@ import static org.junit.Assert.fail;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.ArrayList;
+
 import org.junit.*;
 import org.junit.rules.ExpectedException;
 
 import tienda.*;
 
-/* class TestUsuario {
+ class TestUsuario {
 	
 	
 
@@ -71,6 +73,7 @@ import tienda.*;
 	}
 	
 	 public void testEquals() {
+		 ArrayList<Usuario> u = new ArrayList<>();
 		Usuario sameUsuario = new Usuario("XabierG","Contraeña1","Xabier.garai@opendeusto.es","Xabier","Garai Pascual");
 		assertTrue(u.equals(sameUsuario));
 		
@@ -83,35 +86,38 @@ import tienda.*;
 	}
 	
 	public void testAddUsuario() throws GroupException {
-		u.addUsuario(new Usuario("XabierG","Contraeña1","Xabier.garai@opendeusto.es","Xabier","Garai Pascual"));
+		ArrayList<Usuario> u = new ArrayList<>();
+		u.add(new Usuario("XabierG","Contraeña1","Xabier.garai@opendeusto.es","Xabier","Garai Pascual"));
 		assertEquals(1, u.size());
 	}
 	
 	public ExpectedException expected = ExpectedException.none();
 	
 	public void testAddUsuarioErrors() throws GroupException {
-		u.addUsuario(new Usuario("XabierG","Contraeña1","Xabier.garai@opendeusto.es","Xabier","Garai Pascual"));
+		ArrayList<Usuario> u = new ArrayList<>();
+		u.add(new Usuario("XabierG","Contraeña1","Xabier.garai@opendeusto.es","Xabier","Garai Pascual"));
 		assertEquals(1, u.size());
 		
 	   expected.expect(GroupException.class);
-	   u.addUsuario(new Usuario("XabierG","Contraeña1","Xabier.garai@opendeusto.es","Xabier","Garai Pascual"));
+	   u.add(new Usuario("XabierG","Contraeña1","Xabier.garai@opendeusto.es","Xabier","Garai Pascual"));
 	   assertEquals(2, u.size());
 	   
 	   expected.expect(NullPointerException.class);
-	   u.addUsuario(null);
+	   u.add(null);
 	   assertEquals(1, u.size());
     }
 	
 	public void testRemoveUsuario() throws GroupException {
-		u.addUsuario(new Usuario("XabierG","Contraeña1","Xabier.garai@opendeusto.es","Xabier","Garai Pascual"));
+		ArrayList<Usuario> u = new ArrayList<>();
+		u.add(new Usuario("XabierG","Contraeña1","Xabier.garai@opendeusto.es","Xabier","Garai Pascual"));
 		assertEquals(1, u.size());
 		
-		u.removeUsuario(new Usuario("XabierG","Contraeña1","Xabier.garai@opendeusto.es","Xabier","Garai Pascual"));
+		u.remove(new Usuario("XabierG","Contraeña1","Xabier.garai@opendeusto.es","Xabier","Garai Pascual"));
 		assertEquals(0, u.size());
 			
 		}
 	
-	}*/
+	}
 
 
 
