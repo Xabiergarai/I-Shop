@@ -18,7 +18,7 @@ import ventanasPrincipales.VentanaLogin;
 
 public class PanelAudio extends JPanel{
 	private JPanel pSur,pCentro,pIzquierda,pDerecha;
-	private JButton btnAñadir,btnFavoritos;
+	private JButton btnAnyadir,btnFavoritos;
 	private JLabel lblFoto,lblNombre,lblCategoria,lblDescripcion,lblPrecio,lblMarca,lblEntrada,lblPotencia,lblBluetooth;
 	private JFrame ventana;
 	public PanelAudio(Audio a, JFrame v) {
@@ -28,8 +28,8 @@ public class PanelAudio extends JPanel{
 		pSur = new JPanel();
 		btnFavoritos = new JButton("Lista de deseos");
 		pSur.add(btnFavoritos);
-		btnAñadir = new JButton("Añadir al carrito");
-		pSur.add(btnAñadir);
+		btnAnyadir = new JButton("Anadir al carrito");
+		pSur.add(btnAnyadir);
 		
 		pCentro = new JPanel(new GridLayout(1,2));
 		pIzquierda = new JPanel();
@@ -68,7 +68,7 @@ public class PanelAudio extends JPanel{
 			}
 		});
 		
-		btnAñadir.addActionListener(new ActionListener() {
+		btnAnyadir.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {

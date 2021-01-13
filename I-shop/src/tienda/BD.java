@@ -1,8 +1,14 @@
 package tienda;
 
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class BD {
+	
+	
+	private static final Logger LOG = Logger.getLogger(BD.class.getName());
+	
 	
 	/**
 	 * Inicializa una BD SQLITE y devuelve un conexion con ella
@@ -14,10 +20,10 @@ public class BD {
 		try {
 		    Class.forName("org.sqlite.JDBC");
 		    Connection con = DriverManager.getConnection("jdbc:sqlite:" + nombreBD );
-		    System.out.println("OK");
+		    LOG.log(Level.INFO,"Conexion exitosa");
 		    return con;
 		} catch (ClassNotFoundException | SQLException e) {
-			System.out.println("Error");
+			LOG.log(Level.WARNING,e.getMessage());
 			return null;
 		}
 	}
@@ -38,9 +44,11 @@ public class BD {
 						   "(nombre varchar, "+
 						   " email varchar, "+
 						   " con varchar)");
-
+			LOG.log(Level.INFO,"Tablas creadas correctamente");
 			return statement;
+			
 		} catch (SQLException e) {
+			LOG.log(Level.WARNING,e.getMessage());
 			return null;
 		}
 	}
@@ -53,12 +61,15 @@ public class BD {
 		try {
 			if (st!=null) st.close();
 			if (con!=null) con.close();
+		LOG.log(Level.INFO,"Se ha cerrado correctamente");
 		} catch (SQLException e) {
+		LOG.log(Level.WARNING,e.getMessage());
 		}
 	}
 	public static void crearLaBD() {
 		Connection con = initBD("proyecto.db");
 		cerrarBD(con,usarCrearTablasBD(con));
+		//LOG.log(Level.INFO,"BD creada correctamente");
 	}
 	public static boolean existeUsuario(String email) {
 		//statement.executeUpdate : Cuando queramos hacer create, insert, delete, update, drop
@@ -75,11 +86,12 @@ public class BD {
 			ResultSet rs = st.executeQuery(sql); //Ejecutamos la consulta
 			if(rs.next()) { //rs.next() -> Devuelve true si rs tiene datos, false en caso contrario
 				existe = true;
+			
 			}
 			cerrarBD(con, st);
+			LOG.log(Level.INFO,"Query ejecutado correctamente");
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LOG.log(Level.WARNING,e.getMessage());
 		}
 		return existe;
 	}
@@ -89,8 +101,8 @@ public class BD {
 	 * @param email Correo insertado por el usuario
 	 * @param con Contrase�a insertada por el usuario
 	 * @return 0 - Si el usuario no est� registrado
-	 *         1 - Si el email es correcto pero la contrase�a no
-	 *         2 - Si el email es correcto y la contrase�a tambi�n 
+	 *         1 - Si el email es correcto pero la contrasenya no
+	 *         2 - Si el email es correcto y la contrasenya tambien 
 	 */
 	public static int comprobarUsuario(String email, String con) {
 		int resul = 0;
@@ -101,7 +113,7 @@ public class BD {
 			Statement st = c.createStatement();
 			//Una select SIEMPRE devuelve un ResultSet
 			ResultSet rs = st.executeQuery(s);
-			if(rs.next()) { //Si hemos encontrado el usuario cuyo email coincide con el recibido por par�metro
+			if(rs.next()) { //Si hemos encontrado el usuario cuyo email coincide con el recibido por parametro
 				String contrasenia = rs.getString("con");
 				if(contrasenia.equals(con))
 					resul = 2;
@@ -109,9 +121,9 @@ public class BD {
 					resul = 1;
 			}
 			cerrarBD(c, st);
+			LOG.log(Level.INFO,"Query ejecutada correctamente");
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		  LOG.log(Level.WARNING,e.getMessage());
 		}
 		
 		return resul;
@@ -126,9 +138,9 @@ public class BD {
 			Statement st = c.createStatement();
 			st.executeUpdate(s);
 			cerrarBD(c, st);
+			LOG.log(Level.INFO,"Statement correctamente");
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LOG.log(Level.WARNING,e.getMessage());
 		}
 		
 	}

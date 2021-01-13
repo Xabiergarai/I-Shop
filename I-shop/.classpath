@@ -10,5 +10,7 @@
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="lib" path="sqlite-jdbc-3.32.3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mikel/Desktop/hamcrest-all-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mikel/Desktop/junit-4.13.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
