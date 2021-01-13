@@ -1,22 +1,14 @@
 package ventanasPrincipales;
 
-import java.awt.EventQueue;
+import java.awt.*;
 
-import javax.swing.JFrame;
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.JCheckBox;
-import java.awt.Color;
-import java.awt.Font;
 
 public class VentanaCarritoCompra {
 
 	private JFrame frame;
+	private JPanel tablePanel;
 	private JTable carritoTabla;
 	private DefaultTableModel carritoModeloTabla;
 	
@@ -41,8 +33,22 @@ public class VentanaCarritoCompra {
 	 * Create the application.
 	 */
 	public VentanaCarritoCompra() {
-		initTableModel();
+		initTablePanel();
 		initialize();
+	}
+
+	private void initTablePanel() {
+		tablePanel = new JPanel(new GridLayout());
+	    tablePanel.setBounds(10, 81, 360, 241);
+
+		initTableModel();
+
+		carritoTabla = new JTable();
+		carritoTabla.setModel(carritoModeloTabla);
+		tablePanel.add(carritoTabla);
+
+		JScrollPane js = new JScrollPane(carritoTabla);
+		tablePanel.add(js);
 	}
 
 	/**
@@ -108,30 +114,15 @@ public class VentanaCarritoCompra {
 		grupo1.add(radiobtVisa);
 		grupo1.add(radiobtMaterCard);
 		grupo1.add(radiobtPayPal);
-		
-		carritoTabla = new JTable();
-		carritoTabla.setBounds(10, 81, 360, 241);
-		carritoTabla.setModel(new DefaultTableModel(
-			new Object[][] {
-			},
-			new String[] {
-				"New column", "New column", "New column"
-			}
-		));
-		frame.getContentPane().add(carritoTabla);
-		
-		//JScrollPane js = new JScrollPane(carritoTabla);
-		//frame.getContentPane().add(js);
-		
-		
-		
+
+		frame.getContentPane().add(tablePanel);
+
 		JLabel lblNewLabel = new JLabel("Resumen Compra");
 		lblNewLabel.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 40));
-		lblNewLabel.setBounds(35, 27, 310, 43);
+		lblNewLabel.setBounds(63, 28, 261, 43);
 		frame.getContentPane().add(lblNewLabel);
-		
-		
 	}
+
 	private void initTableModel() {
 		carritoModeloTabla = new DefaultTableModel();
 		carritoModeloTabla.addColumn("Imagen");
