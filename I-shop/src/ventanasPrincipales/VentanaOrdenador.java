@@ -20,8 +20,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.SwingConstants;
 
-import tienda.BD;
-import tienda.DBException;
+import dataBase.BD;
+import dataBase.DBException;
 import tienda.Ordenador;
 
 import javax.swing.JScrollBar;
