@@ -78,12 +78,15 @@ public class VentanaLogin extends JFrame {
 				if(resul==0) {
 					JOptionPane.showMessageDialog(null, "El e-mail no esta registrado.", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
 				}
-				else if(resul==1)
-					JOptionPane.showMessageDialog(null, "La contrase�a no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
-				else
+				else if(resul==1) {
+					JOptionPane.showMessageDialog(null, "La contrasena no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
+				}	
+				else {
 					JOptionPane.showMessageDialog(null, "Bienvenido", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
-				new VentanaMenu(null);
-				vaciarCampos();
+					new VentanaMenu(null);
+					vaciarCampos();
+					frame.dispose();
+				}
 			}
 		});
 		btnEntrar.setForeground(new Color(255, 255, 255));
@@ -121,7 +124,7 @@ public class VentanaLogin extends JFrame {
 		txtContrase.setBounds(115, 252, 236, 42);
 		frame.getContentPane().add(txtContrase);
 		
-		JLabel lblOlvidarContrasena = new JLabel("He olvidado mi contrase�a");
+		JLabel lblOlvidarContrasena = new JLabel("He olvidado mi contrasena");
 		lblOlvidarContrasena.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOlvidarContrasena.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblOlvidarContrasena.setForeground(new Color(255, 165, 0));

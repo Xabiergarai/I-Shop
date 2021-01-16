@@ -1,8 +1,14 @@
 package tienda;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import skapaProyect.dataBase.DBException;
+
+
 
 public class BD {
 	
@@ -99,8 +105,8 @@ public class BD {
 	/**
 	 * 
 	 * @param email Correo insertado por el usuario
-	 * @param con Contrase�a insertada por el usuario
-	 * @return 0 - Si el usuario no est� registrado
+	 * @param con Contrasena insertada por el usuario
+	 * @return 0 - Si el usuario no esta registrado
 	 *         1 - Si el email es correcto pero la contrasenya no
 	 *         2 - Si el email es correcto y la contrasenya tambien 
 	 */
@@ -144,4 +150,57 @@ public class BD {
 		}
 		
 	}
+	
+	public static ArrayList <Ordenador> listarOrdenadores() throws DBException{
+	ArrayList <Ordenador> ordenadores = new ArrayList<>();
+	Connection con = initBD("proyecto.db");
+		
+	
+		try (Statement stmt = con.createStatement()) {
+			ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,ram,pulgadas,portatil FROM ordenador");
+
+			while(rs.next()) {
+				Ordenador ordenador = new Ordenador();
+				ordenador.setNombre(rs.getString("nombre"));
+				ordenador.setMarca(rs.getString("marca"));
+				ordenador.setPrecio(rs.getDouble("precio"));
+				ordenador.setDescripcion(rs.getString("descripcion"));
+				ordenador.setRam(rs.getString("ram"));
+				ordenador.setPulgadas(rs.getFloat("pulgadas"));
+				if (rs.getInt("portatil")== 1) {
+					ordenador.setPortatil(true);
+				}else {
+					ordenador.setPortatil(false);
+				}
+				ordenadores.add(ordenador);
+			}
+			
+		} catch (SQLException e) {
+			throw new DBException("Error obteniendo todos los ordenadores'", e);
+		}
+	
+	return ordenadores;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

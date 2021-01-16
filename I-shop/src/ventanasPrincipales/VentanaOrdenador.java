@@ -8,6 +8,8 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
@@ -17,6 +19,11 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.SwingConstants;
+
+import tienda.BD;
+import tienda.DBException;
+import tienda.Ordenador;
+
 import javax.swing.JScrollBar;
 
 public class VentanaOrdenador {
@@ -66,33 +73,70 @@ public class VentanaOrdenador {
         ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
         lblNewLabel.setIcon(img1);
         
+        ArrayList<Ordenador> ordenadores = new ArrayList<Ordenador>();
+        try {
+			ordenadores = BD.listarOrdenadores();
+		} catch (DBException e1) {
+			e1.printStackTrace();
+		}
+        
+        for(Ordenador o:ordenadores) {
+        	JLabel lblNewLabel_2 = new JLabel(o.getNombre());
+        	lblNewLabel_2.setBackground(Color.WHITE);
+        	lblNewLabel_2.setToolTipText("");
+        	lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        	lblNewLabel_2.setBounds(77, 234, 139, 107);
+        	frame.getContentPane().add(lblNewLabel_2);
+        	
+        	JLabel label = new JLabel(String.valueOf(o.getPrecio()));
+        	label.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        	label.setBounds(57, 342, 124, 43);
+        	frame.getContentPane().add(label);
+        	
+        	JButton btnAnadirAlCarrito = new JButton("Agregar al carrito");
+        	btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
+        	btnAnadirAlCarrito.setForeground(Color.WHITE);
+        	btnAnadirAlCarrito.setBackground(new Color(255, 165, 0));
+        	btnAnadirAlCarrito.setBounds(57, 419, 139, 43);
+        	frame.getContentPane().add(btnAnadirAlCarrito);
+        	
+        	btnAnadirAlCarrito.addActionListener(new ActionListener() {
+        		public void actionPerformed(ActionEvent e) {
+        			VentanaCarritoCompra.main(null);
+        			frame.dispose();
+        		}
+        	});
+        	
+        }
+        
+        
+        /*
         JLabel lblNewLabel_2 = new JLabel("<html>Lenovo IdeaPad 3 15ADA05 AMD\r\n3020e/8GB/256GB SSD/15.6\"<html>" );
-        lblNewLabel_2.setBackground(Color.WHITE);
-        lblNewLabel_2.setToolTipText("");
-        lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        lblNewLabel_2.setBounds(77, 234, 139, 107);
-        frame.getContentPane().add(lblNewLabel_2);
-        
-        JLabel label = new JLabel("379 eur");
-        label.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        label.setBounds(57, 342, 124, 43);
-        frame.getContentPane().add(label);
-        
-        JButton btnAnadirAlCarrito = new JButton("Agregar al carrito");
-        btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
-        btnAnadirAlCarrito.setForeground(Color.WHITE);
-        btnAnadirAlCarrito.setBackground(new Color(255, 165, 0));
-        btnAnadirAlCarrito.setBounds(57, 419, 139, 43);
-        frame.getContentPane().add(btnAnadirAlCarrito);
-        
-
-		btnAnadirAlCarrito.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaCarritoCompra.main(null);
-				frame.dispose();
-			}
-		});
-        
+        	lblNewLabel_2.setBackground(Color.WHITE);
+        	lblNewLabel_2.setToolTipText("");
+        	lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        	lblNewLabel_2.setBounds(77, 234, 139, 107);
+        	frame.getContentPane().add(lblNewLabel_2);
+        	
+        	JLabel label = new JLabel("379 eur");
+        	label.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        	label.setBounds(57, 342, 124, 43);
+        	frame.getContentPane().add(label);
+        	
+        	JButton btnAnadirAlCarrito = new JButton("Agregar al carrito");
+        	btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
+        	btnAnadirAlCarrito.setForeground(Color.WHITE);
+        	btnAnadirAlCarrito.setBackground(new Color(255, 165, 0));
+        	btnAnadirAlCarrito.setBounds(57, 419, 139, 43);
+        	frame.getContentPane().add(btnAnadirAlCarrito);
+        	
+        	btnAnadirAlCarrito.addActionListener(new ActionListener() {
+        		public void actionPerformed(ActionEvent e) {
+        			VentanaCarritoCompra.main(null);
+        			frame.dispose();
+        		}
+        	});
+        **************************************************
         JLabel lblNewLabel_3 = new JLabel("New label");
         lblNewLabel_3.setBounds(329, 90, 150, 141);
         frame.getContentPane().add(lblNewLabel_3);
@@ -237,6 +281,7 @@ public class VentanaOrdenador {
 				frame.dispose();
 			}
 		});
+		*/
         JMenuBar menuBar = new JMenuBar();
 		menuBar.setBounds(0, 0, 99, 22);
 		frame.getContentPane().add(menuBar);

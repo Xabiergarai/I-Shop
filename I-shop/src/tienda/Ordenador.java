@@ -7,7 +7,7 @@ public class Ordenador extends Producto {
 	private boolean portatil;
 	
 	
-	public Ordenador(String nombre, String codigo, String marca, double precio, String descripcion, String categoria,
+	public Ordenador(String nombre, String marca, double precio, String descripcion, String categoria,
 			String rutaFoto, String ram, double pulgadas, boolean portatil) {
 		this.ram = ram;
 		this.pulgadas = pulgadas;

@@ -26,7 +26,7 @@ import tienda.*;
 	@Test
 	public void testGetMarcaProducto() {
 		
-		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		Producto p = new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertEquals("Atributos",p.getMarca());	
 		
 	}
@@ -34,7 +34,7 @@ import tienda.*;
 	@Test
 	public void testGetPrecioProducto() {
 		
-		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		Producto p = new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertEquals(999.99 ,p.getPrecio());
 		
 	}
@@ -42,7 +42,7 @@ import tienda.*;
 	@Test
 	public void testGetDescripcionProducto() {
 		
-		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		Producto p = new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertEquals("Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",p.getDescripcion());	
 		
 	}
@@ -50,7 +50,7 @@ import tienda.*;
 	@Test
 	public void testGetCategoriaProducto() {
 		
-		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		Producto p = new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertEquals("Ordenador",p.getCategoria());	
 		
 	}
@@ -58,7 +58,7 @@ import tienda.*;
 	@Test
 	public void testGetRutaFotoProducto() {
 		
-		Producto p = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		Producto p = new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertEquals("img/pc3.jpg",p.getRutaFoto());
 		
 	}
@@ -70,22 +70,22 @@ import tienda.*;
 	
 	public void testInvalidArguments() {
 		expected.expect(IllegalArgumentException.class);
-		new Producto(null, "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
-		new Producto("Macbook Pro", null,"Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
-		new Producto("Macbook Pro", "E01",null,999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
-		new Producto("Macbook Pro", "E01","Apple",0.0,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
-		new Producto("Macbook Pro", "E01","Apple",999.99,null,"Ordenador","img/pc3.jpg");
-		new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",null,"img/pc3.jpg");
-		new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",null,"");
+		new Producto(null, "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", null,999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "Apple",0.0,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "Apple",999.99,null,"Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",null,"img/pc3.jpg");
+		new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",null,"");
 	
-		new Producto(null, "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
-		new Producto("Macbook Pro", null,"Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
-		new Producto("Macbook Pro", "E01",null,999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
-		new Producto("Macbook Pro", "E01","Apple",0.0,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
-		new Producto("Macbook Pro", "E01","Apple",999.99,null,"Ordenador","img/pc3.jpg");
-		new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",null,"img/pc3.jpg");
-		new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",null,"img/pc3.jpg");
-		new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador",null);
+		new Producto(null, "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", null,999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "Apple",0.0,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "Apple",999.99,null,"Ordenador","img/pc3.jpg");
+		new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",null,"img/pc3.jpg");
+		new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial",null,"img/pc3.jpg");
+		new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador",null);
 		
 
 	}

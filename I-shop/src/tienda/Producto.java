@@ -13,7 +13,7 @@ public class Producto implements Serializable {
 	private String rutaFoto;
 	
 	
-	public Producto(String nombre, String marca, String codigo, double precio, String descripcion, String categoria,
+	public Producto(String nombre, String marca, double precio, String descripcion, String categoria,
 			String rutaFoto) {
 		super();
 		this.nombre = nombre;
