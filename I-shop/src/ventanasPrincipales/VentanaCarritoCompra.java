@@ -1,6 +1,12 @@
 package ventanasPrincipales;
 
+import tienda.Producto;
+
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.List;
+import java.util.logging.Level;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -11,6 +17,8 @@ public class VentanaCarritoCompra {
 	private JPanel tablePanel;
 	private JTable carritoTabla;
 	private DefaultTableModel carritoModeloTabla;
+	private JLabel lblTotal;
+	private double precioTotal;
 	
 
 	/**
@@ -33,6 +41,7 @@ public class VentanaCarritoCompra {
 	 * Create the application.
 	 */
 	public VentanaCarritoCompra() {
+		this.precioTotal = 0;
 		initTablePanel();
 		initialize();
 	}
@@ -63,6 +72,12 @@ public class VentanaCarritoCompra {
 		
 		JButton btnVaciarCesta = new JButton("Vaciar cesta");
 		btnVaciarCesta.setBounds(90, 349, 212, 29);
+		btnVaciarCesta.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				clear();
+			}
+		});
 		frame.getContentPane().add(btnVaciarCesta);
 				
 		JButton btnGuardarLista = new JButton("Guardar lista");
@@ -85,7 +100,8 @@ public class VentanaCarritoCompra {
 		chckbxContratoTarifa.setBounds(14, 498, 188, 23);
 		frame.getContentPane().add(chckbxContratoTarifa);
 		
-		JLabel lblTotal = new JLabel("TOTAL:   999,99");
+		lblTotal = new JLabel();
+		updatePrecioTotal();
 		lblTotal.setBounds(14, 527, 360, 16);
 		frame.getContentPane().add(lblTotal);
 		
@@ -125,11 +141,34 @@ public class VentanaCarritoCompra {
 
 	private void initTableModel() {
 		carritoModeloTabla = new DefaultTableModel();
-		carritoModeloTabla.addColumn("Imagen");
 		carritoModeloTabla.addColumn("Nombre");
 		carritoModeloTabla.addColumn("Marca");
 		carritoModeloTabla.addColumn("Categoria");
 		carritoModeloTabla.addColumn("Precio");
 		
+	}
+
+	public void setTableContent(List<Producto> productos) {
+		clear();
+		for (Producto producto: productos) {
+			this.carritoModeloTabla.addRow(new Object[] {
+					producto.getNombre(),
+					producto.getMarca(),
+					producto.getCategoria(),
+					producto.getPrecio(),
+			});
+			precioTotal += producto.getPrecio();
+		}
+		updatePrecioTotal();
+	}
+
+	public void clear() {
+	    this.precioTotal = 0;
+		this.carritoModeloTabla.setRowCount(0);
+		updatePrecioTotal();
+	}
+
+	private void updatePrecioTotal() {
+		this.lblTotal.setText("TOTAL:   "+this.precioTotal+" Euros");
 	}
 }

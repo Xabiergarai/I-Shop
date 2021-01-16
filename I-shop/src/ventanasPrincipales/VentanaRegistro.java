@@ -5,7 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
-import tienda.BD;
+import dataBase.BD;
 
 import java.awt.SystemColor;
 import java.awt.Font;

@@ -1,4 +1,4 @@
-package tienda;
+package dataBase;
 
 public class DBException extends Exception {
 

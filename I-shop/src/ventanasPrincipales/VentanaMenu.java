@@ -51,16 +51,16 @@ public class VentanaMenu extends JFrame {
 		super();
 		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		ventana = this; //Hace referencia a la ventana actual
-		ventanaAnterior = va; //Guarda la informaci�n de la ventana que ha llamado a esta
+		ventanaAnterior = va; //Guarda la informacion de la ventana que ha llamado a esta
 		setBounds(800, 300, 800, 375); //Le damos las dimensiones a la ventana
-		setTitle("Bienvenido"); //Le asignamos un t�tulo a la ventana
+		setTitle("Bienvenido"); //Le asignamos un titulo a la ventana
 		
-		pCentral = new JPanel(new GridLayout(0, 2)); //Podemos un 0 en las filas para que se vayan incrementando de forma din�mica
+		pCentral = new JPanel(new GridLayout(0, 2)); //Podemos un 0 en las filas para que se vayan incrementando de forma dinamica
 		cargarFotos();
 		JScrollPane scroll =  new JScrollPane(pCentral);//Creamos un scroll que contiene el panel central
-		getContentPane().add(scroll,BorderLayout.CENTER);//A�adir a la ventana principal el scroll que contine el panel
+		getContentPane().add(scroll,BorderLayout.CENTER);//Anyadir a la ventana principal el scroll que contine el panel
 		
-		btnSalir = new JButton("Cerrar Sesi�n");
+		btnSalir = new JButton("Cerrar Sesion");
 		btnSalir.addActionListener(new ActionListener() {
 			
 			@Override
