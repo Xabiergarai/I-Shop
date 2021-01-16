@@ -92,20 +92,20 @@ import tienda.*;
 	
 	public void testEquals() {
 		ArrayList<Producto> p = new ArrayList<>();
-		Producto sameProducto = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		Producto sameProducto = new Producto("Macbook Pro","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertTrue(p.equals(sameProducto));
 		
-		Producto differentProducto = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		Producto differentProducto = new Producto("Macbook Pro","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertFalse(p.equals(differentProducto));
 		
-		differentProducto = new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
+		differentProducto = new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg");
 		assertFalse(p.equals(differentProducto));
 
 	}
 	
 	public void testAddProducto() throws GroupException {
 		ArrayList<Producto> p = new ArrayList<>();
-		p.add(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
+		p.add(new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
 		assertEquals(1, p.size());
 	}
 	
@@ -113,11 +113,11 @@ import tienda.*;
 	
 	public void testAddProductoErrors() throws GroupException {
 		ArrayList<Producto> p = new ArrayList<>();
-		p.add(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
+		p.add(new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
 		assertEquals(1, p.size());
 		 
 	   expected.expect(GroupException.class);
-	   p.add(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
+	   p.add(new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
 	   assertEquals(2, p.size());
 	   
 	   expected.expect(NullPointerException.class);
@@ -127,10 +127,10 @@ import tienda.*;
 	
 	public void testRemoveProducto() throws GroupException {
 		ArrayList<Producto> p = new ArrayList<>();
-		p.add(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
+		p.add(new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
 		assertEquals(1, p.size());
 		
-		p.remove(new Producto("Macbook Pro", "E01","Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
+		p.remove(new Producto("Macbook Pro", "Apple",999.99,"Macbook Pro Intel Core i5/8gb/512GB SSD/13.3 Gris Espacial","Ordenador","img/pc3.jpg"));
 		assertEquals(0, p.size());
 			
 		}
