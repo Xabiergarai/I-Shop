@@ -26,8 +26,8 @@ public class VentanaAdministrador extends JFrame {
 		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		//ventanaAnterior = va; //Para volver a la ventana desde la que se llamï¿½ a esta
 		ventanaActual = this; //ventana guarda la venta es curso
-		setBounds(800, 300, 400, 200); //Le damos las dimensiones a la ventana
-		setTitle("Bienvenido Administrador, ï¿½Que operaciï¿½n desea realizar?"); //Le asignamos un tï¿½tulo a la ventana
+		setBounds(800, 300, 500, 300); //Le damos las dimensiones a la ventana
+		setTitle("Bienvenido Administrador, ¿Que operacion desea realizar?"); //Le asignamos un tï¿½tulo a la ventana
 		panelCentral = new JPanel(new GridLayout(2, 1));//Creamos un panel con 2 filas
 		panelNorte = new JPanel();
 		lblTitulo = new JLabel("Zona de Administrador");
@@ -53,9 +53,9 @@ public class VentanaAdministrador extends JFrame {
 		panelCentral.add(rbtnTelevision);
 		
 		panelSur = new JPanel();
-		btnAniadir = new JButton("Aï¿½adir");
+		btnAniadir = new JButton("Aniadir");
 		btnEliminar = new JButton("Eliminar");
-		btnSalir = new JButton("Cerrar Sesiï¿½n");
+		btnSalir = new JButton("Cerrar Sesion");
 		panelSur.add(btnAniadir);
 		panelSur.add(btnEliminar);
 		panelSur.add(btnSalir);

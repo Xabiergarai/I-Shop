@@ -48,7 +48,7 @@ public class PanelEliminarAudio extends JPanel {
 			lblBluetooth =  new JLabel("El producto tiene bluetooth");
 		else
 			lblBluetooth = new JLabel("El producto no tiene bluetooth");
-		lblPrecio =  new JLabel("Precio de compra: "+String.valueOf(a.getPrecio())+ " �");
+		lblPrecio =  new JLabel("Precio de compra: "+String.valueOf(a.getPrecio())+ " $");
 		pDerecha.add(lblNombre);
 		pDerecha.add(lblMarca);
 		pDerecha.add(lblPotencia);

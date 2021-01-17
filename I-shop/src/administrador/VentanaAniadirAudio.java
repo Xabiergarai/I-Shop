@@ -40,9 +40,9 @@ public class VentanaAniadirAudio extends JFrame{
 		txtCategoria = new JTextField(50);
 		lblEntrada = new JLabel("Introduce la entrada");
 		txtEntrada = new JTextField(50);
-		lblPotencia = new JLabel("Introduce el aï¿½o de la pelï¿½cula");
+		lblPotencia = new JLabel("Introduce la potencia");
 		txtPotencia = new JTextField(50);
-		lblBluetooth = new JLabel("ï¿½Tiene bluetooth?");
+		lblBluetooth = new JLabel("¿Tiene bluetooth?");
 		String [] opciones = {"SI","NO"}; //Creamos las opciones del desplegable
 		cbBluetooth = new JComboBox<String>(opciones); //Creamos el desplegable con las opciones que queremos que apaerzcan
 		lblPrecio = new JLabel("Introduce el precio del producto");

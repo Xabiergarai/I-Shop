@@ -17,6 +17,7 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 
+import administrador.VentanaAdministrador;
 import dataBase.BD;
 import tienda.Contenedora;
 
@@ -84,7 +85,11 @@ public class VentanaLogin extends JFrame {
 				}	
 				else {
 					JOptionPane.showMessageDialog(null, "Bienvenido", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
-					VentanaMenu.main(null);
+					if(email.equals("admin") && con.equals("admin")) {
+						new VentanaAdministrador(null);
+					} else {
+						new VentanaMenu(null);
+					}
 					vaciarCampos();
 					frame.dispose();
 				}
