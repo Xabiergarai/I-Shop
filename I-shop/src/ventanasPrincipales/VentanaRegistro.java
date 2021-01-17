@@ -91,13 +91,6 @@ public class VentanaRegistro {
 		txtContrasena.setBounds(114, 265, 236, 42);
 		frame.getContentPane().add(txtContrasena);
 		
-//		txtContrasena_1 = new JPasswordField();;
-//		txtContrasena_1.setText("");
-//		txtContrasena_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-//		//txtContrasena_1.setColumns(10);
-//		txtContrasena_1.setBackground(SystemColor.menu);
-//		txtContrasena_1.setBounds(114, 284, 236, 42);
-//		frame.getContentPane().add(txtContrasena_1);
 		
 		JCheckBox chckbxPrivacidad = new JCheckBox(" He leido y acepto la politica de privacidad.");
 		chckbxPrivacidad.setBackground(new Color(255, 255, 255));

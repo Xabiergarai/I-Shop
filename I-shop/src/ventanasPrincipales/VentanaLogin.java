@@ -22,7 +22,9 @@ import dataBase.BD;
 import tienda.Contenedora;
 
 import java.awt.SystemColor;
+import java.awt.Toolkit;
 import java.awt.event.ActionListener;
+import java.net.URL;
 import java.awt.event.*;
 import java.awt.event.ActionEvent;
 
@@ -61,7 +63,6 @@ public class VentanaLogin extends JFrame {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		
 		BD.crearLaBD();
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(255, 255, 255));
@@ -85,11 +86,8 @@ public class VentanaLogin extends JFrame {
 				}	
 				else {
 					JOptionPane.showMessageDialog(null, "Bienvenido", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
-					if(email.equals("admin") && con.equals("admin")) {
-						new VentanaAdministrador(null);
-					} else {
-						new VentanaMenu(null);
-					}
+					VentanaMenu.main(null);
+
 					vaciarCampos();
 					frame.dispose();
 				}

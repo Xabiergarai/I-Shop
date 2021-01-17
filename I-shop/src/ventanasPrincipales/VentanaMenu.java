@@ -40,61 +40,10 @@ public class VentanaMenu extends JFrame {
 			if(p instanceof Audio) {
 				PanelAudio panel = new PanelAudio((Audio) p,ventana);
 				pCentral.add(panel);
-			} /*else if (p instanceof Ordenador) {
-				PanelOrdenador panel = new PanelOrdenador((Ordenador) p,ventana);
-				pCentral.add(panel);
-			} else if (p instanceof Smartphone) {
-				PanelSmartphone panel = new PanelSmartphone((Smartphone) p,ventana);
-				pCentral.add(panel);
-			} else if (p instanceof Television) {
-				PanelTelevision panel = new PanelTelevision((Television) p,ventana);
-				pCentral.add(panel);
-			}*/
+			} 
 		}
 	}	
 
-	
-	public VentanaMenu(JFrame va) {
-		super();
-		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-		ventana = this; //Hace referencia a la ventana actual
-		ventanaAnterior = va; //Guarda la informacion de la ventana que ha llamado a esta
-		setBounds(800, 300, 800, 375); //Le damos las dimensiones a la ventana
-		setTitle("Bienvenido"); //Le asignamos un titulo a la ventana
-		
-		pCentral = new JPanel(new GridLayout(0, 2)); //Podemos un 0 en las filas para que se vayan incrementando de forma dinamica
-		cargarFotos();
-		JScrollPane scroll =  new JScrollPane(pCentral);//Creamos un scroll que contiene el panel central
-		getContentPane().add(scroll,BorderLayout.CENTER);//Anyadir a la ventana principal el scroll que contine el panel
-		
-		btnSalir = new JButton("Cerrar Sesion");
-		btnSalir.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				ventana.dispose();
-				new VentanaLogin();
-			}
-		});
-		
-		btnFinalizarCompra = new JButton("Finalizar compra");
-		btnFinalizarCompra.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				ventana.dispose();
-				new VentanaResumenCompra();
-			}
-		});
-		pSur = new JPanel();
-		pSur.add(btnSalir);
-		pSur.add(btnFinalizarCompra);
-		getContentPane().add(pSur, BorderLayout.SOUTH);
-		
-		setVisible(true);
-	}
 
 		VentanaLogin vp = new VentanaLogin();
 	
@@ -127,7 +76,7 @@ public class VentanaMenu extends JFrame {
  */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 500, 500);
+		frame.setBounds(100, 100, 500, 480);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("Ishop");
 		frame.getContentPane().setLayout(null);
@@ -196,9 +145,6 @@ public class VentanaMenu extends JFrame {
 		btnSmartphone.setBounds(83, 339, 126, 48);
 		frame.getContentPane().add(btnSmartphone);
 		
-		JButton btnBuscarProducto = new JButton("Busque aqui el producto deseado");
-		btnBuscarProducto.setBounds(99, 411, 271, 29);
-		frame.getContentPane().add(btnBuscarProducto);
 		
 		JButton btnTelevision = new JButton("Television");
 		btnTelevision.setForeground(Color.WHITE);
@@ -214,14 +160,6 @@ public class VentanaMenu extends JFrame {
 		ImageIcon ico5= new ImageIcon("img/iconotv.jpg");
 		ImageIcon img5= new ImageIcon(ico5.getImage().getScaledInstance(lblNewLabel_3_1.getWidth(), lblNewLabel_3_1.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_3_1.setIcon(img5);
-		
-
-//		btnBuscarProducto.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				VentanaBusqueda.main(null);
-//				frame.dispose();
-//			}
-//		});
 		
 
 		btnSmartphone.addActionListener(new ActionListener() {

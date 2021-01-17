@@ -117,6 +117,16 @@ public class VentanaCarritoCompra {
 		btnRealizarPedido.setBackground(Color.YELLOW);
 		btnRealizarPedido.setBounds(98, 555, 188, 29);
 		frame.getContentPane().add(btnRealizarPedido);
+		btnRealizarPedido.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				new VentanaTransaccion();
+				frame.dispose();
+			}
+		});
+		
 		
 		JLabel lblFormasDePago = new JLabel("Formas de pago");
 		lblFormasDePago.setBounds(22, 625, 108, 16);

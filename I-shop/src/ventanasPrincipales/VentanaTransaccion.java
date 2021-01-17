@@ -1,6 +1,7 @@
 package ventanasPrincipales;
 
 import java.awt.BorderLayout;
+import java.awt.EventQueue;
 import java.awt.Font;
 
 import javax.swing.JFrame;
@@ -9,6 +10,18 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class VentanaTransaccion extends JFrame {
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					VentanaTransaccion window = new VentanaTransaccion();
+					window.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 	private JPanel pCentral;
 	public VentanaTransaccion() {
 		setBounds(800,300,400,100);
@@ -35,7 +48,7 @@ public class VentanaTransaccion extends JFrame {
 					}
 				}
 				ventana.dispose();
-				new VentanaMenu(ventana);
+				VentanaMenu.main(null);
 				JOptionPane.showMessageDialog(null,"Gracias por su compra, la operación se ha realizado con exito");
 			}
 		};
