@@ -22,6 +22,7 @@ import tienda.Contenedora;
 
 import java.awt.SystemColor;
 import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.awt.event.ActionEvent;
 
 public class VentanaLogin extends JFrame {
@@ -107,20 +108,27 @@ public class VentanaLogin extends JFrame {
 		btnNuevoCliente.setBounds(132, 439, 185, 48);
 		frame.getContentPane().add(btnNuevoCliente);
 		
-		txtEmail = new JTextField();
+		txtEmail = new JTextField("Email");
 		txtEmail.setBackground(SystemColor.menu);
 		txtEmail.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txtEmail.setText("EMAIL");
 		txtEmail.setBounds(115, 179, 236, 42);
 		frame.getContentPane().add(txtEmail);
-		txtEmail.setColumns(10);
+		//txtEmail.setColumns(10);
+		txtEmail.addMouseListener(new MouseAdapter() {
+					
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						txtEmail.setText("");
+						
+					}
+				});
 		
 		txtContrase = new JPasswordField();
 		txtContrase.setBackground(SystemColor.menu);
 		txtContrase.setHorizontalAlignment(SwingConstants.LEFT);
 		txtContrase.setText("");
 		txtContrase.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txtContrase.setColumns(10);
+		//txtContrase.setColumns(10);
 		txtContrase.setBounds(115, 252, 236, 42);
 		frame.getContentPane().add(txtContrase);
 		
