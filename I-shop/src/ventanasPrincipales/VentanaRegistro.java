@@ -72,7 +72,7 @@ public class VentanaRegistro {
 		txtEmail.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		//txtEmail.setColumns(10);
 		txtEmail.setBackground(SystemColor.menu);
-		txtEmail.setBounds(114, 178, 236, 42);
+		txtEmail.setBounds(114, 200, 236, 42);
 		frame.getContentPane().add(txtEmail);
 		txtEmail.addMouseListener(new MouseAdapter() {
 			
@@ -88,20 +88,20 @@ public class VentanaRegistro {
 		txtContrasena.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		//txtContrasena.setColumns(10);
 		txtContrasena.setBackground(SystemColor.menu);
-		txtContrasena.setBounds(114, 231, 236, 42);
+		txtContrasena.setBounds(114, 265, 236, 42);
 		frame.getContentPane().add(txtContrasena);
 		
-		txtContrasena_1 = new JPasswordField();;
-		txtContrasena_1.setText("");
-		txtContrasena_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		//txtContrasena_1.setColumns(10);
-		txtContrasena_1.setBackground(SystemColor.menu);
-		txtContrasena_1.setBounds(114, 284, 236, 42);
-		frame.getContentPane().add(txtContrasena_1);
+//		txtContrasena_1 = new JPasswordField();;
+//		txtContrasena_1.setText("");
+//		txtContrasena_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+//		//txtContrasena_1.setColumns(10);
+//		txtContrasena_1.setBackground(SystemColor.menu);
+//		txtContrasena_1.setBounds(114, 284, 236, 42);
+//		frame.getContentPane().add(txtContrasena_1);
 		
 		JCheckBox chckbxPrivacidad = new JCheckBox(" He leido y acepto la politica de privacidad.");
 		chckbxPrivacidad.setBackground(new Color(255, 255, 255));
-		chckbxPrivacidad.setBounds(105, 388, 268, 23);
+		chckbxPrivacidad.setBounds(102, 351, 268, 23);
 		frame.getContentPane().add(chckbxPrivacidad);
 		
 		
@@ -141,7 +141,7 @@ public class VentanaRegistro {
 		});
 		btnCrearCuenta.setForeground(Color.WHITE);
 		btnCrearCuenta.setBackground(new Color(255, 165, 0));
-		btnCrearCuenta.setBounds(136, 440, 185, 48);
+		btnCrearCuenta.setBounds(136, 405, 185, 48);
 		frame.getContentPane().add(btnCrearCuenta);
 		
 		
@@ -150,7 +150,7 @@ public class VentanaRegistro {
 		txtNombre.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		//txtNombre.setColumns(10);
 		txtNombre.setBackground(SystemColor.menu);
-		txtNombre.setBounds(114, 125, 236, 42);
+		txtNombre.setBounds(114, 130, 236, 42);
 		frame.getContentPane().add(txtNombre);
 		txtNombre.addMouseListener(new MouseAdapter() {
 			
@@ -162,7 +162,7 @@ public class VentanaRegistro {
 		});
 		
 		JLabel lblCampos = new JLabel("Los campos marcados con * son obligatorios.");
-		lblCampos.setBounds(114, 351, 277, 14);
+		lblCampos.setBounds(114, 330, 277, 14);
 		frame.getContentPane().add(lblCampos);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
@@ -181,7 +181,7 @@ public class VentanaRegistro {
 				frame.dispose();
 			}
 		});
-		btnNewButton.setBounds(136, 514, 185, 23);
+		btnNewButton.setBounds(136, 485, 185, 23);
 		frame.getContentPane().add(btnNewButton);
 		
 	}
