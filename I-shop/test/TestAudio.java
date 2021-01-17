@@ -29,7 +29,9 @@ class TestAudio extends GroupException {
 		assertEquals(true, x.isBluetooth());
 	
 	}
-	@Test
+}
+
+	/* @Test
 	void test() {
 		fail("Not yet implemented");
 	}
@@ -95,7 +97,7 @@ class TestAudio extends GroupException {
 			
 		}
 	
-	}
+	} */
 
 	
 

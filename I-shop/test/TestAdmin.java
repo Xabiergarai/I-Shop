@@ -23,15 +23,16 @@ class TestAdmin extends GroupException {
 	@Test
 	public void testGetAdminVerificar() {
 		Administrador a = new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03","Admin04");
-		assertEquals("Admin03", a.getAdminInterfaz());
+		assertEquals("Admin03", a.getAdminVerificar());
 	}	
 	@Test
 	public void testGetAdminRecuperacion() {
 		Administrador a = new Administrador("JosePe","EX00B","Admin01@gmail.com","Jose","Rico Perez","Admin01","Admin02","Admin03","Admin04");
 		assertEquals("Admin04", a.getAdminRecuperacion());
 	}
+}
 
-	@Test
+	/* @Test
 	void test() {
 		fail("Not yet implemented");
 	}
@@ -105,5 +106,5 @@ class TestAdmin extends GroupException {
 			
 		}
 	
-	}
+	}*/
 

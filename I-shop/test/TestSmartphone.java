@@ -28,8 +28,8 @@ class TestSmartphone extends GroupException{
 		Smartphone s = new Smartphone("iPhone XR","Apple",515.99,"Apple iPhone XR 128GB Negro Libre Refurbished","Smartphone","img/iphonexr-black-pureangles-us-en-screen1.jpg","ios11",6.06,true);
 		assertEquals(true, s.isNfc());		
 	}
-	
-	@Test
+}
+	/* @Test
 	void test() {
 		fail("Not yet implemented");
 	}
@@ -107,7 +107,7 @@ class TestSmartphone extends GroupException{
 			
 		}
 	
-	}
+	} */
 
 
 
