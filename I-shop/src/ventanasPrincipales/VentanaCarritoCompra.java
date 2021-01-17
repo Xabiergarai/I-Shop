@@ -1,5 +1,6 @@
 package ventanasPrincipales;
 
+import tienda.ListaProducto;
 import tienda.Producto;
 
 import java.awt.*;
@@ -28,7 +29,7 @@ public class VentanaCarritoCompra {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaCarritoCompra window = new VentanaCarritoCompra();
+					VentanaCarritoCompra window = new VentanaCarritoCompra(null);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +41,7 @@ public class VentanaCarritoCompra {
 	/**
 	 * Create the application.
 	 */
-	public VentanaCarritoCompra() {
+	public VentanaCarritoCompra(ListaProducto productos) {
 		this.precioTotal = 0;
 		initTablePanel();
 		initialize();
@@ -87,6 +88,13 @@ public class VentanaCarritoCompra {
 		JButton btnSeguirComprando = new JButton("Seguir comprando");
 		btnSeguirComprando.setBounds(90, 407, 212, 29);
 		frame.getContentPane().add(btnSeguirComprando);
+		btnSeguirComprando.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				VentanaMenu.main(null);
+				frame.dispose();
+			}
+		});
 		
 		JLabel lblPremium = new JLabel("* Con I-ShoPremium puedes benificiarte de gastos");
 		lblPremium.setBounds(14, 448, 352, 29);

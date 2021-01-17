@@ -18,9 +18,12 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JScrollBar;
 
+import tienda.ListaProducto;
+
 public class VentanaAudio {
 
 	private JFrame frame;
+	private ListaProducto productos;
 
 	/**
 	 * Launch the application.
@@ -42,9 +45,14 @@ public class VentanaAudio {
 	 * Create the application.
 	 */
 	public VentanaAudio() {
+		productos = new ListaProducto();
 		initialize();
 	}
 
+	public VentanaAudio(ListaProducto productos) {
+		this.productos = productos;
+		initialize();
+	}
 	/**
 	 * Initialize the contents of the frame.
 	 */

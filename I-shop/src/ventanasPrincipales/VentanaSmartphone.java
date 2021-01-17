@@ -18,10 +18,12 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JScrollBar;
 
+import tienda.ListaProducto;
+
 public class VentanaSmartphone {
 
 	private JFrame frame;
-
+	private ListaProducto productos;
 	/**
 	 * Launch the application.
 	 */
@@ -41,10 +43,16 @@ public class VentanaSmartphone {
 	/**
 	 * Create the application.
 	 */
+	
 	public VentanaSmartphone() {
+		productos = new ListaProducto();
 		initialize();
 	}
 
+	public VentanaSmartphone(ListaProducto productos) {
+		this.productos = productos;
+		initialize();
+	}
 	/**
 	 * Initialize the contents of the frame.
 	 */

@@ -137,7 +137,7 @@ public class VentanaOrdenador {
 
 		JLabel lblNewLabel = new JLabel();
 		lblNewLabel.setBounds(72, 90, 124, 141);
-		ImageIcon ico1= new ImageIcon("img/1539-honor-magicbook-14-amd-ryzen-5-3500u-8gb-256gb-ssd-14.jpg");
+		ImageIcon ico1= new ImageIcon(o.getRutaFoto());//meter las rutas en la bd
 		ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel.setIcon(img1);
 		lblNewLabel.setAlignmentX(Component.CENTER_ALIGNMENT);

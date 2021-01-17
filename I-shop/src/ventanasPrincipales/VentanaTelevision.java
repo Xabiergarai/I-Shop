@@ -12,6 +12,9 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+
+import tienda.ListaProducto;
+
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.Font;
@@ -20,7 +23,7 @@ import javax.swing.ImageIcon;
 public class VentanaTelevision {
 
 	private JFrame frame;
-
+	private ListaProducto productos;
 	/**
 	 * Launch the application.
 	 */
@@ -41,7 +44,13 @@ public class VentanaTelevision {
 	 * Create the application.
 	 */
 	public VentanaTelevision() {
+		productos = new ListaProducto();
 		initialize();
+	}
+	public VentanaTelevision(ListaProducto productos) {
+		this.productos = productos;
+		initialize();
+	
 	}
 
 	/**
