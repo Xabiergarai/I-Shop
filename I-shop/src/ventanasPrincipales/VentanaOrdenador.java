@@ -130,7 +130,7 @@ public class VentanaOrdenador {
 		frame.getContentPane().add(lblNewLabel_1_1);
 		
 		JButton btnCarritoCompra = new JButton("Carrito");
-		btnCarritoCompra.setBounds(100, 100, 200, 200);
+		btnCarritoCompra.setBounds(250, 550, 80, 30);
 		btnCarritoCompra.addActionListener(new ActionListener() {
 			
 			@Override

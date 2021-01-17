@@ -115,14 +115,15 @@ public class VentanaAudio {
 		});
 		mnNewMenu.add(mntmNewMenuItem_2);
 
-		JMenuItem mntmNewMenuItem = new JMenuItem("Audio");
+		JMenuItem mntmNewMenuItem = new JMenuItem("Ordenador");
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaAudio.main(null);
+				VentanaOrdenador.main(null);
 				frame.dispose();
 			}
 		});
 		mnNewMenu.add(mntmNewMenuItem);
+
 
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("SmartPhone");
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
@@ -148,7 +149,7 @@ public class VentanaAudio {
 		frame.getContentPane().add(lblNewLabel_1_1);
 		
 		JButton btnCarritoCompra = new JButton("Carrito");
-		btnCarritoCompra.setBounds(100, 100, 200, 200);
+		btnCarritoCompra.setBounds(250, 550, 80, 30);
 		btnCarritoCompra.addActionListener(new ActionListener() {
 			
 			@Override
