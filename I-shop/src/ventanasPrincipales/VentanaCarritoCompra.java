@@ -91,7 +91,7 @@ public class VentanaCarritoCompra {
 		btnSeguirComprando.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new VentanaMenu(null);
+				new VentanaMenu();
 				frame.dispose();
 			}
 		});
