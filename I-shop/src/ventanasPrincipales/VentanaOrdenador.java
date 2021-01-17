@@ -13,6 +13,7 @@ import dataBase.BD;
 import dataBase.DBException;
 import tienda.ListaProducto;
 import tienda.Ordenador;
+import tienda.Producto;
 
 public class VentanaOrdenador {
 
@@ -22,11 +23,11 @@ public class VentanaOrdenador {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main(ArrayList<Producto> carrito) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaOrdenador window = new VentanaOrdenador();
+					VentanaOrdenador window = new VentanaOrdenador(carrito);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,20 +39,20 @@ public class VentanaOrdenador {
 	/**
 	 * Create the application.
 	 */
-	public VentanaOrdenador() {
+	public VentanaOrdenador(ArrayList<Producto> carrito) {
 		productos = new ListaProducto();
-		initialize();
+		initialize(carrito);
 	}
 
-	public VentanaOrdenador(ListaProducto productos) {
+	public VentanaOrdenador(ListaProducto productos, ArrayList<Producto> carrito) {
 		this.productos = productos;
-		initialize();
+		initialize(carrito);
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize(ArrayList<Producto> carrito) {
 		frame = new JFrame();
 		frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 10));
 		frame.setBounds(100, 100, 600,650);
@@ -68,7 +69,7 @@ public class VentanaOrdenador {
 
 		JPanel ordenadoresPanel = new JPanel(new FlowLayout());
 		for (Ordenador o : ordenadores) {
-			JPanel ordenadorPanel = productoPanel(o);
+			JPanel ordenadorPanel = productoPanel(o, carrito);
 			ordenadoresPanel.add(ordenadorPanel);
 		}
 		ordenadoresPanel.setBounds(50,100,500,700);
@@ -127,9 +128,21 @@ public class VentanaOrdenador {
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 24));
 		lblNewLabel_1_1.setBounds(194, 34, 178, 43);
 		frame.getContentPane().add(lblNewLabel_1_1);
+		
+		JButton btnCarritoCompra = new JButton("Carrito");
+		btnCarritoCompra.setBounds(100, 100, 200, 200);
+		btnCarritoCompra.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				VentanaCarritoCompra.main(carrito);
+				
+			}
+		});
+		frame.getContentPane().add(btnCarritoCompra);
 	}
 
-	private JPanel productoPanel(Ordenador o) {
+	private JPanel productoPanel(Ordenador o, ArrayList<Producto> carrito) {
 		JPanel panel =  new JPanel();
 		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 		panel.setBorder(BorderFactory.createLineBorder(Color.GRAY));
@@ -165,6 +178,7 @@ public class VentanaOrdenador {
 				productos.getProductos().put(
 						new Random().nextInt(), o
 				);
+				carrito.add(o);
 			}
 		});
 		btnAnadirAlCarrito.setAlignmentX(Component.CENTER_ALIGNMENT);

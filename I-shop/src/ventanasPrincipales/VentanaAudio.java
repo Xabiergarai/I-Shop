@@ -31,6 +31,7 @@ import javax.swing.ScrollPaneConstants;
 import dataBase.BD;
 import dataBase.DBException;
 import tienda.ListaProducto;
+import tienda.Producto;
 import tienda.Audio;
 
 public class VentanaAudio {
@@ -41,11 +42,11 @@ public class VentanaAudio {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main(ArrayList<Producto> carrito) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaAudio window = new VentanaAudio();
+					VentanaAudio window = new VentanaAudio(carrito);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -57,19 +58,19 @@ public class VentanaAudio {
 	/**
 	 * Create the application.
 	 */
-	public VentanaAudio() {
+	public VentanaAudio(ArrayList<Producto> carrito) {
 		productos = new ListaProducto();
-		initialize();
+		initialize(carrito);
 	}
 
-	public VentanaAudio(ListaProducto productos) {
+	public VentanaAudio(ListaProducto productos, ArrayList<Producto> carrito) {
 		this.productos = productos;
-		initialize();
+		initialize(carrito);
 	}
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize(ArrayList<Producto> carrito) {
 		frame = new JFrame();
 		frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 10));
 		frame.setBounds(100, 100, 600,650);
@@ -86,7 +87,7 @@ public class VentanaAudio {
 
 		JPanel audiosPanel = new JPanel(new FlowLayout());
 		for (Audio a : audios) {
-			JPanel audioPanel = productoPanel(a);
+			JPanel audioPanel = productoPanel(a, carrito);
 			audiosPanel.add(audioPanel);
 		}
 		audiosPanel.setBounds(50,100,500,700);
@@ -145,9 +146,21 @@ public class VentanaAudio {
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 24));
 		lblNewLabel_1_1.setBounds(194, 34, 178, 43);
 		frame.getContentPane().add(lblNewLabel_1_1);
+		
+		JButton btnCarritoCompra = new JButton("Carrito");
+		btnCarritoCompra.setBounds(100, 100, 200, 200);
+		btnCarritoCompra.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				VentanaCarritoCompra.main(carrito);
+				
+			}
+		});
+		frame.getContentPane().add(btnCarritoCompra);
 	}
 
-	private JPanel productoPanel(Audio a) {
+	private JPanel productoPanel(Audio a, ArrayList<Producto> carrito) {
 		JPanel panel =  new JPanel();
 		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 		panel.setBorder(BorderFactory.createLineBorder(Color.GRAY));
@@ -183,6 +196,7 @@ public class VentanaAudio {
 				productos.getProductos().put(
 						new Random().nextInt(), a
 				);
+				carrito.add(a);
 			}
 		});
 		btnAnadirAlCarrito.setAlignmentX(Component.CENTER_ALIGNMENT);

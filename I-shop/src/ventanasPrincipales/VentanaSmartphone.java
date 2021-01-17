@@ -32,6 +32,7 @@ import dataBase.BD;
 import dataBase.DBException;
 import tienda.ListaProducto;
 import tienda.Ordenador;
+import tienda.Producto;
 import tienda.Smartphone;
 
 public class VentanaSmartphone {
@@ -41,11 +42,11 @@ public class VentanaSmartphone {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main(ArrayList<Producto> carrito) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaSmartphone window = new VentanaSmartphone();
+					VentanaSmartphone window = new VentanaSmartphone(carrito);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -58,19 +59,19 @@ public class VentanaSmartphone {
 	 * Create the application.
 	 */
 	
-	public VentanaSmartphone() {
+	public VentanaSmartphone(ArrayList<Producto> carrito) {
 		productos = new ListaProducto();
-		initialize();
+		initialize(carrito);
 	}
 
-	public VentanaSmartphone(ListaProducto productos) {
+	public VentanaSmartphone(ListaProducto productos, ArrayList<Producto> carrito) {
 		this.productos = productos;
-		initialize();
+		initialize(carrito);
 	}
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize(ArrayList<Producto> carrito) {
 		frame = new JFrame();
 		frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 10));
 		frame.setBounds(100, 100, 600,650);
@@ -87,7 +88,7 @@ public class VentanaSmartphone {
 
 		JPanel smartphonesPanel = new JPanel(new FlowLayout());
 		for (Smartphone s : smartphones) {
-			JPanel smartphonePanel = productoPanel(s);
+			JPanel smartphonePanel = productoPanel(s, carrito);
 			smartphonesPanel.add(smartphonePanel);
 		}
 		smartphonesPanel.setBounds(50,100,500,700);
@@ -146,9 +147,21 @@ public class VentanaSmartphone {
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 24));
 		lblNewLabel_1_1.setBounds(194, 34, 178, 43);
 		frame.getContentPane().add(lblNewLabel_1_1);
+		
+		JButton btnCarritoCompra = new JButton("Carrito");
+		btnCarritoCompra.setBounds(100, 100, 200, 200);
+		btnCarritoCompra.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				VentanaCarritoCompra.main(carrito);
+				
+			}
+		});
+		frame.getContentPane().add(btnCarritoCompra);
 	}
 
-	private JPanel productoPanel(Smartphone s) {
+	private JPanel productoPanel(Smartphone s, ArrayList<Producto> carrito) {
 		JPanel panel =  new JPanel();
 		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 		panel.setBorder(BorderFactory.createLineBorder(Color.GRAY));
@@ -173,7 +186,7 @@ public class VentanaSmartphone {
 		label.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		label.setAlignmentX(Component.CENTER_ALIGNMENT);
 		panel.add(label);
-
+		
 		JButton btnAnadirAlCarrito = new JButton("Agregar al carrito");
 		btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAnadirAlCarrito.setForeground(Color.WHITE);
@@ -184,6 +197,8 @@ public class VentanaSmartphone {
 				productos.getProductos().put(
 						new Random().nextInt(), s
 				);
+				System.out.println(s);
+				carrito.add(s);
 			}
 		});
 		btnAnadirAlCarrito.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -191,4 +206,5 @@ public class VentanaSmartphone {
 
 		return panel;
 	}
+	
 }

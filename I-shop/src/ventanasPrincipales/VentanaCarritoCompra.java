@@ -6,6 +6,7 @@ import tienda.Producto;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
@@ -25,11 +26,11 @@ public class VentanaCarritoCompra {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main(ArrayList<Producto> carrito) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaCarritoCompra window = new VentanaCarritoCompra(null);
+					VentanaCarritoCompra window = new VentanaCarritoCompra(null, carrito);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,17 +42,18 @@ public class VentanaCarritoCompra {
 	/**
 	 * Create the application.
 	 */
-	public VentanaCarritoCompra(ListaProducto productos) {
+	public VentanaCarritoCompra(ListaProducto productos, ArrayList<Producto> carrito) {
 		this.precioTotal = 0;
-		initTablePanel();
-		initialize();
+		lblTotal = new JLabel();
+		initTablePanel(carrito);
+		initialize(carrito);
 	}
 
-	private void initTablePanel() {
+	private void initTablePanel(ArrayList<Producto> carrito) {
 		tablePanel = new JPanel(new GridLayout());
 	    tablePanel.setBounds(10, 81, 360, 241);
 
-		initTableModel();
+		initTableModel(carrito);
 
 		carritoTabla = new JTable();
 		carritoTabla.setModel(carritoModeloTabla);
@@ -64,12 +66,15 @@ public class VentanaCarritoCompra {
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize(ArrayList<Producto> carrito) {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 400, 750);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("Ishop");
 		frame.getContentPane().setLayout(null);
+		updatePrecioTotal();
+		lblTotal.setBounds(14, 527, 360, 16);
+		frame.getContentPane().add(lblTotal);
 		
 		JButton btnVaciarCesta = new JButton("Vaciar cesta");
 		btnVaciarCesta.setBounds(90, 349, 212, 29);
@@ -108,10 +113,7 @@ public class VentanaCarritoCompra {
 		chckbxContratoTarifa.setBounds(14, 498, 188, 23);
 		frame.getContentPane().add(chckbxContratoTarifa);
 		
-		lblTotal = new JLabel();
-		updatePrecioTotal();
-		lblTotal.setBounds(14, 527, 360, 16);
-		frame.getContentPane().add(lblTotal);
+		
 		
 		JButton btnRealizarPedido = new JButton("REALIZAR PEDIDO");
 		btnRealizarPedido.setBackground(Color.YELLOW);
@@ -157,18 +159,19 @@ public class VentanaCarritoCompra {
 		frame.getContentPane().add(lblNewLabel);
 	}
 
-	private void initTableModel() {
+	private void initTableModel(ArrayList<Producto> carrito) {
 		carritoModeloTabla = new DefaultTableModel();
 		carritoModeloTabla.addColumn("Nombre");
 		carritoModeloTabla.addColumn("Marca");
 		carritoModeloTabla.addColumn("Categoria");
 		carritoModeloTabla.addColumn("Precio");
-		
+		setTableContent(carrito);
 	}
 
-	public void setTableContent(List<Producto> productos) {
+	public void setTableContent(ArrayList<Producto> carrito) {
 		clear();
-		for (Producto producto: productos) {
+		System.out.println(carrito);
+		for (Producto producto: carrito) {
 			this.carritoModeloTabla.addRow(new Object[] {
 					producto.getNombre(),
 					producto.getMarca(),

@@ -15,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -33,6 +34,7 @@ public class VentanaMenu extends JFrame {
 	JPanel pCentral, pSur;
 	private JButton btnSalir, btnFinalizarCompra;
 	private JFrame ventana, ventanaAnterior;
+	ArrayList<Producto> carrito = new ArrayList<Producto>();
 	ListaProducto listaProducto = new ListaProducto();
 	
 	public void cargarFotos() {
@@ -121,7 +123,7 @@ public class VentanaMenu extends JFrame {
 				
 			btnPc.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					VentanaOrdenador.main(null);
+					VentanaOrdenador.main(carrito);
 					frame.dispose();
 				}
 			});
@@ -134,7 +136,7 @@ public class VentanaMenu extends JFrame {
 			
 		btnAudio.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					VentanaAudio.main(null);
+					VentanaAudio.main(carrito);
 					frame.dispose();
 				}
 			});
@@ -147,6 +149,12 @@ public class VentanaMenu extends JFrame {
 		
 		
 		JButton btnTelevision = new JButton("Television");
+		btnTelevision.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaTelevision.main(carrito);
+				frame.dispose();
+			}
+		});
 		btnTelevision.setForeground(Color.WHITE);
 		btnTelevision.setBackground(new Color(255, 165, 0));
 		btnTelevision.setBounds(275, 339, 126, 48);
@@ -164,7 +172,7 @@ public class VentanaMenu extends JFrame {
 
 		btnSmartphone.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaSmartphone.main(null);
+				VentanaSmartphone.main(carrito);
 				frame.dispose();
 			}
 		});

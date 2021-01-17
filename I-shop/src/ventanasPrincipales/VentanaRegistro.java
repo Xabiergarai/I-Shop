@@ -21,6 +21,7 @@ import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.sql.*;
 import java.awt.event.ActionEvent;
 
@@ -91,12 +92,31 @@ public class VentanaRegistro {
 		txtContrasena.setBounds(114, 265, 236, 42);
 		frame.getContentPane().add(txtContrasena);
 		
+		JLabel lblTfdhfgdhfghfg = new JLabel("<html>El presente Pol\u00EDtica de Privacidad establece los t\u00E9rminos en que  Ishop usa y protege la informaci\u00F3n que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compa\u00F1\u00EDa est\u00E1 comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de informaci\u00F3n personal con la cual usted pueda ser identificado, lo hacemos asegurando que s\u00F3lo se emplear\u00E1 de acuerdo con los t\u00E9rminos de este documento. Sin embargo esta Pol\u00EDtica de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta p\u00E1gina para asegurarse que est\u00E1 de acuerdo con dichos cambios.<br></html>");
+		lblTfdhfgdhfghfg.setOpaque(true);
+		lblTfdhfgdhfghfg.setForeground(Color.BLACK);
+		lblTfdhfgdhfghfg.setBackground(Color.YELLOW);
+		lblTfdhfgdhfghfg.setBounds(24, 381, 412, 169);
+		frame.getContentPane().add(lblTfdhfgdhfghfg);
+		lblTfdhfgdhfghfg.setVisible(false);
 		
 		JCheckBox chckbxPrivacidad = new JCheckBox(" He leido y acepto la politica de privacidad.");
 		chckbxPrivacidad.setBackground(new Color(255, 255, 255));
 		chckbxPrivacidad.setBounds(102, 351, 268, 23);
 		frame.getContentPane().add(chckbxPrivacidad);
-		
+		chckbxPrivacidad.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseExited(MouseEvent e) {
+				lblTfdhfgdhfghfg.setVisible(false);
+				
+			}
+			
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				lblTfdhfgdhfghfg.setVisible(true);
+				
+			}
+		});
 		
 		JButton btnCrearCuenta = new JButton("CREAR CUENTA");
 		btnCrearCuenta.addActionListener(new ActionListener() {
