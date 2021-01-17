@@ -193,7 +193,7 @@ public class BD {
 			
 		
 			try (Statement stmt = con.createStatement()) {
-				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,tipo,pulgadas,formaPantalla,rutafoto,smartTV FROM television");
+				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,tipo,pulgadas,formapantalla,rutafoto,smarttv FROM television");
 
 				while(rs.next()) {
 					Television television = new Television();
@@ -203,7 +203,7 @@ public class BD {
 					television.setDescripcion(rs.getString("descripcion"));
 					television.setRutaFoto(rs.getString("rutaFoto"));
 					television.setTipo(rs.getString("tipo"));
-					television.setFormaPantalla(rs.getString("formaPantalla"));
+					television.setFormaPantalla(rs.getString("formapantalla"));
 					television.setPulgadas(rs.getDouble("pulgadas"));
 					if (rs.getInt("smartTV")== 1) {
 						television.setSmartTV(true);
@@ -259,7 +259,7 @@ public class BD {
 			
 		
 			try (Statement stmt = con.createStatement()) {
-				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,sistema operativo,pulgadas,nfc,rutafoto FROM smartphone");
+				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,sistemaoperativo,pulgadas,nfc,rutafoto FROM smartphone");
 
 				while(rs.next()) {
 					Smartphone smartphone = new Smartphone();
