@@ -1,24 +1,37 @@
 package ventanasPrincipales;
 
 import java.awt.EventQueue;
+import java.awt.FlowLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPanel;
 
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Random;
 
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.Component;
+
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneConstants;
 
+import dataBase.BD;
+import dataBase.DBException;
 import tienda.ListaProducto;
+import tienda.Audio;
 
 public class VentanaAudio {
 
@@ -58,194 +71,40 @@ public class VentanaAudio {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 600, 900);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 10));
+		frame.setBounds(100, 100, 600,650);
 		frame.setTitle("Ishop");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
-		
-		JLabel lblImagen1 = new JLabel("New label");
-		lblImagen1.setBounds(49, 103, 189, 130);
-		frame.getContentPane().add(lblImagen1);
-		
-		ImageIcon ico1= new ImageIcon("img/1.jpg");
-        ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblImagen1.getWidth(), lblImagen1.getHeight(), Image.SCALE_SMOOTH));
-        lblImagen1.setIcon(img1);
-		
-		JLabel lblImagen2 = new JLabel("New label");
-		lblImagen2.setBounds(323, 108, 151, 121);
-		frame.getContentPane().add(lblImagen2);
-		
-		ImageIcon ico2= new ImageIcon("img/mars-gaming-msx-altavoces-21-35w.jpg");
-        ImageIcon img2= new ImageIcon(ico2.getImage().getScaledInstance(lblImagen2.getWidth(), lblImagen2.getHeight(), Image.SCALE_SMOOTH));
-        lblImagen2.setIcon(img2);
-		
-		JLabel lblNombre1 = new JLabel("<html>Logitech G432 Auriculares Gaming 7.1<html>");
-		lblNombre1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblNombre1.setBounds(52, 244, 172, 48);
-		frame.getContentPane().add(lblNombre1);
-		
-		JLabel lblNombre2 = new JLabel("<html>Mars Gaming MSX Altavoz<html>");
-		lblNombre2.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblNombre2.setBounds(323, 234, 151, 52);
-		frame.getContentPane().add(lblNombre2);
-		
-		JLabel lblPrecio1 = new JLabel("45,99 eur");
-		lblPrecio1.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
-		lblPrecio1.setBounds(52, 322, 112, 16);
-		frame.getContentPane().add(lblPrecio1);
-		
-		JButton btnAnadirAlCarrito = new JButton("Agregar al carrito");
-		btnAnadirAlCarrito.setForeground(Color.WHITE);
-		btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnAnadirAlCarrito.setBackground(new Color(255, 165, 0));
-		btnAnadirAlCarrito.setBounds(52, 370, 139, 43);
-		frame.getContentPane().add(btnAnadirAlCarrito);
-		
-		btnAnadirAlCarrito.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaCarritoCompra.main(null);
-				frame.dispose();
-			}
-		});
-		
-		JLabel lblPrecio2 = new JLabel("15,90 eur");
-		lblPrecio2.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
-		lblPrecio2.setBounds(323, 322, 85, 16);
-		frame.getContentPane().add(lblPrecio2);
-		
-		JButton btnAnadirAlCarrito_1 = new JButton("Agregar al carrito");
-		btnAnadirAlCarrito_1.setForeground(Color.WHITE);
-		btnAnadirAlCarrito_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnAnadirAlCarrito_1.setBackground(new Color(255, 165, 0));
-		btnAnadirAlCarrito_1.setBounds(323, 370, 139, 43);
-		frame.getContentPane().add(btnAnadirAlCarrito_1);
-		
-		btnAnadirAlCarrito_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaCarritoCompra.main(null);
-				frame.dispose();
-			}
-		});
-		
-		JLabel lblImagen3 = new JLabel("New label");
-		lblImagen3.setBounds(49, 457, 157, 148);
-		frame.getContentPane().add(lblImagen3);
-		
-		ImageIcon ico3= new ImageIcon("img/1523-galaxy-buds-live-auriculares-inalambricos-negro.jpg");
-        ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblImagen3.getWidth(), lblImagen3.getHeight(), Image.SCALE_SMOOTH));
-        lblImagen3.setIcon(img3);
-		
-		JLabel lblNombre3 = new JLabel("<html>Galaxy Buds Live Auriculares Inalambricos Negro<html>");
-		lblNombre3.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblNombre3.setBounds(57, 625, 172, 43);
-		frame.getContentPane().add(lblNombre3);
-		
-		JLabel lblPrecio3 = new JLabel("134,99 eur");
-		lblPrecio3.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblPrecio3.setBounds(57, 713, 105, 16);
-		frame.getContentPane().add(lblPrecio3);
-		
-		JButton btnAnadirAlCarrito_2 = new JButton("Agregar al carrito");
-		btnAnadirAlCarrito_2.setForeground(Color.WHITE);
-		btnAnadirAlCarrito_2.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnAnadirAlCarrito_2.setBackground(new Color(255, 165, 0));
-		btnAnadirAlCarrito_2.setBounds(46, 753, 139, 43);
-		frame.getContentPane().add(btnAnadirAlCarrito_2);
-		
-		btnAnadirAlCarrito_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaCarritoCompra.main(null);
-				frame.dispose();
-			}
-		});
-		
-		JButton btnAnadirAlCarrito_3 = new JButton("Agregar al carrito");
-		btnAnadirAlCarrito_3.setForeground(Color.WHITE);
-		btnAnadirAlCarrito_3.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnAnadirAlCarrito_3.setBackground(new Color(255, 165, 0));
-		btnAnadirAlCarrito_3.setBounds(317, 753, 139, 43);
-		frame.getContentPane().add(btnAnadirAlCarrito_3);
-		
-		btnAnadirAlCarrito_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaCarritoCompra.main(null);
-				frame.dispose();
-			}
-		});
-		
-		JLabel lblImagen4 = new JLabel("New label");
-		lblImagen4.setBounds(323, 462, 172, 139);
-		frame.getContentPane().add(lblImagen4);
-		
-		ImageIcon ico4 = new ImageIcon("img/altavoz.jpg");
-        ImageIcon img4 = new ImageIcon(ico4.getImage().getScaledInstance(lblImagen4.getWidth(), lblImagen4.getHeight(), Image.SCALE_SMOOTH));
-        lblImagen4.setIcon(img4);
-		
-		JLabel lblNombre4 = new JLabel("<html>Logitech Speaker System Z313 Altavoces 2.1<html>");
-		lblNombre4.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblNombre4.setBounds(323, 622, 189, 48);
-		frame.getContentPane().add(lblNombre4);
-		
-		JLabel lblPrecio4 = new JLabel("49,99 eur");
-		lblPrecio4.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblPrecio4.setBounds(323, 713, 105, 16);
-		frame.getContentPane().add(lblPrecio4);
-		
-		JButton btnFav = new JButton("Fav");
-		btnFav.setBounds(192, 369, 53, 44);
-		frame.getContentPane().add(btnFav);
-		
-		btnFav.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaFavoritos.main(null);
-				frame.dispose();
-			}
-		});
-		
-		
-		
-		JButton btnFav3 = new JButton("Fav");
-		btnFav3.setBounds(463, 370, 53, 43);
-		frame.getContentPane().add(btnFav3);
-		
-		btnFav3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaFavoritos.main(null);
-				frame.dispose();
-			}
-		});
-		
-		JButton btnFav4 = new JButton("Fav");
-		btnFav4.setBounds(457, 753, 53, 43);
-		frame.getContentPane().add(btnFav4);
-		
-		btnFav4.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaFavoritos.main(null);
-				frame.dispose();
-			}
-		});
-		
-		JButton btnFav2 = new JButton("Fav");
-		btnFav2.setBounds(186, 753, 53, 43);
-		frame.getContentPane().add(btnFav2);
-	
-		
-		btnFav2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaFavoritos.main(null);
-				frame.dispose();
-			}
-		});
-		
+
+		ArrayList<Audio> audios = new ArrayList<Audio>();
+		try {
+			audios = BD.listarAudios();
+		} catch (DBException e1) {
+			e1.printStackTrace();
+		}
+
+		JPanel audiosPanel = new JPanel(new FlowLayout());
+		for (Audio a : audios) {
+			JPanel audioPanel = productoPanel(a);
+			audiosPanel.add(audioPanel);
+		}
+		audiosPanel.setBounds(50,100,500,700);
+		JScrollPane scrollPane = new JScrollPane(
+				audiosPanel,
+				ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+				ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED
+		);
+		frame.getContentPane().add(scrollPane);
+		frame.getContentPane().add(audiosPanel);
+
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBounds(0, 0, 99, 22);
 		frame.getContentPane().add(menuBar);
-		
+
 		JMenu mnNewMenu = new JMenu("Categorias");
 		menuBar.add(mnNewMenu);
-		
+
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Audio");
 		mntmNewMenuItem_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -254,16 +113,16 @@ public class VentanaAudio {
 			}
 		});
 		mnNewMenu.add(mntmNewMenuItem_2);
-		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Ordenador");
+
+		JMenuItem mntmNewMenuItem = new JMenuItem("Audio");
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaOrdenador.main(null);
+				VentanaAudio.main(null);
 				frame.dispose();
 			}
 		});
 		mnNewMenu.add(mntmNewMenuItem);
-		
+
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("SmartPhone");
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -272,7 +131,7 @@ public class VentanaAudio {
 			}
 		});
 		mnNewMenu.add(mntmNewMenuItem_1);
-	
+
 		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Television");
 		mntmNewMenuItem_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -281,12 +140,54 @@ public class VentanaAudio {
 			}
 		});
 		mnNewMenu.add(mntmNewMenuItem_3);
-		
-		JLabel lblNewLabel_1 = new JLabel("Audio");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblNewLabel_1.setBounds(229, 38, 105, 43);
-		frame.getContentPane().add(lblNewLabel_1);
-		
 
+		JLabel lblNewLabel_1_1 = new JLabel("Audio");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 24));
+		lblNewLabel_1_1.setBounds(194, 34, 178, 43);
+		frame.getContentPane().add(lblNewLabel_1_1);
+	}
+
+	private JPanel productoPanel(Audio a) {
+		JPanel panel =  new JPanel();
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+		panel.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+		panel.setBackground(Color.WHITE);
+
+		JLabel lblNewLabel = new JLabel();
+		lblNewLabel.setBounds(72, 90, 124, 141);
+		ImageIcon ico1= new ImageIcon(a.getRutaFoto());//meter las rutas en la bd
+		ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
+		lblNewLabel.setIcon(img1);
+		lblNewLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+		panel.add(lblNewLabel);
+
+		JLabel lblNewLabel_2 = new JLabel(a.getNombre());
+		lblNewLabel_2.setBackground(Color.WHITE);
+		lblNewLabel_2.setToolTipText("");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNewLabel_2.setAlignmentX(Component.CENTER_ALIGNMENT);
+		panel.add(lblNewLabel_2);
+
+		JLabel label = new JLabel(String.valueOf(a.getPrecio()));
+		label.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		label.setAlignmentX(Component.CENTER_ALIGNMENT);
+		panel.add(label);
+
+		JButton btnAnadirAlCarrito = new JButton("Agregar al carrito");
+		btnAnadirAlCarrito.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnAnadirAlCarrito.setForeground(Color.WHITE);
+		btnAnadirAlCarrito.setBackground(new Color(255, 165, 0));
+		btnAnadirAlCarrito.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				productos.getProductos().put(
+						new Random().nextInt(), a
+				);
+			}
+		});
+		btnAnadirAlCarrito.setAlignmentX(Component.CENTER_ALIGNMENT);
+		panel.add(btnAnadirAlCarrito);
+
+		return panel;
 	}
 }

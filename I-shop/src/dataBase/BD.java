@@ -226,7 +226,7 @@ public class BD {
 			
 		
 			try (Statement stmt = con.createStatement()) {
-				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,tipo,entrada,potencia,rutafoto,bluetooth FROM audio");
+				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,entrada,potencia,bluetooth,rutafoto FROM audio");
 
 				while(rs.next()) {
 					Audio audio = new Audio();
@@ -236,7 +236,6 @@ public class BD {
 					audio.setDescripcion(rs.getString("descripcion"));
 					audio.setRutaFoto(rs.getString("rutaFoto"));
 					audio.setEntrada(rs.getString("entrada"));
-					
 					audio.setPotencia(rs.getInt("potencia"));
 					if (rs.getInt("bluetooh")== 1) {
 						audio.setBluetooth(true);
@@ -244,6 +243,7 @@ public class BD {
 						audio.setBluetooth(false);
 					}
 					audios.add(audio);
+					
 				}
 				
 			} catch (SQLException e) {
