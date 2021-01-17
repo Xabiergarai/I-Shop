@@ -54,7 +54,7 @@ public class VentanaOrdenador {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 10));
-		frame.setBounds(100, 100, 600, 900);
+		frame.setBounds(100, 100, 600,650);
 		frame.setTitle("Ishop");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -71,7 +71,7 @@ public class VentanaOrdenador {
 			JPanel ordenadorPanel = productoPanel(o);
 			ordenadoresPanel.add(ordenadorPanel);
 		}
-		ordenadoresPanel.setBounds(50,100,500,900);
+		ordenadoresPanel.setBounds(50,100,500,700);
 		JScrollPane scrollPane = new JScrollPane(
 				ordenadoresPanel,
 				ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,

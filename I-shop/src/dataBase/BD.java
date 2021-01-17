@@ -187,13 +187,13 @@ public class BD {
 	return ordenadores;
 		
 	}
-	public static ArrayList <Television> listarTelevision() throws DBException{
+	public static ArrayList <Television> listarTelevisiones() throws DBException{
 		ArrayList <Television> televisiones = new ArrayList<>();
 		Connection con = initBD("proyecto.db");
 			
 		
 			try (Statement stmt = con.createStatement()) {
-				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,tipo,pulgadas,formaPantalla,rutafoto,smartTV FROM ordenador");
+				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,tipo,pulgadas,formaPantalla,rutafoto,smartTV FROM television");
 
 				while(rs.next()) {
 					Television television = new Television();
@@ -214,19 +214,19 @@ public class BD {
 				}
 				
 			} catch (SQLException e) {
-				throw new DBException("Error obteniendo todos los televisiones'", e);
+				throw new DBException("Error obteniendo todos los televisiones", e);
 			}
 		
 		return televisiones;
 			
 		}
-	public static ArrayList <Audio> listarAudio() throws DBException{
+	public static ArrayList <Audio> listarAudios() throws DBException{
 		ArrayList <Audio> audios = new ArrayList<>();
 		Connection con = initBD("proyecto.db");
 			
 		
 			try (Statement stmt = con.createStatement()) {
-				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,tipo,entrada,potencia,rutafoto,bluetooth FROM ordenador");
+				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,tipo,entrada,potencia,rutafoto,bluetooth FROM audio");
 
 				while(rs.next()) {
 					Audio audio = new Audio();
@@ -247,19 +247,19 @@ public class BD {
 				}
 				
 			} catch (SQLException e) {
-				throw new DBException("Error obteniendo todos los productos de audio'", e);
+				throw new DBException("Error obteniendo todos los productos de audio", e);
 			}
 		
 		return audios;
 			
 		}
-	public static ArrayList <Smartphone> listarSmartPhone() throws DBException{
+	public static ArrayList <Smartphone> listarSmartPhones() throws DBException{
 		ArrayList <Smartphone> smartphones = new ArrayList<>();
 		Connection con = initBD("proyecto.db");
 			
 		
 			try (Statement stmt = con.createStatement()) {
-				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,sistema operativo,pulgadas,nfc,rutafoto FROM ordenador");
+				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,sistema operativo,pulgadas,nfc,rutafoto FROM smartphone");
 
 				while(rs.next()) {
 					Smartphone smartphone = new Smartphone();
@@ -279,7 +279,7 @@ public class BD {
 				}
 				
 			} catch (SQLException e) {
-				throw new DBException("Error obteniendo todos los productos de audio'", e);
+				throw new DBException("Error obteniendo todos los productos de audio", e);
 			}
 		
 		return smartphones;
