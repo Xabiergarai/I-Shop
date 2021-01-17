@@ -26,8 +26,8 @@ public class PanelAudio extends JPanel{
 		ventana = v;
 		setLayout(new BorderLayout());
 		pSur = new JPanel();
-		btnFavoritos = new JButton("Lista de deseos");
-		pSur.add(btnFavoritos);
+//		btnFavoritos = new JButton("Lista de deseos");
+//		pSur.add(btnFavoritos);
 		btnAnyadir = new JButton("Anadir al carrito");
 		pSur.add(btnAnyadir);
 		
@@ -58,15 +58,15 @@ public class PanelAudio extends JPanel{
 		pDerecha.add(lblPrecio);
 		pCentro.add(pDerecha);
 		
-		btnFavoritos.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				VentanaLogin.contenedora.aniadirProductoAFavoritos(a);
-				JOptionPane.showMessageDialog(null, "El producto ha sido añadido a la lista de deseos con exito");
-			}
-		});
+//		btnFavoritos.addActionListener(new ActionListener() {
+//			
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//				// TODO Auto-generated method stub
+//				VentanaLogin.contenedora.aniadirProductoAFavoritos(a);
+//				JOptionPane.showMessageDialog(null, "El producto ha sido añadido a la lista de deseos con exito");
+//			}
+//		});
 		
 		btnAnyadir.addActionListener(new ActionListener() {
 			

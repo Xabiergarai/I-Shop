@@ -19,7 +19,7 @@ import ventanasPrincipales.VentanaLogin;
 public class VentanaAniadirAudio extends JFrame{
 	private JTextField txtNombre,txtPotencia,txtPrecio,txtFoto,txtMarca,txtDescripcion,txtCategoria,txtEntrada;
 	private JLabel lblNombre,lblPotencia,lblBluetooth,lblPrecio,lblRutaFoto,lblMarca,lblDescripcion,lblCategoria,lblEntrada;
-	private JComboBox<String> cbBluetooth; //Desplegable con SI � NO
+	private JComboBox<String> cbBluetooth; //Desplegable con SI o NO
 	private JPanel pSur,pCentro;
 	private JButton btnInsertar,btnActualizarFichero,btnVolverAlMenu;
 	
