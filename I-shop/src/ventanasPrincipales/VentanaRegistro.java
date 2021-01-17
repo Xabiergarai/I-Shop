@@ -19,6 +19,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.sql.*;
 import java.awt.event.ActionEvent;
 
@@ -65,19 +67,26 @@ public class VentanaRegistro {
 		frame.setTitle("Ishop");
 		frame.getContentPane().setLayout(null);
 		
-		txtEmail = new JTextField();
-		txtEmail.setText("EMAIL*");
-		txtEmail.setToolTipText("");
+		txtEmail = new JTextField("Email*");
+		//txtEmail.setToolTipText("");
 		txtEmail.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txtEmail.setColumns(10);
+		//txtEmail.setColumns(10);
 		txtEmail.setBackground(SystemColor.menu);
 		txtEmail.setBounds(114, 178, 236, 42);
 		frame.getContentPane().add(txtEmail);
+		txtEmail.addMouseListener(new MouseAdapter() {
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				txtEmail.setText("");
+				
+			}
+		});
 		
 		txtContrasena = new JPasswordField();;
 		txtContrasena.setText("");
 		txtContrasena.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txtContrasena.setColumns(10);
+		//txtContrasena.setColumns(10);
 		txtContrasena.setBackground(SystemColor.menu);
 		txtContrasena.setBounds(114, 231, 236, 42);
 		frame.getContentPane().add(txtContrasena);
@@ -85,7 +94,7 @@ public class VentanaRegistro {
 		txtContrasena_1 = new JPasswordField();;
 		txtContrasena_1.setText("");
 		txtContrasena_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txtContrasena_1.setColumns(10);
+		//txtContrasena_1.setColumns(10);
 		txtContrasena_1.setBackground(SystemColor.menu);
 		txtContrasena_1.setBounds(114, 284, 236, 42);
 		frame.getContentPane().add(txtContrasena_1);
@@ -116,7 +125,7 @@ public class VentanaRegistro {
 							JOptionPane.showMessageDialog(null, "Tienes que introducir un correo");
 						}
 					} else {
-						JOptionPane.showMessageDialog(null, "Tienes que crear una contrase�a");
+						JOptionPane.showMessageDialog(null, "Tienes que introducir una contrasena");
 					}
 					
 					if  (BD.existeUsuario(emailUsuario)) {
@@ -137,13 +146,20 @@ public class VentanaRegistro {
 		
 		
 		
-		txtNombre = new JTextField();
-		txtNombre.setText("NOMBRE*");
+		txtNombre = new JTextField("Nombre*");
 		txtNombre.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txtNombre.setColumns(10);
+		//txtNombre.setColumns(10);
 		txtNombre.setBackground(SystemColor.menu);
 		txtNombre.setBounds(114, 125, 236, 42);
 		frame.getContentPane().add(txtNombre);
+		txtNombre.addMouseListener(new MouseAdapter() {
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				txtNombre.setText("");
+				
+			}
+		});
 		
 		JLabel lblCampos = new JLabel("Los campos marcados con * son obligatorios.");
 		lblCampos.setBounds(114, 351, 277, 14);
