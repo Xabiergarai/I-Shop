@@ -370,7 +370,7 @@ public class VentanaTelevision {
 //
 //JLabel lblNewLabel = new JLabel();
 //lblNewLabel.setBounds(72, 90, 124, 141);
-//ImageIcon ico1= new ImageIcon(t.getRutaFoto());//meter las rutas en la bd
+//ImageIcon ico1= new ImageIcon(t.getRutaFoto());//meter las rutas en la base de datos
 //ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel.getWidth(), lblNewLabel.getHeight(), Image.SCALE_SMOOTH));
 //lblNewLabel.setIcon(img1);
 //lblNewLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -405,7 +405,8 @@ public class VentanaTelevision {
 //
 //return panel;
 //}	
-	
+	//
+
 	
 	
 
