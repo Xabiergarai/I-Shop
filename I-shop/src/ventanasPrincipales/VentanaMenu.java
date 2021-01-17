@@ -1,7 +1,11 @@
 package ventanasPrincipales;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,12 +25,15 @@ import javax.swing.JScrollPane;
 
 import paneles.PanelAudio;
 import tienda.Audio;
+import tienda.ListaProducto;
 import tienda.Producto;
 
 public class VentanaMenu extends JFrame {
+	private JFrame frame;
 	JPanel pCentral, pSur;
 	private JButton btnSalir, btnFinalizarCompra;
 	private JFrame ventana, ventanaAnterior;
+	ListaProducto listaProducto = new ListaProducto();
 	
 	public void cargarFotos() {
 		for(Producto p: VentanaLogin.contenedora.getListaProductos()) {
@@ -88,23 +95,14 @@ public class VentanaMenu extends JFrame {
 		
 		setVisible(true);
 	}
-	public static void main(String [] args) {
+	
 		VentanaLogin vp = new VentanaLogin();
-	}	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*/**
+
+	/**
 	 * Launch the application.
 	 */
-	/*public static void main(String[] args) {
+	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -115,21 +113,21 @@ public class VentanaMenu extends JFrame {
 				}
 			}
 		});
-	}*/
+	}
 
 	/**
 	 * Create the application.
 	 */
-	/*public VentanaMenu() {
+	public VentanaMenu() {
 		initialize();
-	}*/
+	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	/*private void initialize() {
+	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 500, 550);
+		frame.setBounds(100, 100, 500, 500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("Ishop");
 		frame.getContentPane().setLayout(null);
@@ -198,9 +196,9 @@ public class VentanaMenu extends JFrame {
 		btnSmartphone.setBounds(83, 224, 126, 48);
 		frame.getContentPane().add(btnSmartphone);
 		
-		JButton btnBuscarProducto = new JButton("Busque aqui el producto deseado");
-		btnBuscarProducto.setBounds(99, 411, 271, 29);
-		frame.getContentPane().add(btnBuscarProducto);
+//		JButton btnBuscarProducto = new JButton("Busque aqui el producto deseado");
+//		btnBuscarProducto.setBounds(99, 411, 271, 29);
+//		frame.getContentPane().add(btnBuscarProducto);
 		
 		JButton btnTelevision = new JButton("Television");
 		btnTelevision.setForeground(Color.WHITE);
@@ -218,12 +216,12 @@ public class VentanaMenu extends JFrame {
 		lblNewLabel_3_1.setIcon(img5);
 		
 
-		btnBuscarProducto.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				VentanaBusqueda.main(null);
-				frame.dispose();
-			}
-		});
+//		btnBuscarProducto.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//				VentanaBusqueda.main(null);
+//				frame.dispose();
+//			}
+//		});
 		
 
 		btnSmartphone.addActionListener(new ActionListener() {
@@ -232,5 +230,5 @@ public class VentanaMenu extends JFrame {
 				frame.dispose();
 			}
 		});
-	}*/
+	}
 }

@@ -83,7 +83,7 @@ public class VentanaLogin extends JFrame {
 				}	
 				else {
 					JOptionPane.showMessageDialog(null, "Bienvenido", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
-					new VentanaMenu(null);
+					VentanaMenu.main(null);
 					vaciarCampos();
 					frame.dispose();
 				}
