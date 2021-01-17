@@ -158,7 +158,7 @@ public class BD {
 		
 	
 		try (Statement stmt = con.createStatement()) {
-			ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,ram,pulgadas,portatil FROM ordenador");
+			ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,ram,pulgadas,portatil,rutafoto FROM ordenador");
 
 			while(rs.next()) {
 				Ordenador ordenador = new Ordenador();
@@ -166,6 +166,7 @@ public class BD {
 				ordenador.setMarca(rs.getString("marca"));
 				ordenador.setPrecio(rs.getDouble("precio"));
 				ordenador.setDescripcion(rs.getString("descripcion"));
+				ordenador.setRutaFoto(rs.getString("rutaFoto"));
 				ordenador.setRam(rs.getString("ram"));
 				ordenador.setPulgadas(rs.getFloat("pulgadas"));
 				if (rs.getInt("portatil")== 1) {
