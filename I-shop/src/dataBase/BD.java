@@ -7,6 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import tienda.Ordenador;
+import tienda.Television;
 
 
 
@@ -184,6 +185,39 @@ public class BD {
 	return ordenadores;
 		
 	}
+	public static ArrayList <Television> listarTelevision() throws DBException{
+		ArrayList <Television> televisiones = new ArrayList<>();
+		Connection con = initBD("proyecto.db");
+			
+		
+			try (Statement stmt = con.createStatement()) {
+				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,tipo,pulgadas,formaPantalla,rutafoto,smartTV FROM ordenador");
+
+				while(rs.next()) {
+					Television television = new Television();
+					television.setNombre(rs.getString("nombre"));
+					television.setMarca(rs.getString("marca"));
+					television.setPrecio(rs.getDouble("precio"));
+					television.setDescripcion(rs.getString("descripcion"));
+					television.setRutaFoto(rs.getString("rutaFoto"));
+					television.setTipo(rs.getString("tipo"));
+					television.setFormaPantalla(rs.getString("formaPantalla"));
+					television.setPulgadas(rs.getDouble("pulgadas"));
+					if (rs.getInt("smartTV")== 1) {
+						television.setSmartTV(true);
+					}else {
+						television.setSmartTV(false);
+					}
+					televisiones.add(television);
+				}
+				
+			} catch (SQLException e) {
+				throw new DBException("Error obteniendo todos los televisiones'", e);
+			}
+		
+		return televisiones;
+			
+		}
 	
 	
 	
