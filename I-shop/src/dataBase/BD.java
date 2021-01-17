@@ -6,7 +6,9 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import tienda.Audio;
 import tienda.Ordenador;
+import tienda.Smartphone;
 import tienda.Television;
 
 
@@ -218,7 +220,71 @@ public class BD {
 		return televisiones;
 			
 		}
-	
+	public static ArrayList <Audio> listarAudio() throws DBException{
+		ArrayList <Audio> audios = new ArrayList<>();
+		Connection con = initBD("proyecto.db");
+			
+		
+			try (Statement stmt = con.createStatement()) {
+				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,tipo,entrada,potencia,rutafoto,bluetooth FROM ordenador");
+
+				while(rs.next()) {
+					Audio audio = new Audio();
+					audio.setNombre(rs.getString("nombre"));
+					audio.setMarca(rs.getString("marca"));
+					audio.setPrecio(rs.getDouble("precio"));
+					audio.setDescripcion(rs.getString("descripcion"));
+					audio.setRutaFoto(rs.getString("rutaFoto"));
+					audio.setEntrada(rs.getString("entrada"));
+					
+					audio.setPotencia(rs.getInt("potencia"));
+					if (rs.getInt("bluetooh")== 1) {
+						audio.setBluetooth(true);
+					}else {
+						audio.setBluetooth(false);
+					}
+					audios.add(audio);
+				}
+				
+			} catch (SQLException e) {
+				throw new DBException("Error obteniendo todos los productos de audio'", e);
+			}
+		
+		return audios;
+			
+		}
+	public static ArrayList <Smartphone> listarSmartPhone() throws DBException{
+		ArrayList <Smartphone> smartphones = new ArrayList<>();
+		Connection con = initBD("proyecto.db");
+			
+		
+			try (Statement stmt = con.createStatement()) {
+				ResultSet rs = stmt.executeQuery("SELECT nombre,marca,precio,descripcion,sistema operativo,pulgadas,nfc,rutafoto FROM ordenador");
+
+				while(rs.next()) {
+					Smartphone smartphone = new Smartphone();
+					smartphone.setNombre(rs.getString("nombre"));
+					smartphone.setMarca(rs.getString("marca"));
+					smartphone.setPrecio(rs.getDouble("precio"));
+					smartphone.setDescripcion(rs.getString("descripcion"));
+					smartphone.setRutaFoto(rs.getString("rutaFoto"));
+					smartphone.setSistemaOperativo(rs.getString("sistema operativo"));
+					smartphone.setPulgadas(rs.getDouble("pulgadas"));
+					if (rs.getInt("nfc")== 1) {
+						smartphone.setNfc(true);
+					}else {
+						smartphone.setNfc(false);
+					}
+					smartphones.add(smartphone);
+				}
+				
+			} catch (SQLException e) {
+				throw new DBException("Error obteniendo todos los productos de audio'", e);
+			}
+		
+		return smartphones;
+			
+		}
 	
 	
 	
