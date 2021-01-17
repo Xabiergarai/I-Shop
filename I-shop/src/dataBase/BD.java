@@ -237,7 +237,7 @@ public class BD {
 					audio.setRutaFoto(rs.getString("rutaFoto"));
 					audio.setEntrada(rs.getString("entrada"));
 					audio.setPotencia(rs.getInt("potencia"));
-					if (rs.getInt("bluetooh")== 1) {
+					if (rs.getInt("bluetooth")== 1) {
 						audio.setBluetooth(true);
 					}else {
 						audio.setBluetooth(false);
@@ -268,7 +268,7 @@ public class BD {
 					smartphone.setPrecio(rs.getDouble("precio"));
 					smartphone.setDescripcion(rs.getString("descripcion"));
 					smartphone.setRutaFoto(rs.getString("rutaFoto"));
-					smartphone.setSistemaOperativo(rs.getString("sistema operativo"));
+					smartphone.setSistemaOperativo(rs.getString("sistemaoperativo"));
 					smartphone.setPulgadas(rs.getDouble("pulgadas"));
 					if (rs.getInt("nfc")== 1) {
 						smartphone.setNfc(true);
