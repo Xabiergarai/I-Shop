@@ -141,16 +141,24 @@ public class VentanaLogin extends JFrame {
 		lblOlvidarContrasena.setBounds(105, 319, 236, 14);
 		frame.getContentPane().add(lblOlvidarContrasena);
 		
+		
+		
+		URL iconURL = getClass().getResource("/i-shopSinFondo.png");
+		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("img/i-shopNombreLogo.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon(iconURL));
 		lblNewLabel_1.setBounds(115, 40, 236, 138);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		
-		ImageIcon ico1= new ImageIcon("img/i-shopSinFondo.png");
+		ImageIcon ico1= new ImageIcon(iconURL);
 		ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_1.setIcon(img1);
 
+		
+		
+		
+		
 	}
 	
 	public void vaciarCampos() {

@@ -15,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
@@ -88,19 +89,21 @@ public class VentanaMenu extends JFrame {
 		lblSeccionesProductos.setBounds(128, 27, 242, 16);
 		frame.getContentPane().add(lblSeccionesProductos);
 		
+		URL iconURL = getClass().getResource("/audio.jpg");
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setBounds(275, 62, 126, 77);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 
-		ImageIcon ico2= new ImageIcon("img/audio.jpg");
+		ImageIcon ico2= new ImageIcon(iconURL);
 		ImageIcon img2= new ImageIcon(ico2.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_1.setIcon(img2);
 		
+		URL iconURL1 = getClass().getResource("/portatilLogo.png");
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setBounds(90, 62, 106, 77);
 		frame.getContentPane().add(lblNewLabel_2);
-		ImageIcon ico3= new ImageIcon("img/portatilLogo.png");
+		ImageIcon ico3= new ImageIcon(iconURL1);
 		ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblNewLabel_2.getWidth(), lblNewLabel_2.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_2.setIcon(img3);
 		
@@ -111,7 +114,8 @@ public class VentanaMenu extends JFrame {
 		lblNewLabel_3.setBounds(83, 224, 126, 77);
 		frame.getContentPane().add(lblNewLabel_3);
 
-		ImageIcon ico4= new ImageIcon("img/smartphone.png");
+		URL iconURL2 = getClass().getResource("/smartphone.png");
+		ImageIcon ico4= new ImageIcon(iconURL2);
 		ImageIcon img4= new ImageIcon(ico4.getImage().getScaledInstance(lblNewLabel_3.getWidth(), lblNewLabel_3.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_3.setIcon(img4);
 		
@@ -165,7 +169,8 @@ public class VentanaMenu extends JFrame {
 		lblNewLabel_3_1.setBounds(275, 224, 126, 77);
 		frame.getContentPane().add(lblNewLabel_3_1);
 		
-		ImageIcon ico5= new ImageIcon("img/iconotv.jpg");
+		URL iconURL3 = getClass().getResource("/iconotv.jpg");
+		ImageIcon ico5= new ImageIcon(iconURL3);
 		ImageIcon img5= new ImageIcon(ico5.getImage().getScaledInstance(lblNewLabel_3_1.getWidth(), lblNewLabel_3_1.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_3_1.setIcon(img5);
 		

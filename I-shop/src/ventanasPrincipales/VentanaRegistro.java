@@ -22,6 +22,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.net.URL;
 import java.sql.*;
 import java.awt.event.ActionEvent;
 
@@ -178,12 +179,14 @@ public class VentanaRegistro {
 		lblCampos.setBounds(114, 330, 277, 14);
 		frame.getContentPane().add(lblCampos);
 		
+		
+		URL iconURL = getClass().getResource("/i-shopSinFondo.png");
 		JLabel lblNewLabel_1 = new JLabel("");
 		
 		lblNewLabel_1.setBounds(114, 5, 236, 151);
 		frame.getContentPane().add(lblNewLabel_1);
 		
-		ImageIcon ico1= new ImageIcon("img/i-shopSinFondo.png");
+		ImageIcon ico1= new ImageIcon(iconURL);
 		ImageIcon img1= new ImageIcon(ico1.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_1.setIcon(img1);
 		
