@@ -8,12 +8,10 @@ import java.util.logging.Logger;
 
 import tienda.Audio;
 import tienda.Ordenador;
+import tienda.Producto;
 import tienda.Smartphone;
 import tienda.Television;
 import tienda.Usuario;
-
-
-
 
 public class BD {
 	
@@ -344,6 +342,27 @@ public class BD {
 			
 		}
 	
+	public static void borrarProducto(String p) throws SQLException {
+		Connection con = initBD("proyecto.db");
+		
+			PreparedStatement ps = con.prepareStatement("DELETE FROM ordenador WHERE nombre = ?");
+			ps.setString(1, p);
+			ps.execute();
+
+			ps = con.prepareStatement("DELETE FROM television WHERE nombre = ?");
+			ps.setString(1, p);
+			ps.execute();
+			
+			ps = con.prepareStatement("DELETE FROM audio WHERE nombre = ?");
+			ps.setString(1, p);
+			ps.execute();
+
+			ps = con.prepareStatement("DELETE FROM smartphone WHERE nombre = ?");
+			ps.setString(1, p);
+			ps.execute();
+
+	}
+	
 	public static ArrayList <Usuario> listarUsuarios() throws DBException{
 		ArrayList <Usuario> usuarios = new ArrayList<>();
 		Connection con = initBD("proyecto.db");
@@ -366,6 +385,16 @@ public class BD {
 	
 	return usuarios;
 		
+	}
+	
+	
+	public static void borrarUsuario(Usuario u) throws SQLException {
+		Connection con = initBD("proyecto.db");
+		
+			PreparedStatement ps = con.prepareStatement("DELETE FROM usuario WHERE email = ?");
+			ps.setString(1, u.getEmail());
+			ps.execute();
+
 	}
 		
 	

@@ -5,11 +5,13 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
+import javax.swing.ScrollPaneConstants;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 import java.awt.Color;
@@ -89,10 +91,16 @@ public class VentanaAgregarProducto extends JFrame {
 		lblNewLabel_1_3.setBounds(170, 332, 88, 32);
 		contentPane.add(lblNewLabel_1_3);
 		
+		JPanel panel = new JPanel();
+		panel.setBounds(48, 375, 339, 88);
+		panel.setLayout(new BorderLayout());
+		contentPane.add(panel);
 		textArea= new JTextArea();
 		textArea.setColumns(10);
-		textArea.setBounds(48, 375, 339, 88);
-		contentPane.add(textArea);
+		JScrollPane scroll = new JScrollPane(textArea);
+		scroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+		panel.add(scroll);
 		
 		JLabel lblNewLabel_1_4 = new JLabel("Categoria");
 		lblNewLabel_1_4.setFont(new Font("Tahoma", Font.PLAIN, 16));

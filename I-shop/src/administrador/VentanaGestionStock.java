@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
@@ -15,6 +16,7 @@ import javax.swing.border.EmptyBorder;
 
 import dataBase.BD;
 import dataBase.DBException;
+import administrador.VentanaAgregarProducto;
 import ventanasPrincipales.VentanaAudio;
 import ventanasPrincipales.VentanaLogin;
 import ventanasPrincipales.VentanaOrdenador;
@@ -81,7 +83,11 @@ public class VentanaGestionStock extends JFrame {
 		btnAgregar.setBounds(50, 299, 100, 39);
 		contentPane.add(btnAgregar);
 		
-		
+		JButton btnEliminar = new JButton("Eliminar");
+		btnEliminar.setForeground(Color.WHITE);
+		btnEliminar.setBackground(new Color(255, 165, 0));
+		btnEliminar.setBounds(437, 299, 100, 39);
+		contentPane.add(btnEliminar);
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBounds(0, 0, 584, 22);
@@ -126,7 +132,7 @@ public class VentanaGestionStock extends JFrame {
 		}
 		
 		
-		DefaultListModel modelo = new DefaultListModel<>();
+		DefaultListModel<String> modelo = new DefaultListModel<>();
 		JList listaArticulos = new JList(modelo);
 		listaArticulos.setForeground(Color.BLACK);
 		listaArticulos.setFont(new Font("Arial", Font.PLAIN, 15));
@@ -149,18 +155,21 @@ public class VentanaGestionStock extends JFrame {
 		btnExpACsv.setBounds(245, 299, 100, 39);
 		contentPane.add(btnExpACsv);
 		
-		JButton btnEliminar = new JButton("Eliminar");
 		btnEliminar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int eli = listaArticulos.getSelectedIndex(); //elimina los elementos de la lista
-				modelo.remove(eli);
-				
+				String p = modelo.get(listaArticulos.getSelectedIndex());
+				productos.remove(listaArticulos.getSelectedIndex());
+				modelo.remove(listaArticulos.getSelectedIndex());
+				try {
+					BD.borrarProducto(p);
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				validate();
+				repaint();
 			}
 		});
-		btnEliminar.setForeground(Color.WHITE);
-		btnEliminar.setBackground(new Color(255, 165, 0));
-		btnEliminar.setBounds(437, 299, 100, 39);
-		contentPane.add(btnEliminar);
 		
 		for (String producto : productos) {
 			modelo.addElement(producto);
