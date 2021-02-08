@@ -6,8 +6,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import ventanasPrincipales.VentanaLogin;
+import ventanasPrincipales.VentanaOrdenador;
+
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Window;
+
 
 public class VentanaAdmin extends JFrame {
 
@@ -40,20 +48,39 @@ public class VentanaAdmin extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnEntrar = new JButton("STOCK DISPONIBLE");
-		btnEntrar.setForeground(Color.WHITE);
-		btnEntrar.setBackground(new Color(255, 165, 0));
-		btnEntrar.setBounds(129, 81, 348, 66);
-		contentPane.add(btnEntrar);
+		JButton btnStock = new JButton("STOCK DISPONIBLE");
+		btnStock.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaGestionStock.main(null);
+				dispose();
+		}
+		});
+		btnStock.setForeground(Color.WHITE);
+		btnStock.setBackground(new Color(255, 165, 0));
+		btnStock.setBounds(129, 81, 348, 66);
+		contentPane.add(btnStock);
 		
-		JButton btnEntrar_1 = new JButton("GESTION DE USUARIOS");
-		btnEntrar_1.setForeground(Color.WHITE);
-		btnEntrar_1.setBackground(new Color(255, 165, 0));
-		btnEntrar_1.setBounds(129, 187, 348, 66);
-		contentPane.add(btnEntrar_1);
+		JButton btnUsuarios = new JButton("GESTION DE USUARIOS");
+		btnUsuarios.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaGestionUsuarios.main(null);
+				dispose();
+				
+			}
+		});
+		btnUsuarios.setForeground(Color.WHITE);
+		btnUsuarios.setBackground(new Color(255, 165, 0));
+		btnUsuarios.setBounds(129, 187, 348, 66);
+		contentPane.add(btnUsuarios);
 		
-		JButton btnNewButton = new JButton("Atras");
-		btnNewButton.setBounds(10, 24, 89, 23);
+		JButton btnNewButton = new JButton("Cerrar Sesion");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaLogin.main(null);
+				dispose();
+			}
+		});
+		btnNewButton.setBounds(10, 305, 138, 23);
 		contentPane.add(btnNewButton);
 		
 //		JButton btnEntrar_2 = new JButton("ENTRAR");

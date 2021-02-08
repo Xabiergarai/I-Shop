@@ -3,6 +3,8 @@ package administrador;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.List;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -13,12 +15,20 @@ import javax.swing.border.EmptyBorder;
 
 import dataBase.BD;
 import dataBase.DBException;
+import ventanasPrincipales.VentanaAgregarProducto;
+import ventanasPrincipales.VentanaAudio;
+import ventanasPrincipales.VentanaLogin;
+import ventanasPrincipales.VentanaOrdenador;
+import ventanasPrincipales.VentanaSmartphone;
 
 import javax.swing.JTable;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.JList;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JScrollPane;
 import java.awt.Component;
 import javax.swing.ListModel;
@@ -61,6 +71,12 @@ public class VentanaGestionStock extends JFrame {
 		
 		
 		JButton btnAgregar = new JButton("Agregar");
+		btnAgregar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaAgregarProducto.main(null);
+				dispose();
+			}
+		});
 		btnAgregar.setForeground(Color.WHITE);
 		btnAgregar.setBackground(new Color(255, 165, 0));
 		btnAgregar.setBounds(50, 299, 100, 39);
@@ -72,10 +88,40 @@ public class VentanaGestionStock extends JFrame {
 		btnEliminar.setBounds(437, 299, 100, 39);
 		contentPane.add(btnEliminar);
 		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 584, 22);
+		getContentPane().add(menuBar);
 		
+		JMenu mnNewMenu = new JMenu("Gestion");
+		menuBar.add(mnNewMenu);
+
+		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Stock");
+		mntmNewMenuItem_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaGestionStock.main(null);
+				dispose();
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem_2);
+
+		JMenuItem mntmNewMenuItem = new JMenuItem("Usuarios");
+		mntmNewMenuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaGestionUsuarios.main(null);
+				dispose();
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem);
 		
-		
-		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Cerrar sesion");
+		mntmNewMenuItem_1.setForeground(Color.RED);
+		mntmNewMenuItem_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaLogin.main(null);
+				dispose();
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem_1);
 		
 		try {
 			productos = BD.listarProductos();
@@ -122,22 +168,4 @@ public class VentanaGestionStock extends JFrame {
 	
 		
 	}
-//	public static void productosEnFichero(ArrayList<String> productos, String nomfich) {
-//        PrintWriter pw = null;
-//        productos = BD.listarProductos();
-//        try {
-//            pw = new PrintWriter(nomfich);
-//            for(String p: productos) {
-//                pw.println(p.getNombre()+","+p.getCategoria()+","+p.getPrecio());
-//            }
-//        } catch (FileNotFoundException e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//        } finally {
-//            if(pw!=null) {
-//                pw.flush();
-//                pw.close();
-//            }
-//        }
-//    }
 }
