@@ -367,7 +367,7 @@ public class BD {
 	return usuarios;
 		
 	}
-			
+		
 	
 	
 }

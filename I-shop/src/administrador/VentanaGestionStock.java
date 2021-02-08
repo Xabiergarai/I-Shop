@@ -3,6 +3,8 @@ package administrador;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.List;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
@@ -100,6 +102,12 @@ public class VentanaGestionStock extends JFrame {
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 27));
 		scrollpane.setColumnHeaderView(lblNewLabel);
 		
+		JButton btnExpACsv = new JButton("Exp a CSV");
+		btnExpACsv.setForeground(Color.WHITE);
+		btnExpACsv.setBackground(new Color(0, 128, 0));
+		btnExpACsv.setBounds(245, 299, 100, 39);
+		contentPane.add(btnExpACsv);
+		
 		
 		
 		for (String producto : productos) {
@@ -114,4 +122,22 @@ public class VentanaGestionStock extends JFrame {
 	
 		
 	}
+//	public static void productosEnFichero(ArrayList<String> productos, String nomfich) {
+//        PrintWriter pw = null;
+//        productos = BD.listarProductos();
+//        try {
+//            pw = new PrintWriter(nomfich);
+//            for(String p: productos) {
+//                pw.println(p.getNombre()+","+p.getCategoria()+","+p.getPrecio());
+//            }
+//        } catch (FileNotFoundException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        } finally {
+//            if(pw!=null) {
+//                pw.flush();
+//                pw.close();
+//            }
+//        }
+//    }
 }
