@@ -10,6 +10,7 @@ import tienda.Audio;
 import tienda.Ordenador;
 import tienda.Smartphone;
 import tienda.Television;
+import tienda.Usuario;
 
 
 
@@ -343,21 +344,30 @@ public class BD {
 			
 		}
 	
+	public static ArrayList <Usuario> listarUsuarios() throws DBException{
+		ArrayList <Usuario> usuarios = new ArrayList<>();
+		Connection con = initBD("proyecto.db");
+		
+
+		try (Statement stmt = con.createStatement()) {
+			ResultSet rs = stmt.executeQuery("SELECT nombre,email,con FROM usuario");
+
+			while(rs.next()) {
+				Usuario usuario = new Usuario();
+				usuario.setNombre(rs.getString("nombre"));
+				usuario.setEmail(rs.getString("email"));
+				usuario.setContrasenya(rs.getString("con"));
+				usuarios.add(usuario);
+			}
+			
+		} catch (SQLException e) {
+			throw new DBException("Error obteniendo los usuarios", e);
+		}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	return usuarios;
+		
+	}
+			
 	
 	
 }
