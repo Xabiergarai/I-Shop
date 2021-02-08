@@ -1,4 +1,4 @@
-package ventanasPrincipales;
+package administrador;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

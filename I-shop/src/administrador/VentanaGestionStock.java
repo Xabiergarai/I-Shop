@@ -15,7 +15,6 @@ import javax.swing.border.EmptyBorder;
 
 import dataBase.BD;
 import dataBase.DBException;
-import ventanasPrincipales.VentanaAgregarProducto;
 import ventanasPrincipales.VentanaAudio;
 import ventanasPrincipales.VentanaLogin;
 import ventanasPrincipales.VentanaOrdenador;
@@ -82,11 +81,7 @@ public class VentanaGestionStock extends JFrame {
 		btnAgregar.setBounds(50, 299, 100, 39);
 		contentPane.add(btnAgregar);
 		
-		JButton btnEliminar = new JButton("Eliminar");
-		btnEliminar.setForeground(Color.WHITE);
-		btnEliminar.setBackground(new Color(255, 165, 0));
-		btnEliminar.setBounds(437, 299, 100, 39);
-		contentPane.add(btnEliminar);
+		
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBounds(0, 0, 584, 22);
@@ -154,7 +149,18 @@ public class VentanaGestionStock extends JFrame {
 		btnExpACsv.setBounds(245, 299, 100, 39);
 		contentPane.add(btnExpACsv);
 		
-		
+		JButton btnEliminar = new JButton("Eliminar");
+		btnEliminar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int eli = listaArticulos.getSelectedIndex(); //elimina los elementos de la lista
+				modelo.remove(eli);
+				
+			}
+		});
+		btnEliminar.setForeground(Color.WHITE);
+		btnEliminar.setBackground(new Color(255, 165, 0));
+		btnEliminar.setBounds(437, 299, 100, 39);
+		contentPane.add(btnEliminar);
 		
 		for (String producto : productos) {
 			modelo.addElement(producto);

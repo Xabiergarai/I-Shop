@@ -17,7 +17,6 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 
-import administrador.VentanaAdministrador;
 import dataBase.BD;
 import tienda.Contenedora;
 

@@ -83,10 +83,6 @@ public class VentanaAdmin extends JFrame {
 		btnNewButton.setBounds(10, 305, 138, 23);
 		contentPane.add(btnNewButton);
 		
-//		JButton btnEntrar_2 = new JButton("ENTRAR");
-//		btnEntrar_2.setForeground(Color.WHITE);
-//		btnEntrar_2.setBackground(new Color(255, 165, 0));
-//		btnEntrar_2.setBounds(129, 314, 348, 66);
-//		contentPane.add(btnEntrar_2);
+		
 	}
 }

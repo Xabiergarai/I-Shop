@@ -67,16 +67,17 @@ public class VentanaGestionUsuarios extends JFrame {
 		
 		
 		JButton btnAgregar = new JButton("Agregar");
+		btnAgregar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaAgregarUsuarios.main(null);
+				dispose();
+			}
+		});
 		btnAgregar.setForeground(Color.WHITE);
 		btnAgregar.setBackground(new Color(255, 165, 0));
 		btnAgregar.setBounds(50, 299, 100, 39);
 		contentPane.add(btnAgregar);
 		
-		JButton btnEliminar = new JButton("Eliminar");
-		btnEliminar.setForeground(Color.WHITE);
-		btnEliminar.setBackground(new Color(255, 165, 0));
-		btnEliminar.setBounds(437, 299, 100, 39);
-		contentPane.add(btnEliminar);
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBounds(0, 0, 584, 22);
@@ -141,6 +142,19 @@ public class VentanaGestionUsuarios extends JFrame {
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 27));
 		scrollpane.setColumnHeaderView(lblNewLabel);
 		
+		
+		JButton btnEliminar = new JButton("Eliminar");
+		btnEliminar.setForeground(Color.WHITE);
+		btnEliminar.setBackground(new Color(255, 165, 0));
+		btnEliminar.setBounds(437, 299, 100, 39);
+		contentPane.add(btnEliminar);
+		btnEliminar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int eli = listaArticulos.getSelectedIndex(); //elimina los elementos de la lista
+				modelo.remove(eli);
+				
+			}
+		});
 		
 		
 		for (Usuario usuario : usuarios) {
