@@ -286,7 +286,62 @@ public class BD {
 			
 		}
 	
-	
+	public static ArrayList <String> listarProductos() throws DBException{
+		ArrayList <String> productos = new ArrayList<>();
+		Connection con = initBD("proyecto.db");
+			
+		
+			try (Statement stmt = con.createStatement()) {
+				ResultSet rs = stmt.executeQuery("SELECT nombre FROM television");
+
+				while(rs.next()) {
+					String product = rs.getString("nombre");
+					productos.add(product);
+				}
+				
+			} catch (SQLException e) {
+				throw new DBException("Error obteniendo todos los televisiones", e);
+			}
+			
+			try (Statement stmt = con.createStatement()) {
+				ResultSet rs = stmt.executeQuery("SELECT nombre FROM ordenador");
+
+				while(rs.next()) {
+					String product = rs.getString("nombre");
+					productos.add(product);
+				}
+				
+			} catch (SQLException e) {
+				throw new DBException("Error obteniendo todos los televisiones", e);
+			}
+			
+			try (Statement stmt = con.createStatement()) {
+				ResultSet rs = stmt.executeQuery("SELECT nombre FROM smartphone");
+
+				while(rs.next()) {
+					String product = rs.getString("nombre");
+					productos.add(product);
+				}
+				
+			} catch (SQLException e) {
+				throw new DBException("Error obteniendo todos los televisiones", e);
+			}
+			
+			try (Statement stmt = con.createStatement()) {
+				ResultSet rs = stmt.executeQuery("SELECT nombre FROM audio");
+
+				while(rs.next()) {
+					String product = rs.getString("nombre");
+					productos.add(product);
+				}
+				
+			} catch (SQLException e) {
+				throw new DBException("Error obteniendo todos los televisiones", e);
+			}
+		
+		return productos;
+			
+		}
 	
 	
 	

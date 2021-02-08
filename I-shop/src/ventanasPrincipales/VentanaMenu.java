@@ -93,14 +93,14 @@ public class VentanaMenu extends JFrame {
 		frame.getContentPane().add(lblNewLabel_1);
 		
 
-		ImageIcon ico2= new ImageIcon("img/pc .jpg");
+		ImageIcon ico2= new ImageIcon("img/audio.jpg");
 		ImageIcon img2= new ImageIcon(ico2.getImage().getScaledInstance(lblNewLabel_1.getWidth(), lblNewLabel_1.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_1.setIcon(img2);
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setBounds(83, 62, 106, 77);
+		lblNewLabel_2.setBounds(90, 62, 106, 77);
 		frame.getContentPane().add(lblNewLabel_2);
-		ImageIcon ico3= new ImageIcon("img/audio.jpg");
+		ImageIcon ico3= new ImageIcon("img/portatilLogo.png");
 		ImageIcon img3= new ImageIcon(ico3.getImage().getScaledInstance(lblNewLabel_2.getWidth(), lblNewLabel_2.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_2.setIcon(img3);
 		
