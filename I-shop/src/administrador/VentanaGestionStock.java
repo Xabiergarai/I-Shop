@@ -179,7 +179,7 @@ public class VentanaGestionStock extends JFrame {
 		for (String producto : productos) {
 			modelo.addElement(producto);
 		}
-		
+		//metodo para pasar el arraylist a un fichero .csv
 		btnExpACsv.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
