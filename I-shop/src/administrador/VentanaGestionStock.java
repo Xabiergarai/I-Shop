@@ -206,7 +206,7 @@ public class VentanaGestionStock extends JFrame {
 					if(pw!=null) {
 						pw.flush();
 						pw.close();
-						JOptionPane.showMessageDialog(null, "Correcto", "EXPORT CORRECTO", JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(null, "Fichero .Csv creado correctamente", "EXPORTACION CORRECTA", JOptionPane.INFORMATION_MESSAGE);
 					}
 				}
 		        
