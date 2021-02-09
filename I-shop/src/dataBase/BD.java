@@ -399,7 +399,7 @@ public class BD {
 	
 	public static void insertarOrdenador(String nombre, String marca, String precio, String desc) {
 
-        String s = "INSERT INTO Ordeandor (nombre, marca, precio) VALUES('"+nombre+"','"+marca+"','"+precio+"')";
+        String s = "INSERT INTO Ordenador (nombre, marca, precio) VALUES('"+nombre+"','"+marca+"','"+precio+"')";
         Connection c = BD.initBD("proyecto.db");
         try {
             Statement st = c.createStatement();
