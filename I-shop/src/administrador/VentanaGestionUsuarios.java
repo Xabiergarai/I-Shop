@@ -66,8 +66,13 @@ public class VentanaGestionUsuarios extends JFrame {
 		contentPane.setLayout(null);
 		
 		
-		
 		JButton btnAgregar = new JButton("Agregar");
+		btnAgregar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaAgregarUsuario.main(null);
+				dispose();
+			}
+		});
 		btnAgregar.setForeground(Color.WHITE);
 		btnAgregar.setBackground(new Color(255, 165, 0));
 		btnAgregar.setBounds(50, 299, 100, 39);
