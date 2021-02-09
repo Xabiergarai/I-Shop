@@ -17,6 +17,7 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 
+import administrador.VentanaAdmin;
 import dataBase.BD;
 import tienda.Contenedora;
 
@@ -76,20 +77,34 @@ public class VentanaLogin extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				String email = txtEmail.getText();
 				String con = txtContrase.getText();
-				int resul = BD.comprobarUsuario(email, con);
-				if(resul==0) {
-					JOptionPane.showMessageDialog(null, "El e-mail no esta registrado.", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
-				}
-				else if(resul==1) {
-					JOptionPane.showMessageDialog(null, "La contrasena no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
-				}	
-				else {
-					JOptionPane.showMessageDialog(null, "Bienvenido", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
-					VentanaMenu.main(null);
-
-					vaciarCampos();
+				
+				
+				// acceso a la intranet a traves de usuario admin y contraseña admin
+				if (email.equals("admin") && con.equals("admin")) {
+					VentanaAdmin va = new VentanaAdmin();
+					va.setVisible(true);
+					setVisible(false);
 					frame.dispose();
+					
+					
+					
+				}else {
+					int resul = BD.comprobarUsuario(email, con);
+					if(resul==0) {
+						JOptionPane.showMessageDialog(null, "El e-mail no esta registrado.", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
+					}
+					else if(resul==1) {
+						JOptionPane.showMessageDialog(null, "La contrasena no es correcta", "ACCESO INCORRECTO", JOptionPane.ERROR_MESSAGE);
+					}	
+					else {
+						JOptionPane.showMessageDialog(null, "Bienvenido", "ACCESO CORRECTO", JOptionPane.INFORMATION_MESSAGE);
+						VentanaMenu.main(null);
+
+						vaciarCampos();
+						frame.dispose();
+					}
 				}
+				
 			}
 		});
 		btnEntrar.setForeground(new Color(255, 255, 255));

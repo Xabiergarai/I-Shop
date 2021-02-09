@@ -16,6 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
 
+import dataBase.BD;
 import tienda.Usuario;
 
 import java.awt.event.ActionListener;
@@ -24,9 +25,9 @@ import java.awt.event.ActionEvent;
 public class VentanaAgregarUsuario extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField textNombre;
+	private JTextField textEmail;
+	private JTextField textPass;
 	private JTextArea textArea;
 
 	/**
@@ -61,10 +62,10 @@ public class VentanaAgregarUsuario extends JFrame {
 		lblNewLabel.setBounds(106, 45, 230, 39);
 		contentPane.add(lblNewLabel);
 		
-		textField = new JTextField();
-		textField.setBounds(197, 137, 170, 32);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		textNombre = new JTextField();
+		textNombre.setBounds(197, 137, 170, 32);
+		contentPane.add(textNombre);
+		textNombre.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nombre");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -76,27 +77,27 @@ public class VentanaAgregarUsuario extends JFrame {
 		lblNewLabel_1_1.setBounds(32, 199, 88, 32);
 		contentPane.add(lblNewLabel_1_1);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(197, 199, 170, 32);
-		contentPane.add(textField_1);
+		textEmail = new JTextField();
+		textEmail.setColumns(10);
+		textEmail.setBounds(197, 199, 170, 32);
+		contentPane.add(textEmail);
 		
 		JLabel lblNewLabel_1_2 = new JLabel("Contrasenya");
 		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNewLabel_1_2.setBounds(32, 260, 88, 32);
 		contentPane.add(lblNewLabel_1_2);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(197, 260, 170, 32);
-		contentPane.add(textField_2);
+		textPass = new JTextField();
+		textPass.setColumns(10);
+		textPass.setBounds(197, 260, 170, 32);
+		contentPane.add(textPass);
 		
 		JButton btnAgregarProducto = new JButton("AGREGAR");
 		btnAgregarProducto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String nombre = textField.getText();
-				String email = textField_1.getText();
-				String contrasenia = textField_2.getText();
+				String nombre = textNombre.getText();
+				String email = textEmail.getText();
+				String contrasenia = textPass.getText();
 				Usuario u = new Usuario(nombre, email, contrasenia, null, null);
 				System.out.println(u);
 			}
@@ -105,5 +106,19 @@ public class VentanaAgregarUsuario extends JFrame {
 		btnAgregarProducto.setBackground(new Color(255, 165, 0));
 		btnAgregarProducto.setBounds(149, 390, 132, 50);
 		contentPane.add(btnAgregarProducto);
+		
+		btnAgregarProducto.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				BD.insertarUsuario(textNombre.getText(), textEmail.getText(), textPass.getText());
+				setVisible(false);
+				VentanaGestionUsuarios vu = new VentanaGestionUsuarios();
+				vu.setVisible(true);
+				
+			}
+		});
+		
 	}
 }

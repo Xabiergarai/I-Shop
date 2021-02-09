@@ -5,7 +5,10 @@ import java.awt.EventQueue;
 import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -16,6 +19,7 @@ import javax.swing.border.EmptyBorder;
 
 import dataBase.BD;
 import dataBase.DBException;
+import tienda.Producto;
 import administrador.VentanaAgregarProducto;
 import ventanasPrincipales.VentanaAudio;
 import ventanasPrincipales.VentanaLogin;
@@ -30,6 +34,7 @@ import javax.swing.JList;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import java.awt.Component;
 import javax.swing.ListModel;
@@ -175,11 +180,41 @@ public class VentanaGestionStock extends JFrame {
 			modelo.addElement(producto);
 		}
 		
+		btnExpACsv.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				String desktopPath = System.getProperty("user.home") + "/git/I-shop/I-shop" + "/productos.csv";
+				String ruta = desktopPath.replace("\\", "/");
+				
+		 
 	
-	
+				File archivo = new File(ruta);
+				PrintWriter pw = null;
+					
+				try {
+					pw = new PrintWriter(archivo);
+					for(String p: productos) {
+						pw.println(p);
+						
+						
+					}
+				} catch (FileNotFoundException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				} finally {
+					if(pw!=null) {
+						pw.flush();
+						pw.close();
+						JOptionPane.showMessageDialog(null, "Correcto", "EXPORT CORRECTO", JOptionPane.INFORMATION_MESSAGE);
+					}
+				}
+		        
+			}
 		
-		
-	
+		});
+
+
 	
 		
 	}

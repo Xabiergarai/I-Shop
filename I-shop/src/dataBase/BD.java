@@ -396,7 +396,64 @@ public class BD {
 			ps.execute();
 
 	}
-		
 	
+	public static void insertarOrdenador(String nombre, String marca, String precio, String desc) {
+
+        String s = "INSERT INTO Ordeandor (nombre, marca, precio) VALUES('"+nombre+"','"+marca+"','"+precio+"')";
+        Connection c = BD.initBD("proyecto.db");
+        try {
+            Statement st = c.createStatement();
+            st.executeUpdate(s);
+            cerrarBD(c, st);
+            LOG.log(Level.INFO,"Statement correctamente");
+        } catch (SQLException e) {
+            LOG.log(Level.WARNING,e.getMessage());
+        }
+
+    }
+	public static void insertarSmartphone(String nombre, String marca, String precio, String desc) {
 	
+	    String s = "INSERT INTO Smartphone (nombre, marca, precio) VALUES('"+nombre+"','"+marca+"','"+precio+"')";
+	    Connection c = BD.initBD("proyecto.db");
+	    try {
+	        Statement st = c.createStatement();
+	        st.executeUpdate(s);
+	        cerrarBD(c, st);
+	        LOG.log(Level.INFO,"Statement correctamente");
+	    } catch (SQLException e) {
+	        LOG.log(Level.WARNING,e.getMessage());
+	    }
+	
+	}
+
+	public static void insertarAudio(String nombre, String marca, String precio, String desc) {
+	
+	    String s = "INSERT INTO Audio (nombre, marca, precio) VALUES('"+nombre+"','"+marca+"','"+precio+"')";
+	    Connection c = BD.initBD("proyecto.db");
+	    try {
+	        Statement st = c.createStatement();
+	        st.executeUpdate(s);
+	        cerrarBD(c, st);
+	        LOG.log(Level.INFO,"Statement correctamente");
+	    } catch (SQLException e) {
+	        LOG.log(Level.WARNING,e.getMessage());
+	    }
+	
+	}
+
+	public static void insertarTelevisor(String nombre, String marca, String precio, String desc) {
+	
+	    String s = "INSERT INTO Television (nombre, marca, precio) VALUES('"+nombre+"','"+marca+"','"+precio+"')";
+	    Connection c = BD.initBD("proyecto.db");
+	    try {
+	        Statement st = c.createStatement();
+	        st.executeUpdate(s);
+	        cerrarBD(c, st);
+	        LOG.log(Level.INFO,"Statement correctamente");
+	    } catch (SQLException e) {
+	        LOG.log(Level.WARNING,e.getMessage());
+	    }
+	
+	}
+
 }
