@@ -26,7 +26,7 @@ tienda, divididos a cada lado: por ejemplo, a la izquierda la sección de ordena
  ---
  # **Extra**
 
-  Hemos implementado una seccion donde se pretende usar como una intranet, para los administradores (que solamente podran acceder con un usuario y contraseña especificos).
+  Hemos implementado una seccion donde se pretende usar como una intranet, para los administradores (que solamente podran acceder con un usuario y contraseña especificos(admin, admin, respectivamente).
    - Por una parte hemos creado una ventana para poder gestionar el stock que hay actualmente en la tienda(mediante una lista con todos los articulos que hay en la tienda).
         Donde se puede agregar o eliminar productos segun necesite el administrador, a parte de eso, tambien podra exportar esa lista a un documento .Csv
    - Por otra parte hemos creado tambien una ventana en la que se podran gestionar todos los usuarios registrados en la tienda. Asi como tambien crear nuevos usuarios y/o      eliminar los usuarios que se desee.
