@@ -29,6 +29,8 @@ import paneles.PanelAudio;
 import tienda.Audio;
 import tienda.ListaProducto;
 import tienda.Producto;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 
 public class VentanaMenu extends JFrame {
 	private JFrame frame;
@@ -86,7 +88,7 @@ public class VentanaMenu extends JFrame {
 		
 		JLabel lblSeccionesProductos = new JLabel("Secciones de los productos");
 		lblSeccionesProductos.setFont(new Font("Dialog", Font.BOLD, 18));
-		lblSeccionesProductos.setBounds(128, 27, 242, 16);
+		lblSeccionesProductos.setBounds(128, 11, 242, 26);
 		frame.getContentPane().add(lblSeccionesProductos);
 		
 		URL iconURL = getClass().getResource("/audio.jpg");
@@ -173,6 +175,19 @@ public class VentanaMenu extends JFrame {
 		ImageIcon ico5= new ImageIcon(iconURL3);
 		ImageIcon img5= new ImageIcon(ico5.getImage().getScaledInstance(lblNewLabel_3_1.getWidth(), lblNewLabel_3_1.getHeight(), Image.SCALE_SMOOTH));
 		lblNewLabel_3_1.setIcon(img5);
+		
+		JMenuBar menuBar = new JMenuBar();
+		frame.setJMenuBar(menuBar);
+		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Cerrar sesion");
+		mntmNewMenuItem_1.setForeground(Color.RED);
+		mntmNewMenuItem_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaLogin.main(null);
+				frame.dispose();
+			}
+		});
+		menuBar.add(mntmNewMenuItem_1);
 		
 
 		btnSmartphone.addActionListener(new ActionListener() {

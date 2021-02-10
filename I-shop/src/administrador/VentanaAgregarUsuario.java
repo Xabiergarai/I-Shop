@@ -82,7 +82,7 @@ public class VentanaAgregarUsuario extends JFrame {
 		textEmail.setBounds(197, 199, 170, 32);
 		contentPane.add(textEmail);
 		
-		JLabel lblNewLabel_1_2 = new JLabel("Contrasenya");
+		JLabel lblNewLabel_1_2 = new JLabel("Contraseña");
 		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNewLabel_1_2.setBounds(32, 260, 88, 32);
 		contentPane.add(lblNewLabel_1_2);
